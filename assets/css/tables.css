@@ -18,6 +18,16 @@ tbody tr:hover{background:var(--surface-hover);}
 .row-act{display:flex; gap:4px; justify-content:flex-end;}
 .act-btn{width:36px;height:36px; border-radius:var(--r-md); display:grid; place-items:center; color:var(--text-tertiary);}
 .act-btn:hover{background:var(--surface-hover); color:var(--primary-700);}
+.act-btn.act-danger{color:var(--error-700);}
+.act-btn.act-danger:hover{background:var(--error-bg); color:var(--error-700);}
+
+/* Column-visibility toggle (JS adds/removes these on .table-card) */
+.table-card.hide-col-photo [data-col="photo"],
+.table-card.hide-col-email [data-col="email"],
+.table-card.hide-col-phone [data-col="phone"],
+.table-card.hide-col-status [data-col="status"],
+.table-card.hide-col-created [data-col="created"],
+.table-card.hide-col-last [data-col="last"]{display:none;}
 .tfoot{display:flex; align-items:center; gap:var(--s-2); padding:14px var(--s-2); border-top:1px solid var(--border-guide); font-size:13px; color:var(--text-secondary);}
 .pager{margin-inline-start:auto; display:flex; align-items:center; gap:6px;}
 .pg{min-width:36px; height:36px; border-radius:var(--r-md); display:grid; place-items:center; font-size:13px; font-weight:700; color:var(--text-secondary); padding:0 8px;}

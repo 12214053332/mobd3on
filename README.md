@@ -62,13 +62,21 @@ al-mubdioun/  (= جذر هذا المستودع)
 > ملاحظة: الملف الأصلي `Al-Mubdioun_final_v_02 (2) (1).html` تُرك في الجذر دون
 > تعديل ليبقى مرجعًا لاستخراج بقية الشاشات في المراحل القادمة.
 
-## الصفحة المُنجزة الآن
+## الصفحات المُنجزة الآن
 
 - **[admin/dashboard.html](admin/dashboard.html)** — لوحة تحكم السوبر أدمن الكاملة:
   ترحيب + إجراءات سريعة، 4 مؤشرات KPI، رسم بياني تفاعلي (تبديل المؤشر: تسجيلات/
   إيرادات/إتمام، وتبديل الفترة: 7 أيام/30 يوم/12 شهر) مع Tooltip عند التمرير، توزيع
-  التسجيلات حسب نوع البرنامج، جدول أحدث التسجيلات، وتنبيهات النظام. جميع البيانات
-  مأخوذة كما هي من الـ Prototype الأصلي (لا حذف لأي بيانات تجريبية).
+  التسجيلات حسب نوع البرنامج، جدول أحدث التسجيلات، وتنبيهات النظام.
+- **[admin/reports.html](admin/reports.html)** — تقارير الإيرادات: 4 مؤشرات KPI،
+  قمع المبيعات (Funnel)، وأداء المندوبين.
+- **[admin/trainees.html](admin/trainees.html)** — إدارة المتدربين: جدول كامل
+  (10 صفوف) مع بحث حي، فلاتر حالة، إظهار/إخفاء أعمدة، تحديد صفوف + شريط إجراءات
+  جماعية، إجراءات كل صف (عرض/تعديل/تفعيل-تعطيل حقيقي/إعادة تعيين كلمة مرور/حذف)،
+  ومعالج «إضافة متدرب» بثلاث خطوات (معلومات أساسية بتحقّق من الحقول، معلومات
+  إضافية، مراجعة) يُدرج صفاً جديداً فعلياً في الجدول عند الحفظ.
+
+جميع البيانات مأخوذة كما هي من الـ Prototype الأصلي (لا حذف لأي بيانات تجريبية).
 
 ### التحقق الذي تم إجراؤه
 
@@ -85,12 +93,12 @@ al-mubdioun/  (= جذر هذا المستودع)
 القائمة مستخرجة من `ROLES.*.nav` و`BESPOKE` map في الملف الأصلي — لا شيء محذوف.
 
 ### admin/* (السوبر أدمن)
-البرامج التدريبية: `course-library.html`، `diplomas.html`، `fellowships.html`،
+✅ منجزة: `dashboard.html`، `reports.html`، `trainees.html`
+⏳ متبقية — البرامج التدريبية: `course-library.html`، `diplomas.html`، `fellowships.html`،
 `professional-certificates.html` — التعلم: `waitlist.html`، `placement-exam.html`،
 `course-categories.html`، `virtual-classrooms.html` — الاختبارات: `question-bank.html`،
-`exams.html`، `grading.html` — `certificates.html` — المستخدمون: `trainees.html`،
-`trainers.html`، `academic-staff.html`، `roles.html` — الإيرادات: `reports.html`،
-`payments.html`، `coupons.html`
+`exams.html`، `grading.html` — `certificates.html` — المستخدمون: `trainers.html`،
+`academic-staff.html`، `roles.html` — الإيرادات: `payments.html`، `coupons.html`
 (+ شاشات تفاصيل/Workspace تُبنى مع كل قسم: مثل صفحة تفاصيل دورة، صفحة تفاصيل مستخدم،
 معالج إضافة دورة/مسار/اختبار... إلخ)
 

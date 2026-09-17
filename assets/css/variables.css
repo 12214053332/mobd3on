@@ -8,6 +8,7 @@
   --text-primary:#1C2B28; --text-secondary:#5F6F6A; --text-tertiary:#8A968F;
   --success-700:#1C6B42; --success-bg:#E6F3EB; --warning-700:#9A6B12; --warning-bg:#FBF2DA;
   --error-700:#B03A2E; --error-bg:#FBEAE7; --info-700:#2C55A0; --info-bg:#E9F0FB;
+  --blue-500:#3E7CB1;
   --r-sm:4px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-full:999px;
   --shadow-card:0 1px 3px rgba(19,41,37,.06); --shadow-md:0 4px 12px rgba(19,41,37,.12); --shadow-lg:0 12px 40px rgba(19,41,37,.18);
   --s-1:8px; --s-2:16px; --s-3:24px; --s-4:32px; --s-6:48px;

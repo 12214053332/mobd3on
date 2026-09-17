@@ -202,10 +202,10 @@
             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
             التقارير
           </a>
-          <a class="btn btn-primary" href="trainees.html">
+          <button type="button" class="btn btn-primary" id="addUserBtn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
             إضافة مستخدم
-          </a>
+          </button>
         </div>
       </section>
 
@@ -393,9 +393,130 @@
 </div>
 <div class="sidebar-scrim" id="sidebarScrim"></div>
 
+<!-- ===== Add User Wizard (reusable — role is implicit: "trainee" here, opened via the dashboard's quick action) ===== -->
+<div class="scrim" id="uwScrim"></div>
+<aside class="drawer" id="uwDrawer" role="dialog" aria-modal="true" aria-label="إضافة متدرب">
+  <div class="dr-head">
+    <h2>إضافة متدرب</h2>
+    <div class="dr-head-actions">
+      <button type="button" class="dr-icon-btn" id="uwFull" aria-label="ملء الشاشة" title="ملء الشاشة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+      </button>
+      <button type="button" class="dr-icon-btn" id="uwClose" aria-label="إغلاق">✕</button>
+    </div>
+  </div>
+
+  <div class="wz-steps" id="uwSteps">
+    <div class="wz-step cur" data-step="0"><span class="wz-num">1</span><span class="wz-lbl">المعلومات الأساسية</span></div>
+    <span class="wz-line"></span>
+    <div class="wz-step" data-step="1"><span class="wz-num">2</span><span class="wz-lbl">معلومات إضافية</span></div>
+    <span class="wz-line"></span>
+    <div class="wz-step" data-step="2"><span class="wz-num">3</span><span class="wz-lbl">المراجعة</span></div>
+  </div>
+
+  <div class="dr-body">
+    <!-- Step 1: basic info -->
+    <div class="uw-step" data-step="0">
+      <div class="uw-note">سيُضاف هذا المستخدم كـ «المتدرب»</div>
+      <div class="field">
+        <label class="field-label">الصورة</label>
+        <div class="dropzone">
+          <div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          اسحب صورة الملف الشخصي أو اضغط للرفع
+          <div class="field-hint">PNG/JPG · مربّعة مفضّلة</div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field-label">الاسم <span class="req">*</span></label>
+        <input class="inp" id="uw_name" placeholder="الاسم الكامل">
+        <div class="inp-error" id="err_uwName">هذا الحقل مطلوب</div>
+      </div>
+      <div class="grid-2e">
+        <div class="field">
+          <label class="field-label">البريد الإلكتروني <span class="req">*</span></label>
+          <input class="inp" id="uw_email" dir="ltr" placeholder="user@email.com">
+          <div class="inp-error" id="err_uwEmail">أدخل بريداً صحيحاً</div>
+        </div>
+        <div class="field">
+          <label class="field-label">الجوال</label>
+          <input class="inp" id="uw_phone" dir="ltr" placeholder="+966 5x xxx xxxx">
+        </div>
+      </div>
+      <div class="grid-2e">
+        <div class="field">
+          <label class="field-label">كلمة المرور <span class="req">*</span></label>
+          <input class="inp" id="uw_pass" type="text" placeholder="كلمة مرور مؤقتة">
+          <div class="inp-error" id="err_uwPass">هذا الحقل مطلوب</div>
+        </div>
+        <div class="field">
+          <label class="field-label">اللغة</label>
+          <select class="inp" id="uw_lang">
+            <option value="ar" selected>العربية</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: role-specific extra info (trainee) -->
+    <div class="uw-step" data-step="1" hidden>
+      <div class="uw-note">الحقول الإضافية للدور: المتدرب</div>
+      <div class="grid-2e">
+        <div class="field"><label class="field-label">رقم الهوية / الإقامة</label><input class="inp" placeholder="10xxxxxxxx"></div>
+        <div class="field"><label class="field-label">الجنسية</label>
+          <select class="inp"><option>سعودي</option><option>مقيم</option><option>أخرى</option></select>
+        </div>
+      </div>
+      <div class="grid-2e">
+        <div class="field"><label class="field-label">المدينة</label><input class="inp" placeholder="الرياض"></div>
+        <div class="field"><label class="field-label">البرنامج/الدورة المسجّل بها</label>
+          <select class="inp"><option>— اختياري —</option><option>دبلوم الأمن السيبراني</option><option>مقدمة في الذكاء الاصطناعي</option></select>
+        </div>
+      </div>
+      <div class="field"><label class="field-label">المؤهل التعليمي</label>
+        <select class="inp"><option>ثانوي</option><option>بكالوريوس</option><option>ماجستير</option><option>دكتوراه</option></select>
+      </div>
+    </div>
+
+    <!-- Step 3: review -->
+    <div class="uw-step" data-step="2" hidden>
+      <h3 class="uw-review-title">مراجعة البيانات</h3>
+      <p class="uw-review-sub">تأكّد من صحة المعلومات قبل الحفظ.</p>
+      <div class="uw-review-card">
+        <div class="summary-row"><span>الاسم</span><span id="rv_name" class="v">—</span></div>
+        <div class="summary-row"><span>البريد الإلكتروني</span><span id="rv_email" class="v">—</span></div>
+        <div class="summary-row"><span>الجوال</span><span id="rv_phone" class="v">—</span></div>
+        <div class="summary-row"><span>اللغة</span><span id="rv_lang" class="v">العربية</span></div>
+        <div class="summary-row"><span>الدور</span><span class="v">المتدرب</span></div>
+        <div class="summary-row no-border"><span>كلمة المرور</span><span class="v">••••••••</span></div>
+      </div>
+      <div class="uw-review-note">سيُضاف المستخدم إلى قائمة «المتدربون» مباشرة بعد الحفظ.</div>
+    </div>
+  </div>
+
+  <div class="dr-foot">
+    <button type="button" class="btn btn-secondary" id="uwCancel">إلغاء</button>
+    <span class="step-txt" id="uwStepTxt">الخطوة 1 من 3</span>
+    <div class="end">
+      <button type="button" class="btn btn-secondary" id="uwBack" style="visibility:hidden">السابق</button>
+      <button type="button" class="btn btn-primary" id="uwNext">التالي</button>
+    </div>
+  </div>
+</aside>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/data/dashboard.js"></script>
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/dashboard.js"></script>
+<script src="../assets/js/user-wizard.js"></script>
+<script>
+$(function () {
+  $('#addUserBtn').on('click', UserWizard.open);
+  UserWizard.onSave(function () {
+    // no user table lives on the dashboard — go see the new trainee in the list
+    window.location.href = 'trainees.html';
+  });
+});
+</script>
 </body>
 </html>

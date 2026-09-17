@@ -213,6 +213,17 @@
 .stat-card{background:var(--surface);border:1px solid var(--border-guide);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:var(--s-3);}
 .stat-card .sc-l{font-size:13px;color:var(--text-secondary);} .stat-card .sc-v{font-size:26px;font-weight:700;margin-top:6px;}
 
+/* Wizard note banners + review-step summary (reusable across add/edit wizards) */
+.uw-note{background:var(--primary-50);color:var(--primary-700);padding:10px 14px;border-radius:var(--r-md);font-size:13px;margin-bottom:16px;font-weight:700;}
+.uw-review-title{font-size:17px;font-weight:700;margin-bottom:6px;}
+.uw-review-sub{font-size:13px;color:var(--text-secondary);margin-bottom:16px;}
+.uw-review-card{border:1px solid var(--border-guide);border-radius:var(--r-lg);padding:16px 20px;}
+.uw-review-note{background:var(--success-bg);color:var(--success-700);padding:10px 14px;border-radius:var(--r-md);font-size:13px;margin-top:16px;}
+.summary-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border-guide);font-size:14px;}
+.summary-row.no-border{border-bottom:none;}
+.summary-row>span:first-child{color:var(--text-tertiary);}
+.summary-row .v{font-weight:700;}
+
 /* Icon picker */
 .icon-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;}
 .icon-opt{aspect-ratio:1;border:1px solid var(--border-default);border-radius:var(--r-md);display:grid;place-items:center;color:var(--text-secondary);cursor:pointer;}
@@ -624,6 +635,13 @@ table.matrix tbody tr:hover td{background:var(--surface-hover);}
 .bp-input{width:100%;height:40px;border:1px solid var(--border-default);border-radius:var(--r-md);padding:0 12px;font-family:inherit;font-size:14px;}
 .bp-input:focus{outline:none;border-color:var(--primary-500);box-shadow:0 0 0 3px var(--primary-100);}
 .bp-link{color:var(--primary-700);font-weight:500;text-decoration:underline;}
+
+/* Sales funnel (Reports) */
+.funnel-row{margin-bottom:10px;}
+.funnel-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;}
+.funnel-pct{font-weight:700;}
+.funnel-track{height:10px;background:var(--surface-hover);border-radius:var(--r-full);overflow:hidden;}
+.funnel-fill{height:100%;border-radius:var(--r-full);}
 
 /* Educational Paths */
 .pth-lvl{border:1px solid var(--border-default);border-radius:var(--r-lg);margin-bottom:14px;background:var(--surface);overflow:hidden;}
