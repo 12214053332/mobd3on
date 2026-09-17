@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الرئيسية — مركز المبدعون</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/forms.css">
+<link rel="stylesheet" href="../assets/css/tables.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-navkey="dash">
+
+<div class="proto-banner">
+  <span aria-hidden="true">🛠</span>
+  <span><b>وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
+</div>
+
+<div class="shell">
+
+  <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
+  <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+      <div class="nav-section">
+        <a class="nav-item" href="dashboard.html" data-key="dash">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+          <span class="lbl">الرئيسية</span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-group" data-group="lptrack">
+          <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            <span class="lbl">البرامج التدريبية</span>
+            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="nav-children">
+            <a class="nav-child" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
+            <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
+            <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
+            <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label lbl">التعلم</div>
+        <div class="nav-group" data-group="learning">
+          <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
+            <span class="lbl">التعلم</span>
+            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="nav-children">
+            <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
+            <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
+            <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
+            <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+          </div>
+        </div>
+        <div class="nav-group" data-group="assess">
+          <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+            <span class="lbl">الاختبارات وبنك الأسئلة</span>
+            <span class="nav-badge lbl">8</span>
+            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="nav-children">
+            <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
+            <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
+            <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+          </div>
+        </div>
+        <a class="nav-item" href="certificates.html" data-key="certs">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+          <span class="lbl">الشهادات</span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label lbl">الأشخاص</div>
+        <div class="nav-group" data-group="users">
+          <button type="button" class="nav-parent" data-parent="users" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="lbl">إدارة المستخدمين</span>
+            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="nav-children">
+            <a class="nav-child" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
+            <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
+            <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
+            <a class="nav-child" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label lbl">الإيرادات</div>
+        <a class="nav-item" href="reports.html" data-key="sales_reports">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          <span class="lbl">التقارير</span>
+        </a>
+        <a class="nav-item" href="payments.html" data-key="payments">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <span class="lbl">المدفوعات</span>
+        </a>
+        <a class="nav-item" href="coupons.html" data-key="coupons">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
+          <span class="lbl">كوبونات الخصم</span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label lbl">النمو والمحتوى</div>
+        <div class="nav-group" data-group="website">
+          <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+            <span class="lbl">إدارة الموقع الإلكتروني</span>
+            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="nav-children">
+            <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
+            <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
+            <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
+            <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
+            <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
+            <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
+            <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
+            <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
+            <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
+            <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <button type="button" class="collapse-btn" id="collapseBtn">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="lbl">طيّ القائمة</span>
+    </button>
+  </aside>
+
+  <div class="main">
+    <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
+    <header class="topbar">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <span class="crumb">الرئيسية</span>
+      <div class="topbar-cluster">
+        <div class="role-switch-wrap">
+          <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+            <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+            <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
+            <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
+            <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
+            <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+          </div>
+        </div>
+        <button type="button" class="lang-switch">EN</button>
+        <button type="button" class="icon-btn" aria-label="الإشعارات">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+        <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+      </div>
+    </header>
+
+    <main class="page">
+
+      <!-- ===== Welcome + quick actions ===== -->
+      <section class="welcome adash-head">
+        <div>
+          <h1>مرحباً بك، عبدالعزيز</h1>
+          <div class="meta">
+            <span class="role-pill teal">السوبر أدمن</span>
+            <span class="date">الأربعاء <bdi class="adash-num">16 Sep 2026</bdi> · آخر تحديث قبل 5 دقائق</span>
+          </div>
+        </div>
+        <div class="quick-actions adash-qa" role="group" aria-label="إجراءات سريعة">
+          <span class="adash-qa-l">إجراءات سريعة</span>
+          <a class="btn btn-secondary" href="reports.html">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            التقارير
+          </a>
+          <a class="btn btn-primary" href="trainees.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            إضافة مستخدم
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== KPIs ===== -->
+      <section class="kpi-grid adash-kpis">
+        <div class="kpi adash-kpi">
+          <div class="kpi-top"><div class="kpi-label">إجمالي الطلاب</div></div>
+          <div class="kpi-value">12,847</div>
+          <div class="adash-trend"><span class="delta up">↑ 4.2%</span><span>مقارنة بالشهر الماضي</span></div>
+        </div>
+        <div class="kpi adash-kpi">
+          <div class="kpi-top"><div class="kpi-label">الدورات النشطة</div></div>
+          <div class="kpi-value">234</div>
+          <div class="adash-trend"><span class="delta up">↑ 8%</span><span>مقارنة بالشهر الماضي</span></div>
+        </div>
+        <div class="kpi adash-kpi">
+          <div class="kpi-top"><div class="kpi-label">معدل الإتمام</div></div>
+          <div class="kpi-value">87.4%</div>
+          <div class="adash-trend"><span class="delta down">↓ 1.8%</span><span>مقارنة بالشهر الماضي</span></div>
+        </div>
+        <div class="kpi adash-kpi">
+          <div class="kpi-top"><div class="kpi-label">الإيرادات هذا الشهر</div></div>
+          <div class="kpi-value"><bdi class="adash-num">420K <small>SAR</small></bdi></div>
+          <div class="adash-trend"><span class="delta up">↑ 12.1%</span><span>مقارنة بالشهر الماضي</span></div>
+        </div>
+      </section>
+
+      <!-- ===== Analytics: chart + registrations mix ===== -->
+      <section class="adash-analytics" aria-labelledby="adashAT">
+        <div class="adash-sec-head">
+          <div>
+            <h2 id="adashAT">أداء المنصة</h2>
+            <p id="adashSubtitle">التسجيلات الجديدة: <bdi class="adash-num">Oct 2025 – Sep 2026</bdi></p>
+          </div>
+          <div class="adash-controls">
+            <div class="adash-seg" role="tablist" aria-label="المؤشر" data-seg="metric">
+              <button type="button" role="tab" aria-selected="true" class="on" data-val="reg">التسجيلات الجديدة</button>
+              <button type="button" role="tab" aria-selected="false" data-val="rev">الإيرادات</button>
+              <button type="button" role="tab" aria-selected="false" data-val="comp">معدل الإتمام</button>
+            </div>
+            <div class="adash-seg quiet" role="tablist" aria-label="الفترة الزمنية" data-seg="range">
+              <button type="button" role="tab" aria-selected="false" data-val="7d">7 أيام</button>
+              <button type="button" role="tab" aria-selected="false" data-val="30d">30 يوماً</button>
+              <button type="button" role="tab" aria-selected="true" class="on" data-val="12m">12 شهراً</button>
+            </div>
+          </div>
+        </div>
+        <div class="adash-an-grid">
+          <div class="adash-chart">
+            <div class="adash-stats" id="adashStats">
+              <div><div class="adash-stat-l">الإجمالي للفترة</div><div class="adash-stat-v">13,215</div></div>
+              <div><div class="adash-stat-l">التغيّر خلال الفترة</div><div class="adash-stat-v sm pos">↑ 70.1%</div></div>
+              <div><div class="adash-stat-l">الأعلى</div><div class="adash-stat-v sm">1,395 <bdi class="adash-stat-m adash-num">Sep</bdi></div></div>
+            </div>
+            <div id="adashPlotWrap">
+              <div class="adash-plot" id="adashPlot">
+                <svg viewBox="0 0 760 280" preserveAspectRatio="none" role="img" aria-label="التسجيلات الجديدة — Oct إلى Sep">
+                  <defs><linearGradient id="adashFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--primary-700)" stop-opacity=".16"/><stop offset="1" stop-color="var(--primary-700)" stop-opacity="0"/></linearGradient></defs>
+                  <line x1="16" x2="704" y1="246" y2="246" class="adash-grid"/><text x="714" y="250" class="adash-ytick">800</text>
+                  <line x1="16" x2="704" y1="169.3" y2="169.3" class="adash-grid"/><text x="714" y="173.3" class="adash-ytick">1,000</text>
+                  <line x1="16" x2="704" y1="92.7" y2="92.7" class="adash-grid"/><text x="714" y="96.7" class="adash-ytick">1,200</text>
+                  <line x1="16" x2="704" y1="16" y2="16" class="adash-grid"/><text x="714" y="20" class="adash-ytick">1,400</text>
+                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9 L16.0 246 L704.0 246 Z" fill="url(#adashFill)"/>
+                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9" class="adash-line"/>
+                  <line id="adashCursor" x1="0" x2="0" y1="16" y2="246" class="adash-cursor" style="display:none"/>
+                  <circle cx="16" cy="17.9" r="9" class="adash-halo"/><circle cx="16" cy="17.9" r="4.5" class="adash-dot"/>
+                  <circle id="adashHover" r="4.5" class="adash-hdot" style="display:none"/>
+                  <text x="704" y="270" text-anchor="middle" class="adash-xtick">Oct</text>
+                  <text x="641.5" y="270" text-anchor="middle" class="adash-xtick">Nov</text>
+                  <text x="578.9" y="270" text-anchor="middle" class="adash-xtick">Dec</text>
+                  <text x="516.4" y="270" text-anchor="middle" class="adash-xtick">Jan</text>
+                  <text x="453.8" y="270" text-anchor="middle" class="adash-xtick">Feb</text>
+                  <text x="391.3" y="270" text-anchor="middle" class="adash-xtick">Mar</text>
+                  <text x="328.7" y="270" text-anchor="middle" class="adash-xtick">Apr</text>
+                  <text x="266.2" y="270" text-anchor="middle" class="adash-xtick">May</text>
+                  <text x="203.6" y="270" text-anchor="middle" class="adash-xtick">Jun</text>
+                  <text x="141.1" y="270" text-anchor="middle" class="adash-xtick">Jul</text>
+                  <text x="78.5" y="270" text-anchor="middle" class="adash-xtick">Aug</text>
+                  <text x="16" y="270" text-anchor="middle" class="adash-xtick">Sep</text>
+                  <rect data-i="0" x="672.7" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="1" x="610.2" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="2" x="547.6" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="3" x="485.1" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="4" x="422.5" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="5" x="360.0" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="6" x="297.5" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="7" x="234.9" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="8" x="172.4" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="9" x="109.8" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="10" x="47.3" y="16" width="62.5" height="230" fill="transparent"/>
+                  <rect data-i="11" x="-15.3" y="16" width="62.5" height="230" fill="transparent"/>
+                </svg>
+                <div class="adash-tip" id="adashTip" role="status"></div>
+              </div>
+            </div>
+          </div>
+          <aside class="adash-mix">
+            <h3>التسجيلات حسب نوع البرنامج</h3>
+            <p class="adash-mix-sub">حصة كل نوع من إجمالي التسجيلات</p>
+            <a class="adash-mix-row" href="course-library.html"><span class="adash-mix-n">الدورات التدريبية</span><span class="adash-mix-v">46%</span><span class="adash-bar"><i style="width:100%" class="top"></i></span></a>
+            <a class="adash-mix-row" href="diplomas.html"><span class="adash-mix-n">الدبلومات المهنية</span><span class="adash-mix-v">28%</span><span class="adash-bar"><i style="width:60.9%"></i></span></a>
+            <a class="adash-mix-row" href="fellowships.html"><span class="adash-mix-n">الزمالات المهنية</span><span class="adash-mix-v">14%</span><span class="adash-bar"><i style="width:30.4%"></i></span></a>
+            <a class="adash-mix-row" href="professional-certificates.html"><span class="adash-mix-n">الشهادات الاحترافية</span><span class="adash-mix-v">12%</span><span class="adash-bar"><i style="width:26.1%"></i></span></a>
+            <a class="btn-ghost adash-more" href="reports.html">التقارير التفصيلية ←</a>
+          </aside>
+        </div>
+      </section>
+
+      <div class="adash-bottom">
+        <!-- ===== Latest registrations ===== -->
+        <section class="adash-regs" aria-labelledby="adashRT">
+          <div class="adash-sec-head">
+            <div><h2 id="adashRT">أحدث التسجيلات</h2><p>آخر المستخدمين المسجّلين في البرامج</p></div>
+            <a class="btn-ghost" href="trainees.html">عرض الكل ←</a>
+          </div>
+          <div class="table-card">
+            <table>
+              <thead><tr><th>المستخدم</th><th>البرنامج</th><th>تاريخ التسجيل</th><th>الحالة</th><th><span class="sr-only">الإجراء</span></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><div class="cell-user"><span class="cell-avatar">س‍أ</span><div><div class="adash-u">سارة أحمد</div><div class="adash-meta" dir="ltr">sara.ahmed@email.com</div></div></div></td>
+                  <td>دبلوم الأمن السيبراني</td>
+                  <td><div class="adash-num">16 Sep 2026</div><div class="adash-meta adash-num">10:24 AM</div></td>
+                  <td><span class="pill new">جديد</span></td>
+                  <td style="text-align:end"><a class="mini-btn line" href="trainees.html">عرض</a></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-user"><span class="cell-avatar g">خ‍م</span><div><div class="adash-u">خالد منصور</div><div class="adash-meta" dir="ltr">k.mansour@email.com</div></div></div></td>
+                  <td>تحليل البيانات</td>
+                  <td><div class="adash-num">16 Sep 2026</div><div class="adash-meta adash-num">09:05 AM</div></td>
+                  <td><span class="pill new">جديد</span></td>
+                  <td style="text-align:end"><a class="mini-btn line" href="trainees.html">عرض</a></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-user"><span class="cell-avatar">ر‍ع</span><div><div class="adash-u">ريم العتيبي</div><div class="adash-meta" dir="ltr">r.otaibi@email.com</div></div></div></td>
+                  <td>بكالوريوس علوم الحاسب</td>
+                  <td><div class="adash-num">15 Sep 2026</div><div class="adash-meta adash-num">06:40 PM</div></td>
+                  <td><span class="pill new">جديد</span></td>
+                  <td style="text-align:end"><a class="mini-btn line" href="trainees.html">عرض</a></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-user"><span class="cell-avatar g">ع‍ح</span><div><div class="adash-u">عبدالله حسن</div><div class="adash-meta" dir="ltr">a.hassan@email.com</div></div></div></td>
+                  <td>دبلوم الذكاء الاصطناعي التطبيقي</td>
+                  <td><div class="adash-num">15 Sep 2026</div><div class="adash-meta adash-num">11:12 AM</div></td>
+                  <td><span class="pill ok">مُفعّل</span></td>
+                  <td style="text-align:end"><a class="mini-btn line" href="trainees.html">عرض</a></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-user"><span class="cell-avatar">ن‍ش</span><div><div class="adash-u">نوف الشهري</div><div class="adash-meta" dir="ltr">nouf.s@email.com</div></div></div></td>
+                  <td>إدارة المشاريع الاحترافية</td>
+                  <td><div class="adash-num">14 Sep 2026</div><div class="adash-meta adash-num">03:30 PM</div></td>
+                  <td><span class="pill ok">مُفعّل</span></td>
+                  <td style="text-align:end"><a class="mini-btn line" href="trainees.html">عرض</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== System alerts ===== -->
+        <section class="adash-alerts" aria-labelledby="adashNT">
+          <div class="adash-sec-head"><div><h2 id="adashNT">تنبيهات النظام</h2></div></div>
+          <ul>
+            <li>
+              <span class="adash-ai err"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+              <div class="adash-at"><div>فشل مزامنة Zoom</div><span>3 جلسات لم تتم مزامنتها</span></div>
+              <time class="adash-num">قبل 10 دقائق</time>
+            </li>
+            <li>
+              <span class="adash-ai warn"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span>
+              <div class="adash-at"><div>شهادة SSL تنتهي خلال 14 يوماً</div><span>جدولة التجديد</span></div>
+              <time class="adash-num">أمس</time>
+            </li>
+            <li>
+              <span class="adash-ai info"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>
+              <div class="adash-at"><div>اكتملت النسخة الاحتياطية</div><span>3:00 AM</span></div>
+              <time class="adash-num">أمس</time>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+<div class="sidebar-scrim" id="sidebarScrim"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/data/dashboard.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
