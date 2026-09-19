@@ -41,16 +41,19 @@
     });
   }
 
-  /* ---- Sidebar: off-canvas open/close on mobile ---- */
+  /* ---- Sidebar: off-canvas open/close on tablet + mobile ---- */
+  function setMenu(open) {
+    $('#sidebar').toggleClass('open', open);
+    $('#sidebarScrim').toggleClass('open', open);
+    $('body').toggleClass('menu-open', open);
+    $('#menuToggle').attr('aria-expanded', String(open));
+  }
   function bindMobileSidebar() {
-    $(document).on('click', '#menuToggle', function () {
-      $('#sidebar').addClass('open');
-      $('#sidebarScrim').addClass('open');
-    });
-    $(document).on('click', '#sidebarScrim', function () {
-      $('#sidebar').removeClass('open');
-      $(this).removeClass('open');
-    });
+    $(document).on('click', '#menuToggle', function () { setMenu(!$('#sidebar').hasClass('open')); });
+    $(document).on('click', '#sidebarScrim', function () { setMenu(false); });
+    $(document).on('click', '#sidebar a[href]', function () { setMenu(false); });
+    $(document).on('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    $(window).on('resize', function () { if (window.innerWidth > 1024) setMenu(false); });
   }
 
   /* ---- Topbar: "preview as" role dropdown ---- */

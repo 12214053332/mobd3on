@@ -65,11 +65,13 @@
 
 .page{padding:var(--s-4) var(--s-4) 80px; display:flex; flex-direction:column; gap:var(--s-4); max-width:1440px; width:100%; margin:0 auto;}
 
-/* Manual "collapse sidebar" toggle (desktop icon rail) — mirrors the ≤1024px responsive rail */
-.shell.force-rail{grid-template-columns:84px 1fr;}
-.shell.force-rail .sidebar .brand-name,.shell.force-rail .sidebar .brand-sub,.shell.force-rail .lbl{display:none;}
-.shell.force-rail .sidebar .brand{justify-content:center;padding-inline:8px;}
-.shell.force-rail .nav-item,.shell.force-rail .nav-group>.nav-parent{justify-content:center;padding-inline:8px;}
-.shell.force-rail .nav-item .nav-badge,.shell.force-rail .nav-parent .caret{display:none;}
-.shell.force-rail .nav-children{display:none;}
-.shell.force-rail .collapse-btn{justify-content:center;padding-inline:8px;}
+/* Manual "collapse sidebar" toggle (desktop icon rail); tablet/mobile use the off-canvas menu instead */
+@media(min-width:1025px){
+  .shell.force-rail{grid-template-columns:84px 1fr;}
+  .shell.force-rail .sidebar .brand-name,.shell.force-rail .sidebar .brand-sub,.shell.force-rail .lbl{display:none;}
+  .shell.force-rail .sidebar .brand{justify-content:center;padding-inline:8px;}
+  .shell.force-rail .nav-item,.shell.force-rail .nav-group>.nav-parent{justify-content:center;padding-inline:8px;}
+  .shell.force-rail .nav-item .nav-badge,.shell.force-rail .nav-parent .caret{display:none;}
+  .shell.force-rail .nav-children{display:none;}
+  .shell.force-rail .collapse-btn{justify-content:center;padding-inline:8px;}
+}
