@@ -1,5 +1,6 @@
 /* ===== Data tables ===== */
 .table-card{background:var(--surface); border:1px solid var(--border-guide); border-radius:var(--r-lg); box-shadow:var(--shadow-card); overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;}
+.table-card{position:relative;}
 .table-card::-webkit-scrollbar{height:8px;}
 .table-card::-webkit-scrollbar-thumb{background:var(--border-strong); border-radius:var(--r-full);}
 .table-card::-webkit-scrollbar-track{background:transparent;}

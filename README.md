@@ -49,12 +49,18 @@ al-mubdioun/  (= جذر هذا المستودع)
 │   │   ├── forms.css           (حقول الإدخال، Toggle، Radio Cards، Combo، Dropzone)
 │   │   ├── tables.css          (الجداول + Tree Table)
 │   │   ├── dashboard.css       (تحسينات لوحة السوبر أدمن تحديدًا — .adash-*)
+│   │   ├── users.css           (صفحة عرض المستخدم + الأدوار والصلاحيات)
 │   │   └── responsive.css      (Tablet/Mobile + Off-canvas sidebar على الجوال)
 │   ├── js/
 │   │   ├── app.js              (تفاعلات عامة: القائمة الجانبية، التوب بار، Toast)
 │   │   ├── dashboard.js        (تفاعل الرسم البياني في لوحة السوبر أدمن فقط)
+│   │   ├── user-wizard.js      (معالج «إضافة مستخدم» المشترك)
+│   │   ├── user-table.js       (بحث/فلاتر/أعمدة/تحديد لقوائم المستخدمين)
+│   │   ├── user-view.js        (تبديل تبويبات صفحة عرض المستخدم)
+│   │   ├── roles.js            (درج الأدوار والصلاحيات + الحذف)
 │   │   └── data/
-│   │       └── dashboard.js    (Mock data الخاصة بلوحة السوبر أدمن: ADASH_*)
+│   │       ├── dashboard.js    (Mock data الخاصة بلوحة السوبر أدمن: ADASH_*)
+│   │       └── roles.js        (Mock data الأدوار والصلاحيات)
 │   └── images/                 (شعار المنصة وصور أخرى تُضاف لاحقًا)
 └── README.md
 ```
@@ -76,6 +82,21 @@ al-mubdioun/  (= جذر هذا المستودع)
   ومعالج «إضافة متدرب» بثلاث خطوات (معلومات أساسية بتحقّق من الحقول، معلومات
   إضافية، مراجعة) يُدرج صفاً جديداً فعلياً في الجدول عند الحفظ.
 
+- **[admin/trainers.html](admin/trainers.html)** و **[admin/academic-staff.html](admin/academic-staff.html)** — نفس مكوّن قائمة
+  المستخدمين (بحث، فلاتر، أعمدة، تحديد جماعي) ومعالج الإضافة بحقول خاصة بكل دور
+  (المدرب: التخصص/الخبرة/نبذة/معتمد — الكادر: القسم/الرتبة/مجال الإشراف).
+- **[admin/roles.html](admin/roles.html)** — الأدوار والصلاحيات: جدول الأدوار (السوبر أدمن/الأدوار الأساسية/المخصّصة)،
+  بحث، درج إنشاء/تعديل دور بمصفوفة صلاحيات (عرض/إنشاء/تعديل/حذف لكل وحدة + «تحديد الكل» + طيّ)،
+  الأدوار الأساسية لا يُعدَّل اسمها، وحوار حذف يمنع حذف دور مُسنَد لمستخدمين.
+- **admin/users/*.html** — صفحات «عرض المستخدم» (15 صفحة: `trainee-1…10`، `trainer-1…3`، `academic-1…2`) بنفس تخطيط
+  الـ Prototype: بطاقات إحصاء، 6 تبويبات (نظرة عامة، النشاط، المستندات، الملاحظات، الخط الزمني، الإعدادات) ومحتوى
+  «نظرة عامة» مختلف لكل دور. تُفتح من زر «عرض»/اسم المستخدم/الضغط على الصف في القوائم ومن جدول أحدث التسجيلات في اللوحة.
+
+**الإضافة (Create)** تعمل كنافذة منبثقة (Drawer) كما في الـ Prototype — من كل قائمة، ومن زر «إضافة مستخدم» في لوحة السوبر أدمن
+(وبعد الحفظ من اللوحة يُحوَّل إلى قائمة المتدربين).
+
+**التجاوب:** كل الصفحات مفحوصة على 390px بلا تمرير أفقي للصفحة (الجداول تتمرّر داخل بطاقتها)، والقائمة الجانبية تتحوّل لقائمة منزلقة على الجوال.
+
 جميع البيانات مأخوذة كما هي من الـ Prototype الأصلي (لا حذف لأي بيانات تجريبية).
 
 ### التحقق الذي تم إجراؤه
@@ -93,12 +114,11 @@ al-mubdioun/  (= جذر هذا المستودع)
 القائمة مستخرجة من `ROLES.*.nav` و`BESPOKE` map في الملف الأصلي — لا شيء محذوف.
 
 ### admin/* (السوبر أدمن)
-✅ منجزة: `dashboard.html`، `reports.html`، `trainees.html`
+✅ منجزة: `dashboard.html`، `reports.html`، `trainees.html`، `trainers.html`، `academic-staff.html`، `roles.html` (+ `users/*` صفحات العرض)
 ⏳ متبقية — البرامج التدريبية: `course-library.html`، `diplomas.html`، `fellowships.html`،
 `professional-certificates.html` — التعلم: `waitlist.html`، `placement-exam.html`،
 `course-categories.html`، `virtual-classrooms.html` — الاختبارات: `question-bank.html`،
-`exams.html`، `grading.html` — `certificates.html` — المستخدمون: `trainers.html`،
-`academic-staff.html`، `roles.html` — الإيرادات: `payments.html`، `coupons.html`
+`exams.html`، `grading.html` — `certificates.html` — الإيرادات: `payments.html`، `coupons.html`
 (+ شاشات تفاصيل/Workspace تُبنى مع كل قسم: مثل صفحة تفاصيل دورة، صفحة تفاصيل مستخدم،
 معالج إضافة دورة/مسار/اختبار... إلخ)
 

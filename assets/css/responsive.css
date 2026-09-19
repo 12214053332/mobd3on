@@ -48,3 +48,68 @@
 
 .menu-toggle{display:none; width:40px;height:40px;border-radius:var(--r-md);align-items:center;justify-content:center;color:var(--text-secondary);}
 .menu-toggle:hover{background:var(--surface-hover);}
+
+/* ===== User management pages (lists, workspace, roles) ===== */
+@media(max-width:1200px){
+  .uws-stats{grid-template-columns:repeat(3,1fr);}
+  .uws-mini{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:1024px){
+  .uws-cols{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .page-head{gap:var(--s-2);}
+  .page-head h1{font-size:24px;}
+  .head-actions,.uws-actions{margin-inline-start:0;width:100%;flex-wrap:wrap;}
+  .head-actions .btn,.uws-actions .btn{flex:1 1 auto;justify-content:center;}
+  .toolbar{gap:8px;}
+  .tb-search{width:100%;}
+  .toolbar-end{margin-inline-start:0;width:100%;}
+  .tfoot{flex-wrap:wrap;}
+  .pager{margin-inline-start:0;flex-wrap:wrap;}
+  .bulk-bar{flex-wrap:wrap;}
+  .bulk-bar .bulk-actions{margin-inline-start:0;flex-wrap:wrap;}
+  .uws-name-row h1{font-size:22px;}
+  .uws-avatar{width:52px;height:52px;font-size:18px;}
+  .uws-stats{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .uws-mini{gap:12px;}
+  .uws-cols,.uws-col,.uws-panels{gap:16px;}
+  .kv{flex-direction:column;gap:2px;padding:10px 16px;}
+  .kv .k{width:auto;font-size:12px;}
+  .uws-card-h,.uws-pad,.uws-tl,.rating-hero,.avail-grid,.uws-note{padding-inline:16px;}
+  .table-card.uws-card .row{padding-inline:16px;}
+  .mini-table thead th,.mini-table tbody td{padding-inline:16px;}
+  .avail-grid{gap:4px;}
+  .avail-cell{height:38px;font-size:11px;}
+  .dlg{padding:var(--s-3);}
+  .dr-body{padding:var(--s-2);}
+  .dr-head,.dr-foot{padding-inline:var(--s-2);}
+  .dr-foot{flex-wrap:wrap;}
+  .dr-foot .step-txt{order:3;width:100%;text-align:center;}
+  .grid-2e{grid-template-columns:1fr;}
+  .perm-mod-h{flex-wrap:wrap;}
+  .sec-tabs{margin-bottom:var(--s-2);}
+}
+@media(max-width:480px){
+  .uws-name-row{gap:6px;}
+  .uws-actions .btn{flex:1 1 100%;}
+  .stat-card .sc-v{font-size:22px;}
+}
+
+/* ===== Topbar on small screens: shrink breadcrumb, compact role switch ===== */
+@media(max-width:768px){
+  .topbar{min-width:0;}
+  .crumb{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;}
+  .topbar-cluster{flex-shrink:0;margin-inline-start:0;gap:4px;}
+  .role-switch{font-size:0;padding:0 10px;gap:6px;}
+  .role-switch>span[aria-hidden]{font-size:16px;}
+  .role-menu{position:fixed;top:108px;inset-inline:12px;min-width:0;}
+  .proto-banner{padding-inline:var(--s-2);font-size:12px;}
+}
+@media(max-width:480px){
+  .lang-switch{display:none;}
+}
+@media(max-width:480px){
+  .wz-step:not(.cur) .wz-lbl{display:none;}
+  .wz-steps{padding-inline:var(--s-2);}
+}

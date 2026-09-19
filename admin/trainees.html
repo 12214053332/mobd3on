@@ -14,9 +14,10 @@
 <link rel="stylesheet" href="../assets/css/forms.css">
 <link rel="stylesheet" href="../assets/css/tables.css">
 <link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/users.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body data-navkey="um_trainees">
+<body data-navkey="um_trainees" data-unit="متدرب">
 
 <div class="proto-banner">
   <span aria-hidden="true">🛠</span>
@@ -26,163 +27,162 @@
 <div class="shell">
 
   <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
-  <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
-    <div class="brand">
-      <div class="brand-mark" aria-hidden="true">
-        <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
-      </div>
-      <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+<aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+    </div>
+    <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+  </div>
+
+  <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+    <div class="nav-section">
+      <a class="nav-item" href="dashboard.html" data-key="dash">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+        <span class="lbl">الرئيسية</span>
+      </a>
     </div>
 
-    <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
-      <div class="nav-section">
-        <a class="nav-item" href="dashboard.html" data-key="dash">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
-          <span class="lbl">الرئيسية</span>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-group" data-group="lptrack">
-          <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-            <span class="lbl">البرامج التدريبية</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="nav-children">
-            <a class="nav-child" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
-            <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
-            <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
-            <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label lbl">التعلم</div>
-        <div class="nav-group" data-group="learning">
-          <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
-            <span class="lbl">التعلم</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="nav-children">
-            <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
-            <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
-            <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
-            <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
-          </div>
-        </div>
-        <div class="nav-group" data-group="assess">
-          <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
-            <span class="lbl">الاختبارات وبنك الأسئلة</span>
-            <span class="nav-badge lbl">8</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="nav-children">
-            <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
-            <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
-            <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
-          </div>
-        </div>
-        <a class="nav-item" href="certificates.html" data-key="certs">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
-          <span class="lbl">الشهادات</span>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label lbl">الأشخاص</div>
-        <div class="nav-group" data-group="users">
-          <button type="button" class="nav-parent" data-parent="users" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="lbl">إدارة المستخدمين</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="nav-children">
-            <a class="nav-child" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
-            <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
-            <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
-            <a class="nav-child" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label lbl">الإيرادات</div>
-        <a class="nav-item" href="reports.html" data-key="sales_reports">
+    <div class="nav-section">
+      <div class="nav-group collapsed" data-group="lptrack">
+        <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="false">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-          <span class="lbl">التقارير</span>
-        </a>
-        <a class="nav-item" href="payments.html" data-key="payments">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <span class="lbl">المدفوعات</span>
-        </a>
-        <a class="nav-item" href="coupons.html" data-key="coupons">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
-          <span class="lbl">كوبونات الخصم</span>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label lbl">النمو والمحتوى</div>
-        <div class="nav-group" data-group="website">
-          <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
-            <span class="lbl">إدارة الموقع الإلكتروني</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="nav-children">
-            <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
-            <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
-            <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
-            <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
-            <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
-            <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
-            <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
-            <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
-            <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
-            <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
-          </div>
+          <span class="lbl">البرامج التدريبية</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
+          <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
+          <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
+          <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <button type="button" class="collapse-btn" id="collapseBtn">
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-      <span class="lbl">طيّ القائمة</span>
-    </button>
-  </aside>
+    <div class="nav-section">
+      <div class="nav-label lbl">التعلم</div>
+      <div class="nav-group collapsed" data-group="learning">
+        <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
+          <span class="lbl">التعلم</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
+          <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
+          <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
+          <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+        </div>
+      </div>
+      <div class="nav-group collapsed" data-group="assess">
+        <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+          <span class="lbl">الاختبارات وبنك الأسئلة</span>
+          <span class="nav-badge lbl">8</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
+          <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
+          <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+        </div>
+      </div>
+      <a class="nav-item" href="certificates.html" data-key="certs">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+        <span class="lbl">الشهادات</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الأشخاص</div>
+      <div class="nav-group open" data-group="users">
+        <button type="button" class="nav-parent" data-parent="users" aria-expanded="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="lbl">إدارة المستخدمين</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child active" aria-current="page" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
+          <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
+          <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
+          <a class="nav-child" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الإيرادات</div>
+      <a class="nav-item" href="reports.html" data-key="sales_reports">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        <span class="lbl">التقارير</span>
+      </a>
+      <a class="nav-item" href="payments.html" data-key="payments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <span class="lbl">المدفوعات</span>
+      </a>
+      <a class="nav-item" href="coupons.html" data-key="coupons">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
+        <span class="lbl">كوبونات الخصم</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">النمو والمحتوى</div>
+      <div class="nav-group collapsed" data-group="website">
+        <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+          <span class="lbl">إدارة الموقع الإلكتروني</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
+          <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
+          <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
+          <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
+          <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
+          <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
+          <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
+          <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
+          <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
+          <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <button type="button" class="collapse-btn" id="collapseBtn">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    <span class="lbl">طيّ القائمة</span>
+  </button>
+</aside>
 
   <div class="main">
     <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
     <header class="topbar">
       <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
       <span class="crumb">الرئيسية / الأشخاص / إدارة المستخدمين / <b>المتدربون</b></span>
-      <div class="topbar-cluster">
-        <div class="role-switch-wrap">
-          <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
-            <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
-            <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
-            <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
-            <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
-            <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
-            <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
-          </div>
-        </div>
-        <button type="button" class="lang-switch">EN</button>
-        <button type="button" class="icon-btn" aria-label="الإشعارات">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-          <span class="dot"></span>
-        </button>
-        <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
-      </div>
+      <div class="topbar-cluster"><div class="role-switch-wrap">
+    <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
+      <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+      <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+      <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
+      <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+    </div>
+  </div>
+  <button type="button" class="lang-switch">EN</button>
+  <button type="button" class="icon-btn" aria-label="الإشعارات">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    <span class="dot"></span>
+  </button>
+  <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+</div>
     </header>
 
     <main class="page">
@@ -194,8 +194,8 @@
         </div>
         <div class="head-actions">
           <button type="button" class="btn btn-secondary" id="exportBtn">تصدير</button>
-          <button type="button" class="btn btn-primary" id="addTraineeBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <button type="button" class="btn btn-primary" id="addBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
             إضافة متدرب
           </button>
         </div>
@@ -204,9 +204,9 @@
       <div class="toolbar">
         <label class="tb-search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input type="search" id="traineeSearch" placeholder="ابحث بالاسم أو البريد أو الجوال…">
+          <input type="search" id="userSearch" placeholder="ابحث بالاسم أو البريد أو الجوال…">
         </label>
-        <button type="button" class="chip on" data-filter="all">الكل <span class="chip-x">✕</span></button>
+        <button type="button" class="chip on" data-filter="all">الكل ✕</button>
         <button type="button" class="chip" data-filter="active">نشط</button>
         <button type="button" class="chip" data-filter="suspended">معطّل</button>
         <button type="button" class="chip" data-filter="pending">بانتظار التفعيل</button>
@@ -217,12 +217,12 @@
               الأعمدة
             </button>
             <div class="menu" id="colVisMenu">
-              <button type="button" class="menu-item on" data-col="photo"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>الصورة</button>
-              <button type="button" class="menu-item on" data-col="email"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>البريد الإلكتروني</button>
-              <button type="button" class="menu-item on" data-col="phone"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>الجوال</button>
-              <button type="button" class="menu-item on" data-col="status"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>الحالة</button>
-              <button type="button" class="menu-item on" data-col="created"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>تاريخ الإنشاء</button>
-              <button type="button" class="menu-item on" data-col="last"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/></svg></span>آخر تسجيل دخول</button>
+              <button type="button" class="menu-item on" data-col="photo"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>الصورة</button>
+              <button type="button" class="menu-item on" data-col="email"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>البريد الإلكتروني</button>
+              <button type="button" class="menu-item on" data-col="phone"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>الجوال</button>
+              <button type="button" class="menu-item on" data-col="status"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>الحالة</button>
+              <button type="button" class="menu-item on" data-col="created"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>تاريخ الإنشاء</button>
+              <button type="button" class="menu-item on" data-col="last"><span class="cbx"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>آخر تسجيل دخول</button>
             </div>
           </div>
           <button type="button" class="tb-btn" id="exportBtn2">تصدير</button>
@@ -231,8 +231,8 @@
 
       <div id="bulkBar"></div>
 
-      <div class="table-card" id="traineeTableCard">
-        <table id="traineeTable">
+      <div class="table-card" id="userTableCard">
+        <table id="userTable">
           <thead>
             <tr>
               <th data-col="cbx" style="width:44px"><span class="cbx-cell" id="umSelAll"></span></th>
@@ -246,11 +246,11 @@
               <th data-col="actions" style="text-align:end">الإجراءات</th>
             </tr>
           </thead>
-          <tbody id="traineeTbody">
-                <tr data-id="1" data-status="active">
+          <tbody id="userTbody">
+                <tr data-id="1" data-status="active" data-href="users/trainee-1.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="1"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ن‍ش</span></td>
-                  <td data-col="name"><span class="cell-name">نورة الشهري</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-1.html">نورة الشهري</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">noura.s@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 50 111 2233</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -258,18 +258,14 @@
                   <td data-col="last" class="mono">قبل ساعة</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-1.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="2" data-status="active">
+                <tr data-id="2" data-status="active" data-href="users/trainee-2.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="2"></span></td>
                   <td data-col="photo"><span class="cell-avatar">م‍ع</span></td>
-                  <td data-col="name"><span class="cell-name">محمد العمري</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-2.html">محمد العمري</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">m.omari@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 55 222 3344</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -277,18 +273,14 @@
                   <td data-col="last" class="mono">أمس</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-2.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="3" data-status="suspended">
+                <tr data-id="3" data-status="suspended" data-href="users/trainee-3.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="3"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ر‍ق</span></td>
-                  <td data-col="name"><span class="cell-name">ريم القحطاني</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-3.html">ريم القحطاني</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">reem.q@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 53 333 4455</td>
                   <td data-col="status"><span class="pill archived">معطّل</span></td>
@@ -296,18 +288,14 @@
                   <td data-col="last" class="mono">قبل أسبوع</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-3.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="4" data-status="active">
+                <tr data-id="4" data-status="active" data-href="users/trainee-4.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="4"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ف‍د</span></td>
-                  <td data-col="name"><span class="cell-name">فهد الدوسري</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-4.html">فهد الدوسري</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">fahd.d@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 56 444 5566</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -315,18 +303,14 @@
                   <td data-col="last" class="mono">قبل 3 أيام</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-4.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="5" data-status="pending">
+                <tr data-id="5" data-status="pending" data-href="users/trainee-5.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="5"></span></td>
                   <td data-col="photo"><span class="cell-avatar">س‍م</span></td>
-                  <td data-col="name"><span class="cell-name">سارة المطيري</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-5.html">سارة المطيري</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">sara.m@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 50 555 6677</td>
                   <td data-col="status"><span class="pill warn">بانتظار التفعيل</span></td>
@@ -334,18 +318,14 @@
                   <td data-col="last" class="mono">لم يسجّل بعد</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-5.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="6" data-status="active">
+                <tr data-id="6" data-status="active" data-href="users/trainee-6.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="6"></span></td>
                   <td data-col="photo"><span class="cell-avatar">س‍أ</span></td>
-                  <td data-col="name"><span class="cell-name">سارة أحمد</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-6.html">سارة أحمد</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">sara.ahmed@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 50 612 3401</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -353,18 +333,14 @@
                   <td data-col="last" class="mono">اليوم</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-6.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="7" data-status="active">
+                <tr data-id="7" data-status="active" data-href="users/trainee-7.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="7"></span></td>
                   <td data-col="photo"><span class="cell-avatar">خ‍م</span></td>
-                  <td data-col="name"><span class="cell-name">خالد منصور</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-7.html">خالد منصور</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">k.mansour@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 55 713 2290</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -372,18 +348,14 @@
                   <td data-col="last" class="mono">اليوم</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-7.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="8" data-status="active">
+                <tr data-id="8" data-status="active" data-href="users/trainee-8.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="8"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ر‍ع</span></td>
-                  <td data-col="name"><span class="cell-name">ريم العتيبي</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-8.html">ريم العتيبي</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">r.otaibi@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 53 810 4452</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -391,18 +363,14 @@
                   <td data-col="last" class="mono">أمس</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-8.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="9" data-status="active">
+                <tr data-id="9" data-status="active" data-href="users/trainee-9.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="9"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ع‍ح</span></td>
-                  <td data-col="name"><span class="cell-name">عبدالله حسن</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-9.html">عبدالله حسن</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">a.hassan@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 56 904 1187</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -410,18 +378,14 @@
                   <td data-col="last" class="mono">أمس</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-9.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
-                <tr data-id="10" data-status="active">
+                <tr data-id="10" data-status="active" data-href="users/trainee-10.html">
                   <td data-col="cbx"><span class="cbx-cell um-cbx" data-id="10"></span></td>
                   <td data-col="photo"><span class="cell-avatar">ن‍ش</span></td>
-                  <td data-col="name"><span class="cell-name">نوف الشهري</span></td>
+                  <td data-col="name"><a class="cell-name" href="users/trainee-10.html">نوف الشهري</a></td>
                   <td data-col="email" dir="ltr" style="text-align:start">nouf.s@email.com</td>
                   <td data-col="phone" class="mono" dir="ltr" style="text-align:start">+966 50 318 7765</td>
                   <td data-col="status"><span class="pill ok">نشط</span></td>
@@ -429,11 +393,7 @@
                   <td data-col="last" class="mono">قبل يومين</td>
                   <td data-col="actions" style="text-align:end">
                     <div class="row-act">
-                      <button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
-                      <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
-                      <button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button>
-                      <button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button>
-                      <button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
+                      <a class="act-btn" href="users/trainee-10.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a><button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button><button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/></svg></button><button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></button><button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></button>
                     </div>
                   </td>
                 </tr>
@@ -449,13 +409,18 @@
           </nav>
         </div>
       </div>
+      <div class="empty" id="userEmpty" hidden>
+        <div class="empty-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h2>لا نتائج مطابقة</h2>
+        <p>جرّب تعديل كلمة البحث أو الفلتر المحدد.</p>
+      </div>
 
     </main>
   </div>
 </div>
 <div class="sidebar-scrim" id="sidebarScrim"></div>
 
-<!-- ===== Add User Wizard (reusable — role is implicit: "trainee" on this page) ===== -->
+<!-- ===== Add User Wizard (reusable — role is implicit: "المتدرب" on this page) ===== -->
 <div class="scrim" id="uwScrim"></div>
 <aside class="drawer" id="uwDrawer" role="dialog" aria-modal="true" aria-label="إضافة متدرب">
   <div class="dr-head">
@@ -477,7 +442,6 @@
   </div>
 
   <div class="dr-body">
-    <!-- Step 1: basic info -->
     <div class="uw-step" data-step="0">
       <div class="uw-note">سيُضاف هذا المستخدم كـ «المتدرب»</div>
       <div class="field">
@@ -520,7 +484,6 @@
       </div>
     </div>
 
-    <!-- Step 2: role-specific extra info (trainee) -->
     <div class="uw-step" data-step="1" hidden>
       <div class="uw-note">الحقول الإضافية للدور: المتدرب</div>
       <div class="grid-2e">
@@ -540,7 +503,6 @@
       </div>
     </div>
 
-    <!-- Step 3: review -->
     <div class="uw-step" data-step="2" hidden>
       <h3 class="uw-review-title">مراجعة البيانات</h3>
       <p class="uw-review-sub">تأكّد من صحة المعلومات قبل الحفظ.</p>
@@ -567,9 +529,8 @@
 </aside>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="../assets/js/data/trainees.js"></script>
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/user-wizard.js"></script>
-<script src="../assets/js/trainees.js"></script>
+<script src="../assets/js/user-table.js"></script>
 </body>
 </html>

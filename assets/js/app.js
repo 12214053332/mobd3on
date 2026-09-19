@@ -102,8 +102,29 @@
     }, 3200);
   };
 
+  /* ---- Toggle switches (.toggle) ---- */
+  function bindToggles() {
+    $(document).on('click', '.toggle', function () {
+      var on = !$(this).hasClass('on');
+      $(this).toggleClass('on', on).attr('aria-checked', String(on));
+    });
+    $(document).on('keydown', '.toggle', function (e) {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); $(this).trigger('click'); }
+    });
+  }
+
+  /* ---- Any element with data-toast="..." shows a toast on click ---- */
+  function bindToastButtons() {
+    $(document).on('click', '[data-toast]', function (e) {
+      e.preventDefault();
+      App.toast($(this).data('toast'), $(this).data('toast-sub'));
+    });
+  }
+
   $(function () {
     markActiveNav();
+    bindToggles();
+    bindToastButtons();
     bindNavGroups();
     bindCollapseBtn();
     bindMobileSidebar();
