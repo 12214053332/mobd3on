@@ -1067,6 +1067,15 @@ input,textarea,select{
        column-gap:0.5rem;
 }
 
+.gap-x-6{
+  -moz-column-gap:1.5rem;
+       column-gap:1.5rem;
+}
+
+.gap-y-1{
+  row-gap:0.25rem;
+}
+
 .gap-y-1\.5{
   row-gap:0.375rem;
 }
@@ -1836,6 +1845,10 @@ input,textarea,select{
 .text-white{
   --tw-text-opacity:1;
   color:rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.accent-primary-700{
+  accent-color:var(--primary-700);
 }
 
 .opacity-0{
