@@ -1,423 +1,408 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الأدوار والصلاحيات — مركز المبدعون</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/variables.css">
-<link rel="stylesheet" href="../assets/css/base.css">
-<link rel="stylesheet" href="../assets/css/layout.css">
-<link rel="stylesheet" href="../assets/css/components.css">
-<link rel="stylesheet" href="../assets/css/forms.css">
-<link rel="stylesheet" href="../assets/css/tables.css">
-<link rel="stylesheet" href="../assets/css/dashboard.css">
-<link rel="stylesheet" href="../assets/css/users.css">
-<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tailwind.css">
 </head>
-<body data-navkey="um_roles">
+<body data-navkey="um_roles" class="d1024:[&.menu-open]:overflow-hidden">
 
-<div class="proto-banner">
+<div class="py-2 gap-2.5 bg-primary-900 text-gold-100 text-[13px] font-medium flex items-center d768:px-4 d768:text-[12px] u1025:px-8 d1024:px-8">
   <span aria-hidden="true">🛠</span>
-  <span><b>وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
+  <span><b class="text-gold-500">وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
 </div>
 
-<div class="shell">
+<div class="shell grid grid-cols-[280px_1fr] min-h-[calc(100vh_-_37px)] d1024:block [&.force-rail]:grid-cols-[84px_1fr] d1024:[&.force-rail]:grid-cols-[280px_1fr]">
 
   <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
-<aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
-  <div class="brand">
-    <div class="brand-mark" aria-hidden="true">
-      <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+<aside class="sidebar top-0 border-e border-e-guide bg-surface flex flex-col sticky h-[calc(100vh_-_37px)] z-20 d1024:bottom-0 d1024:start-0 d1024:fixed d1024:h-dvh d1024:z-[70] d1024:w-[min(300px,86vw)] d1024:[transform:translateX(100%)] d1024:[transition:transform_.24s_ease,_visibility_0s_linear_.24s] d1024:shadow-lg d1024:invisible d1024:[&.open]:[transition:transform_.24s_ease,_visibility_0s] d1024:[&.open]:visible d1024:[html[dir=rtl]_&.open]:[transform:translateX(0)] d1024:[html[dir=rtl]_&.open]:[transition:transform_.24s_ease,_visibility_0s] d1024:[html[dir=rtl]_&.open]:visible" id="sidebar" aria-label="التنقل الرئيسي">
+  <div class="py-5 px-6 gap-3 border-b border-b-guide flex items-center u1025:[.shell.force-rail_.sidebar_&]:px-2 u1025:[.shell.force-rail_.sidebar_&]:justify-center">
+    <div class="h-12 shrink-0 grid place-items-center" aria-hidden="true">
+      <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'" class="h-12 w-auto block">
     </div>
-    <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+    <div><div class="text-[16px] font-bold leading-[1.3] u1025:[.shell.force-rail_.sidebar_&]:hidden u1025:[.shell.force-rail_&]:hidden">مركز المبدعون</div><div class="text-[12px] text-gold-600 font-medium u1025:[.shell.force-rail_.sidebar_&]:hidden u1025:[.shell.force-rail_&]:hidden">منصة التعليم والتدريب</div></div>
   </div>
 
-  <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
-    <div class="nav-section">
-      <a class="nav-item" href="dashboard.html" data-key="dash">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
-        <span class="lbl">الرئيسية</span>
+  <nav class="px-4 pt-4 pb-6 flex-1 overflow-y-auto" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+    <div class="mb-[18px]">
+      <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="dashboard.html" data-key="dash">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"></path><path d="M5 10v10h14V10"></path></svg>
+        <span class="u1025:[.shell.force-rail_&]:hidden">الرئيسية</span>
       </a>
     </div>
 
-    <div class="nav-section">
+    <div class="mb-[18px]">
       <div class="nav-group collapsed" data-group="lptrack">
-        <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="false">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-          <span class="lbl">البرامج التدريبية</span>
-          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="lptrack" aria-expanded="false">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">البرامج التدريبية</span>
+          <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <div class="nav-children">
-          <a class="nav-child" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
-          <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
-          <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
-          <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
+        <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="course-library.html" data-key="course_lib"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الدورات التدريبية</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="diplomas.html" data-key="lp_diplomas"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الدبلومات المهنية</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="fellowships.html" data-key="lp_fellowships"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الزمالات المهنية</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="professional-certificates.html" data-key="lp_procerts"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الشهادات الاحترافية</a>
         </div>
       </div>
     </div>
 
-    <div class="nav-section">
-      <div class="nav-label lbl">التعلم</div>
+    <div class="mb-[18px]">
+      <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">التعلم</div>
       <div class="nav-group collapsed" data-group="learning">
-        <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
-          <span class="lbl">التعلم</span>
-          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="learning" aria-expanded="false">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">التعلم</span>
+          <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <div class="nav-children">
-          <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
-          <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
-          <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
-          <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+        <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="waitlist.html" data-key="waitlist"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>قائمة الانتظار</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="placement-exam.html" data-key="placement"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>اختبار تحديد المستوى</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="course-categories.html" data-key="coursecats"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>تصنيفات الدورات</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="virtual-classrooms.html" data-key="vclasses"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الفصول الافتراضية</a>
         </div>
       </div>
       <div class="nav-group collapsed" data-group="assess">
-        <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
-          <span class="lbl">الاختبارات وبنك الأسئلة</span>
-          <span class="nav-badge lbl">8</span>
-          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="assess" aria-expanded="false">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"></path><rect x="4" y="3" width="16" height="18" rx="2"></rect></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">الاختبارات وبنك الأسئلة</span>
+          <span class="ms-auto py-0.5 px-2 rounded-full bg-error-bg text-error-700 text-[12px] font-bold u1025:[.shell.force-rail_&]:hidden">8</span>
+          <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <div class="nav-children">
-          <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
-          <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
-          <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+        <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="question-bank.html" data-key="qbank"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>بنك الأسئلة</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="exams.html" data-key="exams"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الاختبارات</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="grading.html" data-key="grading"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>التصحيح والنتائج</a>
         </div>
       </div>
-      <a class="nav-item" href="certificates.html" data-key="certs">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
-        <span class="lbl">الشهادات</span>
+      <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="certificates.html" data-key="certs">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg>
+        <span class="u1025:[.shell.force-rail_&]:hidden">الشهادات</span>
       </a>
     </div>
 
-    <div class="nav-section">
-      <div class="nav-label lbl">الأشخاص</div>
+    <div class="mb-[18px]">
+      <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">الأشخاص</div>
       <div class="nav-group open" data-group="users">
-        <button type="button" class="nav-parent" data-parent="users" aria-expanded="true">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <span class="lbl">إدارة المستخدمين</span>
-          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="users" aria-expanded="true">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">إدارة المستخدمين</span>
+          <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <div class="nav-children">
-          <a class="nav-child" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
-          <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
-          <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
-          <a class="nav-child active" aria-current="page" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+        <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="trainees.html" data-key="um_trainees"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المتدربون</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="trainers.html" data-key="um_trainers"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المدربون</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="academic-staff.html" data-key="um_academic"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الكادر الأكاديمي</a>
+          <a class="nav-child active mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" aria-current="page" href="roles.html" data-key="um_roles"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الأدوار والصلاحيات</a>
         </div>
       </div>
     </div>
 
-    <div class="nav-section">
-      <div class="nav-label lbl">الإيرادات</div>
-      <a class="nav-item" href="reports.html" data-key="sales_reports">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-        <span class="lbl">التقارير</span>
+    <div class="mb-[18px]">
+      <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">الإيرادات</div>
+      <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="reports.html" data-key="sales_reports">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+        <span class="u1025:[.shell.force-rail_&]:hidden">التقارير</span>
       </a>
-      <a class="nav-item" href="payments.html" data-key="payments">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-        <span class="lbl">المدفوعات</span>
+      <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="payments.html" data-key="payments">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
+        <span class="u1025:[.shell.force-rail_&]:hidden">المدفوعات</span>
       </a>
-      <a class="nav-item" href="coupons.html" data-key="coupons">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
-        <span class="lbl">كوبونات الخصم</span>
+      <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="coupons.html" data-key="coupons">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"></path><circle cx="7.5" cy="7.5" r="1.3"></circle></svg>
+        <span class="u1025:[.shell.force-rail_&]:hidden">كوبونات الخصم</span>
       </a>
     </div>
 
-    <div class="nav-section">
-      <div class="nav-label lbl">النمو والمحتوى</div>
+    <div class="mb-[18px]">
+      <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">النمو والمحتوى</div>
       <div class="nav-group collapsed" data-group="website">
-        <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
-          <span class="lbl">إدارة الموقع الإلكتروني</span>
-          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="website" aria-expanded="false">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">إدارة الموقع الإلكتروني</span>
+          <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <div class="nav-children">
-          <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
-          <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
-          <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
-          <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
-          <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
-          <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
-          <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
-          <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
-          <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
-          <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+        <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/dashboard.html" data-key="web_dash"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>لوحة الموقع</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/home.html" data-key="web_home"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الصفحة الرئيسية</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/programs.html" data-key="web_programs"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>البرامج</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/pages.html" data-key="web_pages"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>صفحات الموقع</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/blog.html" data-key="web_blog"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المدونة والأخبار</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/media.html" data-key="web_media"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المكتبة الإعلامية</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/forms.html" data-key="web_forms"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>النماذج</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/navigation.html" data-key="web_nav"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>التنقل والقوائم</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/policies.html" data-key="web_policies"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>السياسات والامتثال</a>
+          <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/settings.html" data-key="web_settings"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>إعدادات الموقع</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <button type="button" class="collapse-btn" id="collapseBtn">
-    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-    <span class="lbl">طيّ القائمة</span>
+  <button type="button" class="py-3.5 px-6 gap-3 border-t border-t-guide flex items-center text-ink-3 text-[14px] font-medium w-full d1024:hidden hover:text-ink hover:bg-surface-hover u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center" id="collapseBtn">
+    <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+    <span class="u1025:[.shell.force-rail_&]:hidden">طيّ القائمة</span>
   </button>
 </aside>
 
-  <div class="main">
+  <div class="flex flex-col min-w-0">
     <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
-    <header class="topbar">
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
-  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <header class="py-0 px-8 top-0 gap-4 border-b border-b-guide h-16 bg-surface flex items-center sticky z-30 d768:px-4 d768:gap-2 d768:min-w-0">
+      <button type="button" class="rounded-md hidden w-10 h-10 items-center justify-center text-ink-2 d1024:grid hover:bg-surface-hover" id="menuToggle" aria-label="فتح القائمة">
+  <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
 </button>
-      <span class="crumb">الرئيسية / الأشخاص / إدارة المستخدمين / <b>الأدوار والصلاحيات</b></span>
-      <div class="topbar-cluster"><div class="role-switch-wrap">
-    <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
-      <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
-      <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <span class="text-[13px] text-ink-3 font-medium whitespace-nowrap d768:overflow-hidden d768:flex-1 d768:min-w-0 d768:text-ellipsis">الرئيسية / الأشخاص / إدارة المستخدمين / <b class="text-ink-2 font-bold">الأدوار والصلاحيات</b></span>
+      <div class="ms-auto gap-2 flex items-center d768:ms-0 d768:gap-1 d768:shrink-0"><div class="relative">
+    <button type="button" class="role-switch py-0 px-3.5 gap-2 border-[1.5px] border-dashed border-gold-500 rounded-md flex items-center h-10 bg-gold-50 text-[13px] font-bold text-gold-600 whitespace-nowrap d768:px-2.5 d768:gap-1.5 d768:text-[0] hover:bg-gold-100 focus-visible:[outline:2px_solid_var(--gold-500)] focus-visible:outline-offset-[2px]" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span aria-hidden="true" class="d768:text-[16px]">👁</span> معاينة كـ: <span class="cur [.role-switch_&.cur]:text-primary-700 d768:[.role-switch_&.cur]:hidden">السوبر أدمن</span>
+      <svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
-    <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
-      <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
-      <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
-      <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
-      <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
-      <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+    <div class="p-2 top-[calc(100%_+_8px)] start-0 border border-guide rounded-lg absolute min-w-[250px] bg-surface shadow-md z-50 hidden d768:top-[108px] d768:start-3 d768:end-3 d768:fixed d768:min-w-0 [&.open]:block" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+      <div class="mb-1.5 px-2.5 pt-1.5 pb-2.5 border-b border-b-guide text-[11px] text-ink-3 leading-[1.6]">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+      <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>المتدرب<small class="block text-[11px] text-ink-3 font-normal">بوابة تعلم</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+      <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>المدرب<small class="block text-[11px] text-ink-3 font-normal">أنشطته التدريبية</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+      <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>الكادر الأكاديمي<small class="block text-[11px] text-ink-3 font-normal">الجودة والاعتماد</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+      <a class="role-opt on p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="dashboard.html" role="option"><span>السوبر أدمن<small class="block text-[11px] text-ink-3 font-normal">إدارة المنصة</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
     </div>
   </div>
-  <button type="button" class="lang-switch">EN</button>
-  <button type="button" class="icon-btn" aria-label="الإشعارات">
-    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-    <span class="dot"></span>
+  <button type="button" class="py-0 px-3 gap-1.5 border border-edge rounded-md flex items-center h-10 text-[14px] font-medium text-ink-2 d480:hidden">EN</button>
+  <button type="button" class="rounded-md w-10 h-10 grid place-items-center text-ink-2 relative hover:text-ink hover:bg-surface-hover" aria-label="الإشعارات">
+    <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg>
+    <span class="top-2 end-2 border-2 border-surface rounded-full absolute w-2 h-2 bg-error-700"></span>
   </button>
-  <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+  <button type="button" class="rounded-md w-10 h-10 grid place-items-center text-ink-2 relative hover:text-ink hover:bg-surface-hover" aria-label="الحساب"><span class="rounded-full w-9 h-9 grid place-items-center text-[13px] font-bold bg-primary-700 text-gold-100">ع‍ش</span></button>
 </div>
     </header>
 
-    <main class="page">
+    <main class="my-0 mx-auto px-8 pt-8 pb-20 gap-8 flex flex-col max-w-[1440px] w-full d768:px-4 d768:pt-4 d768:pb-16">
 
-      <div class="page-head">
+      <div class="gap-6 flex items-start flex-wrap d768:gap-4">
         <div>
-          <h1>الأدوار والصلاحيات</h1>
-          <p class="page-desc">إدارة الأدوار وتحديد الصلاحيات الممنوحة لكل دور داخل المنصة.</p>
+          <h1 class="text-[28px] font-bold leading-[1.4] d768:text-[24px]">الأدوار والصلاحيات</h1>
+          <p class="mt-1 text-[15px] text-ink-2">إدارة الأدوار وتحديد الصلاحيات الممنوحة لكل دور داخل المنصة.</p>
         </div>
-        <div class="head-actions">
-          <button type="button" class="btn btn-primary" id="createRoleBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        <div class="ms-auto gap-3 flex d768:ms-0 d768:w-full d768:flex-wrap">
+          <button type="button" class="py-0 px-5 gap-2 rounded-md h-11 text-[15px] font-bold inline-flex items-center bg-primary-700 text-white d768:flex-auto d768:justify-center focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-primary-600" id="createRoleBtn" data-popup-open="#roleDrawer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
             إنشاء دور
           </button>
         </div>
       </div>
 
-      <div class="toolbar">
-        <label class="tb-search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input type="search" id="roleSearch" placeholder="ابحث في الأدوار...">
+      <div class="toolbar gap-3 flex items-center flex-wrap d768:gap-2">
+        <label class="py-0 px-3.5 gap-2.5 border border-edge rounded-md flex items-center bg-surface h-11 w-80 text-ink-3 text-[14px] d768:w-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+          <input type="search" id="roleSearch" placeholder="ابحث في الأدوار..." class="flex-1 border-0 [outline:none] text-[14px] bg-transparent text-ink">
         </label>
       </div>
 
-      <div class="table-card">
-        <table id="roleTable">
+      <div class="table-card border border-guide rounded-lg bg-surface shadow-card overflow-x-auto overflow-y-hidden [-webkit-overflow-scrolling:touch] relative [scrollbar-width:thin] [scrollbar-color:var(--border-strong)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-edge-strong [&::-webkit-scrollbar-track]:bg-transparent">
+        <table id="roleTable" class="w-full min-w-[820px] border-collapse text-[14px]">
           <thead>
-            <tr><th>اسم الدور</th><th>وصف الدور</th><th>عدد المستخدمين</th><th>عدد الصلاحيات</th><th>آخر تعديل</th><th>الحالة</th><th style="text-align:end">الإجراءات</th></tr>
+            <tr><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">اسم الدور</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">وصف الدور</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">عدد المستخدمين</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">عدد الصلاحيات</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">آخر تعديل</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-start whitespace-nowrap">الحالة</th><th class="py-3 px-4 border-b border-b-guide bg-primary-50 text-ink-2 text-[13px] font-bold text-end whitespace-nowrap">الإجراءات</th></tr>
           </thead>
           <tbody id="roleTbody">
-            <tr data-id="superadmin">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><b class="js-name">السوبر أدمن</b></div></td>
-              <td class="role-desc js-desc">وصول كامل لكل الوحدات</td>
-              <td class="mono js-users">2</td>
-              <td class="mono js-perms">39</td>
-              <td class="mono js-updated">اليوم</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><span class="pill neutral">دور نظام</span></td>
+            <tr data-id="superadmin" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg></span><b>السوبر أدمن</b></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">وصول كامل لكل الوحدات</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">2</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">39</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">اليوم</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 border border-edge rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-surface-hover text-ink-2">دور نظام</span></td>
             </tr>
-            <tr data-id="trainee">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span><b class="js-name">المتدربون</b> <span class="pill neutral">دور أساسي</span></div></td>
-              <td class="role-desc js-desc">الالتحاق بالبرامج والدورات ومتابعة التقدم الدراسي</td>
-              <td class="mono js-users">12847</td>
-              <td class="mono js-perms">4</td>
-              <td class="mono js-updated">اليوم</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><button type="button" class="mini-btn line" data-role-edit>إدارة الصلاحيات</button></td>
+            <tr data-id="trainee" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span><b>المتدربون</b> <span class="pill py-[3px] px-3 border border-edge rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-surface-hover text-ink-2">دور أساسي</span></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">الالتحاق بالبرامج والدورات ومتابعة التقدم الدراسي</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">12847</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">4</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">اليوم</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-popup-open="#roleDrawer">إدارة الصلاحيات</button></td>
             </tr>
-            <tr data-id="trainer">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span><b class="js-name">المدربون</b> <span class="pill neutral">دور أساسي</span></div></td>
-              <td class="role-desc js-desc">تقديم الدورات والجلسات المباشرة</td>
-              <td class="mono js-users">89</td>
-              <td class="mono js-perms">10</td>
-              <td class="mono js-updated">منذ أسبوع</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><button type="button" class="mini-btn line" data-role-edit>إدارة الصلاحيات</button></td>
+            <tr data-id="trainer" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span><b>المدربون</b> <span class="pill py-[3px] px-3 border border-edge rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-surface-hover text-ink-2">دور أساسي</span></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">تقديم الدورات والجلسات المباشرة</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">89</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">10</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">منذ أسبوع</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-popup-open="#roleDrawer">إدارة الصلاحيات</button></td>
             </tr>
-            <tr data-id="academic">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span><b class="js-name">الكادر الأكاديمي</b> <span class="pill neutral">دور أساسي</span></div></td>
-              <td class="role-desc js-desc">الإشراف ومراجعة الجودة والاعتماد</td>
-              <td class="mono js-users">34</td>
-              <td class="mono js-perms">7</td>
-              <td class="mono js-updated">منذ 3 أيام</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><button type="button" class="mini-btn line" data-role-edit>إدارة الصلاحيات</button></td>
+            <tr data-id="academic" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span><b>الكادر الأكاديمي</b> <span class="pill py-[3px] px-3 border border-edge rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-surface-hover text-ink-2">دور أساسي</span></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">الإشراف ومراجعة الجودة والاعتماد</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">34</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">7</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">منذ 3 أيام</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-popup-open="#roleDrawer">إدارة الصلاحيات</button></td>
             </tr>
-            <tr data-id="sales_mgr">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span><b class="js-name">مدير المبيعات</b></div></td>
-              <td class="role-desc js-desc">إدارة المبيعات والعملاء والتقارير</td>
-              <td class="mono js-users">8</td>
-              <td class="mono js-perms">7</td>
-              <td class="mono js-updated">اليوم</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><div class="row-actions-inline"><button type="button" class="mini-btn line" data-role-edit>تعديل</button><button type="button" class="mini-btn line danger-line" data-role-del>حذف</button></div></td>
+            <tr data-id="sales_mgr" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span><b>مدير المبيعات</b></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">إدارة المبيعات والعملاء والتقارير</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">8</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">7</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">اليوم</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><div class="gap-2 flex justify-end"><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-popup-open="#roleDrawer">تعديل</button><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border text-error-700 [&.solid]:bg-primary-700 [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed hover:border-error-700" data-popup-open="#roleDelScrim">حذف</button></div></td>
             </tr>
-            <tr data-id="sales_rep">
-              <td><div class="role-name-cell"><span class="row-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span><b class="js-name">مندوب المبيعات</b></div></td>
-              <td class="role-desc js-desc">متابعة العملاء المحتملين</td>
-              <td class="mono js-users">8</td>
-              <td class="mono js-perms">4</td>
-              <td class="mono js-updated">أمس</td>
-              <td><span class="pill ok">نشط</span></td>
-              <td class="js-actions" style="text-align:end"><div class="row-actions-inline"><button type="button" class="mini-btn line" data-role-edit>تعديل</button><button type="button" class="mini-btn line danger-line" data-role-del>حذف</button></div></td>
+            <tr data-id="sales_rep" class="[tbody_&:hover]:bg-surface-hover">
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><div class="gap-2.5 flex items-center flex-wrap"><span class="row-avatar rounded-full w-[34px] h-[34px] shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span><b>مندوب المبيعات</b></div></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-ink-2 min-w-[220px] max-w-[340px] [tbody_tr:last-child_&]:border-b-0">متابعة العملاء المحتملين</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">8</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">4</td>
+              <td class="mono py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0 [&.mono]:text-ink-2">أمس</td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle [tbody_tr:last-child_&]:border-b-0"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">نشط</span></td>
+              <td class="py-3 px-4 border-b border-b-guide align-middle text-end [tbody_tr:last-child_&]:border-b-0"><div class="gap-2 flex justify-end"><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-popup-open="#roleDrawer">تعديل</button><button type="button" class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border text-error-700 [&.solid]:bg-primary-700 [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed hover:border-error-700" data-popup-open="#roleDelScrim">حذف</button></div></td>
             </tr>
           </tbody>
         </table>
-        <div class="tfoot"><span>عرض <b id="roleShown">6</b> من <b id="roleTotal">6</b> دور</span></div>
+        <div class="py-3.5 px-4 gap-4 border-t border-t-guide flex items-center text-[13px] text-ink-2 d768:flex-wrap"><span>عرض <b id="roleShown">6</b> من <b id="roleTotal">6</b> دور</span></div>
       </div>
-      <div class="empty roles-empty" id="roleEmpty" hidden>
-        <div class="empty-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></div>
-        <h2 style="font-size:16px">لا أدوار مطابقة</h2>
-        <p>جرّب تعديل كلمة البحث.</p>
+      <div class="py-16 px-8 gap-3.5 border border-guide rounded-lg bg-surface shadow-none text-center flex flex-col items-center [&[hidden]]:hidden" id="roleEmpty" hidden="">
+        <div class="rounded-lg w-[72px] h-[72px] bg-primary-50 text-primary-600 grid place-items-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></div>
+        <h2 class="text-[16px] font-bold">لا أدوار مطابقة</h2>
+        <p class="text-[14px] text-ink-2 max-w-[420px] leading-[1.7]">جرّب تعديل كلمة البحث.</p>
       </div>
 
     </main>
   </div>
 </div>
-<div class="sidebar-scrim" id="sidebarScrim"></div>
+<div class="d1024:inset-0 d1024:fixed d1024:bg-[rgba(19,41,37,.4)] d1024:z-[65] d1024:opacity-0 d1024:pointer-events-none d1024:[transition:opacity_.2s] d1024:[&.open]:opacity-100 d1024:[&.open]:pointer-events-auto" id="sidebarScrim"></div>
 
 <!-- ===== Create / Edit role drawer (permissions live here) ===== -->
-<div class="scrim" id="roleScrim"></div>
-<aside class="drawer" id="roleDrawer" role="dialog" aria-modal="true" aria-label="إنشاء دور">
-  <div class="dr-head"><h2 id="roleDrTitle">إنشاء دور جديد</h2><div class="dr-head-actions"><button type="button" class="dr-icon-btn" id="roleClose" aria-label="إغلاق">✕</button></div></div>
-  <div class="dr-body">
-    <div class="perm-section-label">المعلومات الأساسية</div>
+<div class="scrim inset-0 fixed bg-[rgba(19,41,37,.4)] z-[60] opacity-0 pointer-events-none [transition:opacity_.2s] [&.open]:opacity-100 [&.open]:pointer-events-auto" id="roleScrim"></div>
+<aside class="drawer inset-y-0 left-0 right-auto fixed w-[620px] max-w-[96vw] bg-canvas z-[61] shadow-[0_12px_40px_rgba(19,41,37,.18)] [transform:translateX(-100%)] [transition:transform_.24s_ease,width_.24s_ease] flex flex-col invisible pointer-events-none d768:w-screen d768:max-w-[100vw] [&.open]:[transform:translateX(0)] [&.open]:visible [&.open]:pointer-events-auto [&.full]:w-screen [&.full]:max-w-[100vw]" id="roleDrawer" role="dialog" aria-modal="true" aria-label="إنشاء دور">
+  <div class="py-6 gap-3 border-b border-b-guide bg-surface flex items-center u1025:px-8 d1024:px-8 d768:px-4"><h2 id="roleDrTitle" class="text-[20px] font-bold">إنشاء دور جديد</h2><div class="ms-auto gap-1.5 flex items-center"><button type="button" class="rounded-md w-[38px] h-[38px] grid place-items-center text-ink-2 hover:text-ink hover:bg-surface-hover" data-popup-close="" aria-label="إغلاق">✕</button></div></div>
+  <div class="dr-body p-8 flex-1 overflow-y-auto d768:p-4 [.drawer.full_&]:my-0 [.drawer.full_&]:mx-auto [.drawer.full_&]:max-w-[900px] [.drawer.full_&]:w-full">
+    <div class="mb-2.5 text-[13px] font-bold text-ink-2">المعلومات الأساسية</div>
 
-    <div class="role-basic" id="roleBasicCore" hidden>
-      <div class="wb-ref-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg> <span>هذا دور أساسي في النظام — لا يمكن حذفه أو تغيير اسمه، ويمكن فقط تعديل الصلاحيات الممنوحة له.</span></div>
-      <div class="field"><label class="field-label">اسم الدور</label><input class="inp" id="roleCoreName" disabled></div>
-      <div class="field"><label class="field-label">وصف الدور</label><textarea class="inp" id="roleCoreDesc" disabled></textarea></div>
+    <div class="[&[hidden]]:hidden" id="roleBasicCustom">
+      <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">اسم الدور <span class="text-error-700">*</span></label><input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700 disabled:bg-surface-hover disabled:text-ink-2 disabled:cursor-not-allowed" id="role_name" placeholder="مثال: مدير المبيعات"></div>
+      <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">وصف الدور</label><textarea class="py-3 px-3.5 border border-edge rounded-md w-full h-auto text-[14px] bg-surface text-ink min-h-[88px] resize-y leading-[1.7] focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700 disabled:bg-surface-hover disabled:text-ink-2 disabled:cursor-not-allowed" id="role_desc" placeholder="أدخل وصفاً مختصراً للدور ومسؤولياته"></textarea></div>
     </div>
 
-    <div class="role-basic" id="roleBasicCustom">
-      <div class="field"><label class="field-label">اسم الدور <span class="req">*</span></label><input class="inp" id="role_name" placeholder="مثال: مدير المبيعات"><div class="inp-error" id="err_roleName">هذا الحقل مطلوب</div></div>
-      <div class="field"><label class="field-label">وصف الدور</label><textarea class="inp" id="role_desc" placeholder="أدخل وصفاً مختصراً للدور ومسؤولياته"></textarea></div>
-    </div>
+    <div class="mx-0 mt-8 mb-4 pt-6 border-t border-t-guide text-[16px] font-bold">الصلاحيات</div>
+    <div class="mt-[5px] mb-3 text-[12px] text-ink-3 leading-[1.6]">حدّد الوحدات التي يمكن لهذا الدور الوصول إليها والإجراءات المسموح بها في كل وحدة.</div>
 
-    <div class="divider-label">الصلاحيات</div>
-    <div class="field-hint" style="margin-bottom:12px">حدّد الوحدات التي يمكن لهذا الدور الوصول إليها والإجراءات المسموح بها في كل وحدة.</div>
-
-      <div class="set-card perm-mod" data-mod="dash">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg></span>
-          <span style="font-weight:700">لوحة التحكم</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="dash">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"></path><path d="M5 10v10h14V10"></path></svg></span>
+          <span class="font-bold">لوحة التحكم</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip on py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="courses">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg></span>
-          <span style="font-weight:700">الدورات</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="courses">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"></path></svg></span>
+          <span class="font-bold">الدورات</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip on py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip on py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="paths">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></span>
-          <span style="font-weight:700">المسارات التعليمية</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="paths">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg></span>
+          <span class="font-bold">المسارات التعليمية</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="placement">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>
-          <span style="font-weight:700">اختبار تحديد المستوى</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="placement">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"></path><rect x="4" y="3" width="16" height="18" rx="2"></rect></svg></span>
+          <span class="font-bold">اختبار تحديد المستوى</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="coursecats">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg></span>
-          <span style="font-weight:700">تصنيفات الدورات</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="coursecats">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"></path></svg></span>
+          <span class="font-bold">تصنيفات الدورات</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="vclasses">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
-          <span style="font-weight:700">الفصول الافتراضية</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="vclasses">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg></span>
+          <span class="font-bold">الفصول الافتراضية</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="exams">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>
-          <span style="font-weight:700">الاختبارات وبنك الأسئلة</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="exams">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"></path><rect x="4" y="3" width="16" height="18" rx="2"></rect></svg></span>
+          <span class="font-bold">الاختبارات وبنك الأسئلة</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="certs">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></span>
-          <span style="font-weight:700">الشهادات</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="certs">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg></span>
+          <span class="font-bold">الشهادات</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="users">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          <span style="font-weight:700">إدارة المستخدمين</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="users">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+          <span class="font-bold">إدارة المستخدمين</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="crm">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
-          <span style="font-weight:700">إدارة المبيعات والعملاء</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="crm">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="9"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg></span>
+          <span class="font-bold">إدارة المبيعات والعملاء</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="create">إنشاء</button><button type="button" class="chip" data-act="edit">تعديل</button><button type="button" class="chip" data-act="delete">حذف</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="create">إنشاء</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="delete">حذف</button></div>
       </div>
-      <div class="set-card perm-mod" data-mod="payments">
-        <div class="set-card-h perm-mod-h">
-          <span class="mc-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
-          <span style="font-weight:700">المدفوعات</span>
-          <button type="button" class="mini-btn line" data-all>تحديد الكل</button>
-          <svg class="perm-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="perm-mod mb-2.5 overflow-hidden border border-guide rounded-lg bg-surface" data-mod="payments">
+        <div class="set-card-h py-3.5 px-5 gap-2.5 border-b border-b-guide text-[15px] font-bold flex items-center cursor-pointer d768:flex-wrap">
+          <span class="rounded-sm w-[26px] h-[26px] bg-surface-hover grid place-items-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></span>
+          <span class="font-bold">المدفوعات</span>
+          <button type="button" class="line ms-auto py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" data-all="">تحديد الكل</button>
+          <svg class="ms-2 text-ink-3 [transition:transform_.15s] [transform:rotate(180deg)] [.perm-mod.collapsed_&]:[transform:none]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
-        <div class="set-card-b perm-chips"><button type="button" class="chip" data-act="view">عرض</button><button type="button" class="chip" data-act="edit">تعديل</button></div>
+        <div class="set-card-b py-4 px-5 gap-2 flex flex-wrap [.perm-mod.collapsed_&]:hidden"><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="view">عرض</button><button type="button" class="chip py-0 px-3.5 gap-1.5 border border-edge rounded-full h-9 text-[13px] font-bold inline-flex items-center text-ink-2 bg-surface [&.on]:border-primary-700 [&.on]:text-white [&.on]:bg-primary-700" data-act="edit">تعديل</button></div>
       </div>
   </div>
-  <div class="dr-foot"><button type="button" class="btn btn-secondary" id="roleCancel">إلغاء</button><div class="end"><button type="button" class="btn btn-primary" id="roleSave">حفظ الدور</button></div></div>
+  <div class="py-4 bottom-0 gap-3 border-t border-t-guide bg-surface flex items-center sticky u1025:px-8 d1024:px-8 d768:px-4 d768:flex-wrap"><button type="button" class="py-0 px-5 gap-2 border border-edge rounded-md h-11 text-[15px] font-medium inline-flex items-center bg-surface text-primary-700 focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:border-primary-500 hover:bg-primary-50" data-popup-close="">إلغاء</button><div class="ms-auto gap-2.5 flex"><button type="button" class="py-0 px-5 gap-2 rounded-md h-11 text-[15px] font-bold inline-flex items-center bg-primary-700 text-white focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-primary-600" data-popup-close="">حفظ الدور</button></div></div>
 </aside>
 
 <!-- ===== Delete role confirmation ===== -->
-<div class="dlg-scrim" id="roleDelScrim"><div class="dlg" style="max-width:480px">
-  <div class="dlg-ico danger"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></div>
-  <h3>حذف الدور؟</h3>
-  <p>هل أنت متأكد من حذف هذا الدور؟ لا يمكن التراجع عن هذا الإجراء.</p>
-  <div class="dlg-warn" id="roleDelWarn" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>هذا الدور مُسنَد حالياً إلى <b id="roleDelCount">0</b> مستخدماً. يجب إعادة تعيينهم إلى دور آخر قبل الحذف.</span></div>
-  <div class="dlg-actions"><button type="button" class="btn btn-secondary" id="roleDelNo">إلغاء</button><button type="button" class="btn btn-danger" id="roleDelYes">حذف الدور</button></div>
+<div class="dlg-scrim inset-0 fixed bg-[rgba(19,41,37,.45)] z-[80] opacity-0 pointer-events-none [transition:opacity_.2s] grid place-items-center [&.open]:opacity-100 [&.open]:pointer-events-auto" id="roleDelScrim"><div class="p-8 rounded-xl bg-surface shadow-lg w-[460px] max-w-[480px] [transform:scale(.97)] [transition:transform_.2s] d768:p-6 [.dlg-scrim.open_&]:[transform:scale(1)]">
+  <div class="mb-4 rounded-full w-[52px] h-[52px] bg-error-bg text-error-700 grid place-items-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"></path></svg></div>
+  <h3 class="mb-2 text-[19px] font-bold">حذف الدور؟</h3>
+  <p class="mb-6 text-[14px] text-ink-2 leading-[1.7]">هل أنت متأكد من حذف هذا الدور؟ لا يمكن التراجع عن هذا الإجراء.</p>
+  <div class="dlg-actions gap-2.5 flex flex-wrap"><button type="button" class="py-0 px-5 gap-2 border border-edge rounded-md h-11 text-[15px] font-medium inline-flex items-center bg-surface text-primary-700 focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:border-primary-500 hover:bg-primary-50 [.dlg-actions_&[disabled]]:opacity-50 [.dlg-actions_&[disabled]]:cursor-not-allowed" data-popup-close="">إلغاء</button><button type="button" class="py-0 px-5 gap-2 rounded-md h-11 text-[15px] font-bold inline-flex items-center bg-error-700 text-white focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [.dlg-actions_&[disabled]]:opacity-50 [.dlg-actions_&[disabled]]:cursor-not-allowed hover:bg-[#963126]" data-popup-close="">حذف الدور</button></div>
 </div></div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="../assets/js/data/roles.js"></script>
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/popups.js"></script>
 <script src="../assets/js/roles.js"></script>
-</body>
-</html>
+
+
+</body></html>

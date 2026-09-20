@@ -1,5 +1,6 @@
 /* Shared behavior for the user-management list pages (trainees / trainers / academic staff).
-   The page's table, toolbar and add-user drawer are real HTML; this file only reacts to them.
+   The page's table and toolbar are real HTML; this file only reacts to them.
+   The add-user drawer is static HTML that popups.js opens and closes.
    Per-page settings come from <body data-unit="متدرب" data-view-base="users/trainee-">. */
 (function ($) {
   'use strict';
@@ -8,17 +9,6 @@
   var TOGGLABLE_COLS = ['photo', 'email', 'phone', 'status', 'created', 'last'];
   var unit = document.body.getAttribute('data-unit') || 'مستخدم';
   var activeStatus = 'all';
-
-  var ICONS = {
-    view: '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>',
-    edit: '<path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
-    toggle: '<path d="M18.36 6.64A9 9 0 1 1 5.64 6.64M12 2v10"/>',
-    reset: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
-    del: '<path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/>'
-  };
-  function icon(name) {
-    return '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICONS[name] + '</svg>';
-  }
 
   /* ---- search + status filter ---- */
   function applyFilters() {
@@ -60,12 +50,12 @@
     var n = selected.size;
     if (!n) { $('#bulkBar').empty(); return; }
     var $bar = $(
-      '<div class="bulk-bar"><span class="cnt"></span><div class="bulk-actions">' +
-        '<button type="button" class="bulk-btn" data-bulk="تفعيل">تفعيل</button>' +
-        '<button type="button" class="bulk-btn" data-bulk="تعطيل">تعطيل</button>' +
-        '<button type="button" class="bulk-btn" data-bulk="تصدير">تصدير</button>' +
-        '<button type="button" class="bulk-btn danger" data-bulk="حذف">حذف</button>' +
-        '<button type="button" class="bulk-btn" id="bulkClear">إلغاء التحديد</button>' +
+      '<div class="bulk-bar mb-4 py-2.5 px-4 gap-3 rounded-lg flex items-center bg-primary-800 text-white d768:flex-wrap"><span class="cnt text-[14px] font-bold"></span><div class="bulk-actions ms-auto gap-2 flex d768:ms-0 d768:flex-wrap">' +
+        '<button type="button" class="bulk-btn py-0 px-3.5 gap-1.5 rounded-md h-[34px] text-[13px] font-bold bg-[rgba(255,255,255,.12)] text-white inline-flex items-center hover:bg-[rgba(255,255,255,.2)]" data-bulk="تفعيل">تفعيل</button>' +
+        '<button type="button" class="bulk-btn py-0 px-3.5 gap-1.5 rounded-md h-[34px] text-[13px] font-bold bg-[rgba(255,255,255,.12)] text-white inline-flex items-center hover:bg-[rgba(255,255,255,.2)]" data-bulk="تعطيل">تعطيل</button>' +
+        '<button type="button" class="bulk-btn py-0 px-3.5 gap-1.5 rounded-md h-[34px] text-[13px] font-bold bg-[rgba(255,255,255,.12)] text-white inline-flex items-center hover:bg-[rgba(255,255,255,.2)]" data-bulk="تصدير">تصدير</button>' +
+        '<button type="button" class="bulk-btn py-0 px-3.5 gap-1.5 rounded-md h-[34px] text-[13px] font-bold bg-[rgba(255,255,255,.12)] text-white inline-flex items-center hover:bg-error-700" data-bulk="حذف">حذف</button>' +
+        '<button type="button" class="bulk-btn py-0 px-3.5 gap-1.5 rounded-md h-[34px] text-[13px] font-bold bg-[rgba(255,255,255,.12)] text-white inline-flex items-center hover:bg-[rgba(255,255,255,.2)]" id="bulkClear">إلغاء التحديد</button>' +
       '</div></div>'
     );
     $bar.find('.cnt').text(n + ' محدد');
@@ -125,40 +115,6 @@
         App.toast('تم حذف المستخدم', name);
       }
     });
-    $(document).on('click', '#userTbody tr[data-href]', function (e) {
-      if ($(e.target).closest('a, button, .cbx-cell').length) return;
-      window.location.href = $(this).data('href');
-    });
-  }
-
-  /* ---- new row after the add-user wizard saves ---- */
-  function addRowToTable(u) {
-    var $row = $(
-      '<tr data-id="' + u.id + '" data-status="pending">' +
-        '<td data-col="cbx"><span class="cbx-cell um-cbx" data-id="' + u.id + '"></span></td>' +
-        '<td data-col="photo"><span class="cell-avatar"></span></td>' +
-        '<td data-col="name"><span class="cell-name"></span></td>' +
-        '<td data-col="email" dir="ltr" style="text-align:start"></td>' +
-        '<td data-col="phone" class="mono" dir="ltr" style="text-align:start"></td>' +
-        '<td data-col="status"><span class="pill warn">بانتظار التفعيل</span></td>' +
-        '<td data-col="created" class="mono">الآن</td>' +
-        '<td data-col="last" class="mono">لم يسجّل بعد</td>' +
-        '<td data-col="actions" style="text-align:end"><div class="row-act">' +
-          '<button type="button" class="act-btn" title="عرض" aria-label="عرض" data-action="view">' + icon('view') + '</button>' +
-          '<button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-action="edit">' + icon('edit') + '</button>' +
-          '<button type="button" class="act-btn" title="تعطيل/تفعيل" aria-label="تعطيل أو تفعيل" data-action="toggle">' + icon('toggle') + '</button>' +
-          '<button type="button" class="act-btn" title="إعادة تعيين كلمة المرور" aria-label="إعادة تعيين كلمة المرور" data-action="reset">' + icon('reset') + '</button>' +
-          '<button type="button" class="act-btn act-danger" title="حذف" aria-label="حذف" data-action="delete">' + icon('del') + '</button>' +
-        '</div></td>' +
-      '</tr>'
-    );
-    $row.find('.cell-avatar').text(u.av);
-    $row.find('.cell-name').text(u.name);
-    $row.find('[data-col="email"]').text(u.email);
-    $row.find('[data-col="phone"]').text(u.phone || '—');
-    $('#userTbody').prepend($row);
-    $('#tfootTotal').text($('#userTbody > tr').length);
-    applyFilters();
   }
 
   $(function () {
@@ -172,8 +128,6 @@
     bindColumnVisibility();
     bindSelection();
     bindRowActions();
-    $('#addBtn').on('click', UserWizard.open);
-    UserWizard.onSave(addRowToTable);
     $('#exportBtn, #exportBtn2').on('click', function () {
       App.toast('تم تجهيز ملف التصدير', 'سيبدأ التنزيل تلقائياً');
     });

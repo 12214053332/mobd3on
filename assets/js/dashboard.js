@@ -33,13 +33,13 @@
     for (var k = 0; k < gridCount; k++) {
       var v = mn + step * k, yy = y(v);
       var label = metric === 'comp' ? (+v.toFixed(1)) + '%' : metric === 'rev' ? (+v.toFixed(1)) + 'K' : v.toLocaleString('en-US');
-      grid += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + yy + '" y2="' + yy + '" class="adash-grid"/>' +
-              '<text x="' + (W - pr + 10) + '" y="' + (yy + 4) + '" class="adash-ytick">' + label + '</text>';
+      grid += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + yy + '" y2="' + yy + '" class="adash-grid stroke-guide stroke-1 [stroke-dasharray:3_4] [vector-effect:non-scaling-stroke]"/>' +
+              '<text x="' + (W - pr + 10) + '" y="' + (yy + 4) + '" class="adash-ytick text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">' + label + '</text>';
     }
 
     var xl = S.labels.map(function (l, i) {
       var show = (i % S.every === 0 || i === n - 1) && !(S.every > 1 && i !== n - 1 && n - 1 - i < S.every / 2);
-      return show ? '<text x="' + x(i) + '" y="' + (H - 10) + '" text-anchor="middle" class="adash-xtick">' + l + '</text>' : '';
+      return show ? '<text x="' + x(i) + '" y="' + (H - 10) + '" text-anchor="middle" class="adash-xtick text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">' + l + '</text>' : '';
     }).join('');
 
     var last = pts[n - 1];
@@ -53,21 +53,21 @@
     var peak = Math.max.apply(null, S.values), peakI = S.values.indexOf(peak);
 
     var statsHtml =
-        '<div><div class="adash-stat-l">' + (M.sum ? 'الإجمالي للفترة' : 'القيمة الحالية') + '</div><div class="adash-stat-v">' + M.fmt(total) + '</div></div>' +
-        '<div><div class="adash-stat-l">التغيّر خلال الفترة</div><div class="adash-stat-v sm ' + (ch >= 0 ? 'pos' : 'neg') + '">' + (ch >= 0 ? '↑' : '↓') + ' ' + Math.abs(ch).toFixed(1) + '%</div></div>' +
-        '<div><div class="adash-stat-l">الأعلى</div><div class="adash-stat-v sm">' + M.fmt(peak) + ' <bdi class="adash-stat-m adash-num">' + S.labels[peakI] + '</bdi></div></div>';
+        '<div><div class="adash-stat-l text-[12px] text-ink-3">' + (M.sum ? 'الإجمالي للفترة' : 'القيمة الحالية') + '</div><div class="adash-stat-v mt-0.5 text-[28px] font-bold tabular-nums">' + M.fmt(total) + '</div></div>' +
+        '<div><div class="adash-stat-l text-[12px] text-ink-3">التغيّر خلال الفترة</div><div class="adash-stat-v mt-2 text-[20px] font-bold tabular-nums ' + (ch >= 0 ? 'text-primary-700' : 'text-error-700') + '">' + (ch >= 0 ? '↑' : '↓') + ' ' + Math.abs(ch).toFixed(1) + '%</div></div>' +
+        '<div><div class="adash-stat-l text-[12px] text-ink-3">الأعلى</div><div class="adash-stat-v mt-2 text-[20px] font-bold tabular-nums">' + M.fmt(peak) + ' <bdi class="adash-num [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] font-medium text-ink-3">' + S.labels[peakI] + '</bdi></div></div>';
 
     var svgHtml =
-      '<div class="adash-plot" id="adashPlot">' +
-        '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="' + M.t + ' — ' + S.labels[0] + ' إلى ' + S.labels[n - 1] + '">' +
+      '<div class="adash-plot relative h-[280px] d820:h-[220px]" id="adashPlot">' +
+        '<svg viewBox="0 0 ' + W + ' ' + H + '" class="overflow-visible w-full h-full block" preserveAspectRatio="none" role="img" aria-label="' + M.t + ' — ' + S.labels[0] + ' إلى ' + S.labels[n - 1] + '">' +
           '<defs><linearGradient id="adashFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--primary-700)" stop-opacity=".16"/><stop offset="1" stop-color="var(--primary-700)" stop-opacity="0"/></linearGradient></defs>' +
-          grid + '<path d="' + area + '" fill="url(#adashFill)"/><path d="' + line + '" class="adash-line"/>' +
-          '<line id="adashCursor" x1="0" x2="0" y1="' + pt + '" y2="' + (H - pb) + '" class="adash-cursor" style="display:none"/>' +
-          '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="9" class="adash-halo"/><circle cx="' + last[0] + '" cy="' + last[1] + '" r="4.5" class="adash-dot"/>' +
-          '<circle id="adashHover" r="4.5" class="adash-hdot" style="display:none"/>' +
+          grid + '<path d="' + area + '" fill="url(#adashFill)"/><path d="' + line + '" class="adash-line fill-none stroke-primary-700 stroke-[2.5] [stroke-linejoin:round] [stroke-linecap:round] [vector-effect:non-scaling-stroke]"/>' +
+          '<line id="adashCursor" x1="0" x2="0" y1="' + pt + '" y2="' + (H - pb) + '" class="adash-cursor stroke-edge-strong stroke-1 [vector-effect:non-scaling-stroke]" style="display:none"/>' +
+          '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="9" class="adash-halo fill-gold-500 opacity-25"/><circle cx="' + last[0] + '" cy="' + last[1] + '" r="4.5" class="adash-dot fill-gold-500 stroke-white stroke-2"/>' +
+          '<circle id="adashHover" r="4.5" class="adash-hdot fill-white stroke-primary-700 stroke-2" style="display:none"/>' +
           xl + hits +
         '</svg>' +
-        '<div class="adash-tip" id="adashTip" role="status"></div>' +
+        '<div class="adash-tip py-1.5 px-2.5 gap-2.5 rounded-md absolute [transform:translate(-50%,calc(-100%_-_12px))] bg-primary-900 text-white text-[12px] flex items-baseline whitespace-nowrap pointer-events-none opacity-0 [transition:opacity_.12s]" id="adashTip" role="status"></div>' +
       '</div>';
 
     return { statsHtml: statsHtml, svgHtml: svgHtml, W: W, H: H, series: S, metric: M };
@@ -86,7 +86,7 @@
     });
 
     var S = built.series;
-    $('#adashSubtitle').html(built.metric.t + ': <bdi class="adash-num">' + S.span[0] + ' – ' + S.span[1] + '</bdi>');
+    $('#adashSubtitle').html(built.metric.t + ': <bdi class="adash-num [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">' + S.span[0] + ' – ' + S.span[1] + '</bdi>');
   }
 
   $(function () {
@@ -119,7 +119,7 @@
       var $tip = $('#adashTip'), $cur = $('#adashCursor'), $hd = $('#adashHover');
       $cur.attr({ x1: p.x, x2: p.x }).show();
       $hd.attr({ cx: p.x, cy: p.y }).show();
-      $tip.html('<b>' + M.fmt(S.values[i]) + '</b><span>' + S.labels[i] + '</span>');
+      $tip.html('<b class="text-[14px]">' + M.fmt(S.values[i]) + '</b><span class="text-gold-100 opacity-[.85]">' + S.labels[i] + '</span>');
       $tip.css({ left: (p.x / p.W * rect.width) + 'px', top: (p.y / p.H * rect.height) + 'px', opacity: 1 });
     });
     $(document).on('mouseleave', '#adashPlot', function () {

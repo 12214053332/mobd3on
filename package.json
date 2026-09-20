@@ -1,0 +1,12 @@
+{
+  "name": "al-mubdioun-frontend",
+  "private": true,
+  "description": "Static HTML prototype styled with Tailwind CSS. Pages open directly from file:// — the compiled stylesheet is committed.",
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.src.css -o assets/css/tailwind.css",
+    "watch": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.src.css -o assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

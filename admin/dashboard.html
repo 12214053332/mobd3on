@@ -1,364 +1,356 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الرئيسية — مركز المبدعون</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/variables.css">
-<link rel="stylesheet" href="../assets/css/base.css">
-<link rel="stylesheet" href="../assets/css/layout.css">
-<link rel="stylesheet" href="../assets/css/components.css">
-<link rel="stylesheet" href="../assets/css/forms.css">
-<link rel="stylesheet" href="../assets/css/tables.css">
-<link rel="stylesheet" href="../assets/css/dashboard.css">
-<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tailwind.css">
 </head>
-<body data-navkey="dash">
+<body data-navkey="dash" class="d1024:[&.menu-open]:overflow-hidden">
 
-<div class="proto-banner">
+<div class="py-2 gap-2.5 bg-primary-900 text-gold-100 text-[13px] font-medium flex items-center d768:px-4 d768:text-[12px] u1025:px-8 d1024:px-8">
   <span aria-hidden="true">🛠</span>
-  <span><b>وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
+  <span><b class="text-gold-500">وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
 </div>
 
-<div class="shell">
+<div class="shell grid grid-cols-[280px_1fr] min-h-[calc(100vh_-_37px)] d1024:block [&.force-rail]:grid-cols-[84px_1fr] d1024:[&.force-rail]:grid-cols-[280px_1fr]">
 
   <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
-  <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
-    <div class="brand">
-      <div class="brand-mark" aria-hidden="true">
-        <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+  <aside class="sidebar top-0 border-e border-e-guide bg-surface flex flex-col sticky h-[calc(100vh_-_37px)] z-20 d1024:bottom-0 d1024:start-0 d1024:fixed d1024:h-dvh d1024:z-[70] d1024:w-[min(300px,86vw)] d1024:[transform:translateX(100%)] d1024:[transition:transform_.24s_ease,_visibility_0s_linear_.24s] d1024:shadow-lg d1024:invisible d1024:[&.open]:[transition:transform_.24s_ease,_visibility_0s] d1024:[&.open]:visible d1024:[html[dir=rtl]_&.open]:[transform:translateX(0)] d1024:[html[dir=rtl]_&.open]:[transition:transform_.24s_ease,_visibility_0s] d1024:[html[dir=rtl]_&.open]:visible" id="sidebar" aria-label="التنقل الرئيسي">
+    <div class="py-5 px-6 gap-3 border-b border-b-guide flex items-center u1025:[.shell.force-rail_.sidebar_&]:px-2 u1025:[.shell.force-rail_.sidebar_&]:justify-center">
+      <div class="h-12 shrink-0 grid place-items-center" aria-hidden="true">
+        <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'" class="h-12 w-auto block">
       </div>
-      <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+      <div><div class="text-[16px] font-bold leading-[1.3] u1025:[.shell.force-rail_.sidebar_&]:hidden u1025:[.shell.force-rail_&]:hidden">مركز المبدعون</div><div class="text-[12px] text-gold-600 font-medium u1025:[.shell.force-rail_.sidebar_&]:hidden u1025:[.shell.force-rail_&]:hidden">منصة التعليم والتدريب</div></div>
     </div>
 
-    <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
-      <div class="nav-section">
-        <a class="nav-item" href="dashboard.html" data-key="dash">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
-          <span class="lbl">الرئيسية</span>
+    <nav class="px-4 pt-4 pb-6 flex-1 overflow-y-auto" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+      <div class="mb-[18px]">
+        <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="dashboard.html" data-key="dash">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"></path><path d="M5 10v10h14V10"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">الرئيسية</span>
         </a>
       </div>
 
-      <div class="nav-section">
+      <div class="mb-[18px]">
         <div class="nav-group collapsed" data-group="lptrack">
-          <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-            <span class="lbl">البرامج التدريبية</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="lptrack" aria-expanded="false">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+            <span class="u1025:[.shell.force-rail_&]:hidden">البرامج التدريبية</span>
+            <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
           </button>
-          <div class="nav-children">
-            <a class="nav-child" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
-            <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
-            <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
-            <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
+          <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="course-library.html" data-key="course_lib"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الدورات التدريبية</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="diplomas.html" data-key="lp_diplomas"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الدبلومات المهنية</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="fellowships.html" data-key="lp_fellowships"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الزمالات المهنية</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="professional-certificates.html" data-key="lp_procerts"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الشهادات الاحترافية</a>
           </div>
         </div>
       </div>
 
-      <div class="nav-section">
-        <div class="nav-label lbl">التعلم</div>
+      <div class="mb-[18px]">
+        <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">التعلم</div>
         <div class="nav-group collapsed" data-group="learning">
-          <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
-            <span class="lbl">التعلم</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="learning" aria-expanded="false">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"></path></svg>
+            <span class="u1025:[.shell.force-rail_&]:hidden">التعلم</span>
+            <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
           </button>
-          <div class="nav-children">
-            <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
-            <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
-            <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
-            <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+          <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="waitlist.html" data-key="waitlist"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>قائمة الانتظار</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="placement-exam.html" data-key="placement"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>اختبار تحديد المستوى</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="course-categories.html" data-key="coursecats"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>تصنيفات الدورات</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="virtual-classrooms.html" data-key="vclasses"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الفصول الافتراضية</a>
           </div>
         </div>
         <div class="nav-group collapsed" data-group="assess">
-          <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
-            <span class="lbl">الاختبارات وبنك الأسئلة</span>
-            <span class="nav-badge lbl">8</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="assess" aria-expanded="false">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"></path><rect x="4" y="3" width="16" height="18" rx="2"></rect></svg>
+            <span class="u1025:[.shell.force-rail_&]:hidden">الاختبارات وبنك الأسئلة</span>
+            <span class="ms-auto py-0.5 px-2 rounded-full bg-error-bg text-error-700 text-[12px] font-bold u1025:[.shell.force-rail_&]:hidden">8</span>
+            <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
           </button>
-          <div class="nav-children">
-            <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
-            <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
-            <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+          <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="question-bank.html" data-key="qbank"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>بنك الأسئلة</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="exams.html" data-key="exams"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الاختبارات</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="grading.html" data-key="grading"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>التصحيح والنتائج</a>
           </div>
         </div>
-        <a class="nav-item" href="certificates.html" data-key="certs">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
-          <span class="lbl">الشهادات</span>
+        <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="certificates.html" data-key="certs">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">الشهادات</span>
         </a>
       </div>
 
-      <div class="nav-section">
-        <div class="nav-label lbl">الأشخاص</div>
+      <div class="mb-[18px]">
+        <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">الأشخاص</div>
         <div class="nav-group collapsed" data-group="users">
-          <button type="button" class="nav-parent" data-parent="users" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="lbl">إدارة المستخدمين</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="users" aria-expanded="false">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span class="u1025:[.shell.force-rail_&]:hidden">إدارة المستخدمين</span>
+            <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
           </button>
-          <div class="nav-children">
-            <a class="nav-child" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
-            <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
-            <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
-            <a class="nav-child" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+          <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="trainees.html" data-key="um_trainees"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المتدربون</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="trainers.html" data-key="um_trainers"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المدربون</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="academic-staff.html" data-key="um_academic"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الكادر الأكاديمي</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="roles.html" data-key="um_roles"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الأدوار والصلاحيات</a>
           </div>
         </div>
       </div>
 
-      <div class="nav-section">
-        <div class="nav-label lbl">الإيرادات</div>
-        <a class="nav-item" href="reports.html" data-key="sales_reports">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-          <span class="lbl">التقارير</span>
+      <div class="mb-[18px]">
+        <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">الإيرادات</div>
+        <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="reports.html" data-key="sales_reports">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">التقارير</span>
         </a>
-        <a class="nav-item" href="payments.html" data-key="payments">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <span class="lbl">المدفوعات</span>
+        <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="payments.html" data-key="payments">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">المدفوعات</span>
         </a>
-        <a class="nav-item" href="coupons.html" data-key="coupons">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
-          <span class="lbl">كوبونات الخصم</span>
+        <a class="nav-item mb-0.5 py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-medium text-ink-2 relative min-h-11 text-start hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center [&.active]:before:inset-y-2 [&.active]:before:-start-4 [&.active]:before:rounded-full [&.active]:before:content-[''] [&.active]:before:absolute [&.active]:before:w-[3px] [&.active]:before:bg-primary-700" href="coupons.html" data-key="coupons">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"></path><circle cx="7.5" cy="7.5" r="1.3"></circle></svg>
+          <span class="u1025:[.shell.force-rail_&]:hidden">كوبونات الخصم</span>
         </a>
       </div>
 
-      <div class="nav-section">
-        <div class="nav-label lbl">النمو والمحتوى</div>
+      <div class="mb-[18px]">
+        <div class="py-2 px-3 text-[12px] font-medium tracking-[0] text-ink-3 u1025:[.shell.force-rail_&]:hidden">النمو والمحتوى</div>
         <div class="nav-group collapsed" data-group="website">
-          <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
-            <span class="lbl">إدارة الموقع الإلكتروني</span>
-            <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <button type="button" class="nav-parent py-2.5 px-3 gap-3 rounded-md flex items-center w-full text-[15px] font-bold text-ink min-h-11 text-start [.nav-group>&:hover]:bg-surface-hover [.nav-group>&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.nav-group>&:focus-visible]:outline-offset-[2px] u1025:[.shell.force-rail_.nav-group>&]:px-2 u1025:[.shell.force-rail_.nav-group>&]:justify-center" data-parent="website" aria-expanded="false">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"></path></svg>
+            <span class="u1025:[.shell.force-rail_&]:hidden">إدارة الموقع الإلكتروني</span>
+            <svg class="ms-auto w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0 text-ink-3 [transition:transform_.18s] [.nav-group.open_&]:[transform:rotate(-90deg)] u1025:[.shell.force-rail_.nav-parent_&]:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
           </button>
-          <div class="nav-children">
-            <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
-            <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
-            <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
-            <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
-            <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
-            <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
-            <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
-            <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
-            <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
-            <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+          <div class="mt-0.5 ps-5 relative [.nav-group.collapsed_&]:hidden u1025:[.shell.force-rail_&]:hidden before:top-1 before:bottom-2 before:start-4 before:content-[''] before:absolute before:w-[1.5px] before:bg-guide">
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/dashboard.html" data-key="web_dash"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>لوحة الموقع</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/home.html" data-key="web_home"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>الصفحة الرئيسية</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/programs.html" data-key="web_programs"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>البرامج</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/pages.html" data-key="web_pages"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>صفحات الموقع</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/blog.html" data-key="web_blog"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المدونة والأخبار</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/media.html" data-key="web_media"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>المكتبة الإعلامية</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/forms.html" data-key="web_forms"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>النماذج</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/navigation.html" data-key="web_nav"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>التنقل والقوائم</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/policies.html" data-key="web_policies"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>السياسات والامتثال</a>
+            <a class="nav-child mb-0.5 py-[9px] px-3 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 min-h-10 text-start relative hover:text-ink hover:bg-surface-hover focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [&.active]:font-bold [&.active]:text-primary-700 [&.active]:bg-surface-selected" href="../website/settings.html" data-key="web_settings"><span class="rounded-full w-1.5 h-1.5 bg-edge-strong shrink-0 [.nav-child.active_&]:bg-primary-700"></span>إعدادات الموقع</a>
           </div>
         </div>
       </div>
     </nav>
 
-    <button type="button" class="collapse-btn" id="collapseBtn">
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-      <span class="lbl">طيّ القائمة</span>
+    <button type="button" class="py-3.5 px-6 gap-3 border-t border-t-guide flex items-center text-ink-3 text-[14px] font-medium w-full d1024:hidden hover:text-ink hover:bg-surface-hover u1025:[.shell.force-rail_&]:px-2 u1025:[.shell.force-rail_&]:justify-center" id="collapseBtn">
+      <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      <span class="u1025:[.shell.force-rail_&]:hidden">طيّ القائمة</span>
     </button>
   </aside>
 
-  <div class="main">
+  <div class="flex flex-col min-w-0">
     <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
-    <header class="topbar">
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <header class="py-0 px-8 top-0 gap-4 border-b border-b-guide h-16 bg-surface flex items-center sticky z-30 d768:px-4 d768:gap-2 d768:min-w-0">
+      <button type="button" class="rounded-md hidden w-10 h-10 items-center justify-center text-ink-2 d1024:grid hover:bg-surface-hover" id="menuToggle" aria-label="فتح القائمة">
+        <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
       </button>
-      <span class="crumb">الرئيسية</span>
-      <div class="topbar-cluster">
-        <div class="role-switch-wrap">
-          <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
-            <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      <span class="text-[13px] text-ink-3 font-medium whitespace-nowrap d768:overflow-hidden d768:flex-1 d768:min-w-0 d768:text-ellipsis">الرئيسية</span>
+      <div class="ms-auto gap-2 flex items-center d768:ms-0 d768:gap-1 d768:shrink-0">
+        <div class="relative">
+          <button type="button" class="role-switch py-0 px-3.5 gap-2 border-[1.5px] border-dashed border-gold-500 rounded-md flex items-center h-10 bg-gold-50 text-[13px] font-bold text-gold-600 whitespace-nowrap d768:px-2.5 d768:gap-1.5 d768:text-[0] hover:bg-gold-100 focus-visible:[outline:2px_solid_var(--gold-500)] focus-visible:outline-offset-[2px]" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span aria-hidden="true" class="d768:text-[16px]">👁</span> معاينة كـ: <span class="cur [.role-switch_&.cur]:text-primary-700 d768:[.role-switch_&.cur]:hidden">السوبر أدمن</span>
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
-          <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
-            <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
-            <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
-            <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
-            <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
-            <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+          <div class="p-2 top-[calc(100%_+_8px)] start-0 border border-guide rounded-lg absolute min-w-[250px] bg-surface shadow-md z-50 hidden d768:top-[108px] d768:start-3 d768:end-3 d768:fixed d768:min-w-0 [&.open]:block" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+            <div class="mb-1.5 px-2.5 pt-1.5 pb-2.5 border-b border-b-guide text-[11px] text-ink-3 leading-[1.6]">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+            <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>المتدرب<small class="block text-[11px] text-ink-3 font-normal">بوابة تعلم</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+            <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>المدرب<small class="block text-[11px] text-ink-3 font-normal">أنشطته التدريبية</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+            <a class="role-opt p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="#" role="option"><span>الكادر الأكاديمي<small class="block text-[11px] text-ink-3 font-normal">الجودة والاعتماد</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
+            <a class="role-opt on p-2.5 gap-2.5 rounded-md flex items-center w-full text-[14px] font-medium text-ink-2 text-start hover:text-ink hover:bg-surface-hover [&.on]:font-bold [&.on]:text-primary-700 [&.on]:bg-surface-selected" href="dashboard.html" role="option"><span>السوبر أدمن<small class="block text-[11px] text-ink-3 font-normal">إدارة المنصة</small></span><span class="ms-auto text-primary-700 invisible [.role-opt.on_&]:visible">✓</span></a>
           </div>
         </div>
-        <button type="button" class="lang-switch">EN</button>
-        <button type="button" class="icon-btn" aria-label="الإشعارات">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-          <span class="dot"></span>
+        <button type="button" class="py-0 px-3 gap-1.5 border border-edge rounded-md flex items-center h-10 text-[14px] font-medium text-ink-2 d480:hidden">EN</button>
+        <button type="button" class="rounded-md w-10 h-10 grid place-items-center text-ink-2 relative hover:text-ink hover:bg-surface-hover" aria-label="الإشعارات">
+          <svg class="w-5 h-5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg>
+          <span class="top-2 end-2 border-2 border-surface rounded-full absolute w-2 h-2 bg-error-700"></span>
         </button>
-        <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+        <button type="button" class="rounded-md w-10 h-10 grid place-items-center text-ink-2 relative hover:text-ink hover:bg-surface-hover" aria-label="الحساب"><span class="rounded-full w-9 h-9 grid place-items-center text-[13px] font-bold bg-primary-700 text-gold-100">ع‍ش</span></button>
       </div>
     </header>
 
-    <main class="page">
+    <main class="my-0 mx-auto px-8 pt-8 pb-20 gap-8 flex flex-col max-w-[1440px] w-full d768:px-4 d768:pt-4 d768:pb-16">
 
       <!-- ===== Welcome + quick actions ===== -->
-      <section class="welcome adash-head">
+      <section class="gap-6 flex items-start flex-wrap">
         <div>
-          <h1>مرحباً بك، عبدالعزيز</h1>
-          <div class="meta">
-            <span class="role-pill teal">السوبر أدمن</span>
-            <span class="date">الأربعاء <bdi class="adash-num">16 Sep 2026</bdi> · آخر تحديث قبل 5 دقائق</span>
+          <h1 class="text-[32px] font-bold leading-[1.35] d820:text-[26px]">مرحباً بك، عبدالعزيز</h1>
+          <div class="mt-1.5 gap-3 flex items-center flex-wrap">
+            <span class="py-[3px] px-3 border border-primary-100 rounded-full text-[12px] font-bold text-primary-700 bg-primary-50">السوبر أدمن</span>
+            <span class="text-[14px] text-ink-2">الأربعاء <bdi class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">16 Sep 2026</bdi> · آخر تحديث قبل 5 دقائق</span>
           </div>
         </div>
-        <div class="quick-actions adash-qa" role="group" aria-label="إجراءات سريعة">
-          <span class="adash-qa-l">إجراءات سريعة</span>
-          <a class="btn btn-secondary" href="reports.html">
-            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        <div class="adash-qa ms-auto p-1.5 gap-1.5 border border-guide rounded-lg flex flex-wrap items-center bg-surface d820:ms-0 d820:w-full" role="group" aria-label="إجراءات سريعة">
+          <span class="ps-2.5 pe-1.5 text-[12px] text-ink-3 font-medium d560:hidden">إجراءات سريعة</span>
+          <a class="py-0 px-4 gap-2 border border-transparent rounded-md h-10 text-[14px] font-medium inline-flex items-center bg-transparent text-primary-700 focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] [.adash-qa_&:hover]:bg-surface-hover" href="reports.html">
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
             التقارير
           </a>
-          <button type="button" class="btn btn-primary" id="addUserBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <button type="button" class="py-0 px-4 gap-2 rounded-md h-10 text-[14px] font-bold inline-flex items-center bg-primary-700 text-white focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-primary-600" id="addUserBtn" data-popup-open="#uwDrawer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
             إضافة مستخدم
           </button>
         </div>
       </section>
 
       <!-- ===== KPIs ===== -->
-      <section class="kpi-grid adash-kpis">
-        <div class="kpi adash-kpi">
-          <div class="kpi-top"><div class="kpi-label">إجمالي الطلاب</div></div>
-          <div class="kpi-value">12,847</div>
-          <div class="adash-trend"><span class="delta up">↑ 4.2%</span><span>مقارنة بالشهر الماضي</span></div>
+      <section class="gap-6 grid grid-cols-[repeat(4,1fr)] d1100:grid-cols-[repeat(2,1fr)] d768:grid-cols-[1fr]">
+        <div class="adash-kpi py-[22px] px-6 overflow-hidden border border-guide rounded-lg bg-surface shadow-none relative first:border-primary-100 first:after:inset-y-0 first:after:start-0 first:after:content-[''] first:after:absolute first:after:w-[3px] first:after:bg-gold-500">
+          <div class="gap-2 flex items-start justify-between"><div class="text-[14px] font-medium text-ink-2 leading-[1.5]">إجمالي الطلاب</div></div>
+          <div class="mt-2 text-[34px] font-bold leading-[1.1] tracking-[-.01em] tabular-nums text-ink [.adash-kpi:first-child_&]:text-primary-700">12,847</div>
+          <div class="mt-3 gap-2 flex items-center text-[12px] text-ink-3 flex-wrap"><span class="py-0.5 px-2 rounded-full text-[12px] font-bold bg-gold-50 text-gold-600 tabular-nums">↑ 4.2%</span><span>مقارنة بالشهر الماضي</span></div>
         </div>
-        <div class="kpi adash-kpi">
-          <div class="kpi-top"><div class="kpi-label">الدورات النشطة</div></div>
-          <div class="kpi-value">234</div>
-          <div class="adash-trend"><span class="delta up">↑ 8%</span><span>مقارنة بالشهر الماضي</span></div>
+        <div class="adash-kpi py-[22px] px-6 overflow-hidden border border-guide rounded-lg bg-surface shadow-none relative first:border-primary-100 first:after:inset-y-0 first:after:start-0 first:after:content-[''] first:after:absolute first:after:w-[3px] first:after:bg-gold-500">
+          <div class="gap-2 flex items-start justify-between"><div class="text-[14px] font-medium text-ink-2 leading-[1.5]">الدورات النشطة</div></div>
+          <div class="mt-2 text-[34px] font-bold leading-[1.1] tracking-[-.01em] tabular-nums text-ink [.adash-kpi:first-child_&]:text-primary-700">234</div>
+          <div class="mt-3 gap-2 flex items-center text-[12px] text-ink-3 flex-wrap"><span class="py-0.5 px-2 rounded-full text-[12px] font-bold bg-gold-50 text-gold-600 tabular-nums">↑ 8%</span><span>مقارنة بالشهر الماضي</span></div>
         </div>
-        <div class="kpi adash-kpi">
-          <div class="kpi-top"><div class="kpi-label">معدل الإتمام</div></div>
-          <div class="kpi-value">87.4%</div>
-          <div class="adash-trend"><span class="delta down">↓ 1.8%</span><span>مقارنة بالشهر الماضي</span></div>
+        <div class="adash-kpi py-[22px] px-6 overflow-hidden border border-guide rounded-lg bg-surface shadow-none relative first:border-primary-100 first:after:inset-y-0 first:after:start-0 first:after:content-[''] first:after:absolute first:after:w-[3px] first:after:bg-gold-500">
+          <div class="gap-2 flex items-start justify-between"><div class="text-[14px] font-medium text-ink-2 leading-[1.5]">معدل الإتمام</div></div>
+          <div class="mt-2 text-[34px] font-bold leading-[1.1] tracking-[-.01em] tabular-nums text-ink [.adash-kpi:first-child_&]:text-primary-700">87.4%</div>
+          <div class="mt-3 gap-2 flex items-center text-[12px] text-ink-3 flex-wrap"><span class="py-0.5 px-2 rounded-full text-[12px] font-bold bg-error-bg text-error-700 tabular-nums">↓ 1.8%</span><span>مقارنة بالشهر الماضي</span></div>
         </div>
-        <div class="kpi adash-kpi">
-          <div class="kpi-top"><div class="kpi-label">الإيرادات هذا الشهر</div></div>
-          <div class="kpi-value"><bdi class="adash-num">420K <small>SAR</small></bdi></div>
-          <div class="adash-trend"><span class="delta up">↑ 12.1%</span><span>مقارنة بالشهر الماضي</span></div>
+        <div class="adash-kpi py-[22px] px-6 overflow-hidden border border-guide rounded-lg bg-surface shadow-none relative first:border-primary-100 first:after:inset-y-0 first:after:start-0 first:after:content-[''] first:after:absolute first:after:w-[3px] first:after:bg-gold-500">
+          <div class="gap-2 flex items-start justify-between"><div class="text-[14px] font-medium text-ink-2 leading-[1.5]">الإيرادات هذا الشهر</div></div>
+          <div class="mt-2 text-[34px] font-bold leading-[1.1] tracking-[-.01em] tabular-nums text-ink [.adash-kpi:first-child_&]:text-primary-700"><bdi class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">420K <small class="ms-0.5 text-[15px] font-bold text-ink-2">SAR</small></bdi></div>
+          <div class="mt-3 gap-2 flex items-center text-[12px] text-ink-3 flex-wrap"><span class="py-0.5 px-2 rounded-full text-[12px] font-bold bg-gold-50 text-gold-600 tabular-nums">↑ 12.1%</span><span>مقارنة بالشهر الماضي</span></div>
         </div>
       </section>
 
       <!-- ===== Analytics: chart + registrations mix ===== -->
-      <section class="adash-analytics" aria-labelledby="adashAT">
-        <div class="adash-sec-head">
+      <section class="pt-2" aria-labelledby="adashAT">
+        <div class="mb-4 gap-4 flex items-end justify-between flex-wrap">
           <div>
-            <h2 id="adashAT">أداء المنصة</h2>
-            <p id="adashSubtitle">التسجيلات الجديدة: <bdi class="adash-num">Oct 2025 – Sep 2026</bdi></p>
+            <h2 id="adashAT" class="text-[20px] font-semibold leading-[1.4]">أداء المنصة</h2>
+            <p id="adashSubtitle" class="mt-0.5 text-[13px] text-ink-3">التسجيلات الجديدة: <bdi class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">Oct 2025 – Sep 2026</bdi></p>
           </div>
-          <div class="adash-controls">
-            <div class="adash-seg" role="tablist" aria-label="المؤشر" data-seg="metric">
-              <button type="button" role="tab" aria-selected="true" class="on" data-val="reg">التسجيلات الجديدة</button>
-              <button type="button" role="tab" aria-selected="false" data-val="rev">الإيرادات</button>
-              <button type="button" role="tab" aria-selected="false" data-val="comp">معدل الإتمام</button>
+          <div class="gap-2.5 flex flex-wrap d560:w-full">
+            <div class="adash-seg p-[3px] gap-0.5 border border-guide rounded-md inline-flex bg-surface d560:w-full" role="tablist" aria-label="المؤشر" data-seg="metric">
+              <button type="button" role="tab" aria-selected="true" class="on py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]" data-val="reg">التسجيلات الجديدة</button>
+              <button type="button" role="tab" aria-selected="false" data-val="rev" class="py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]">الإيرادات</button>
+              <button type="button" role="tab" aria-selected="false" data-val="comp" class="py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]">معدل الإتمام</button>
             </div>
-            <div class="adash-seg quiet" role="tablist" aria-label="الفترة الزمنية" data-seg="range">
-              <button type="button" role="tab" aria-selected="false" data-val="7d">7 أيام</button>
-              <button type="button" role="tab" aria-selected="false" data-val="30d">30 يوماً</button>
-              <button type="button" role="tab" aria-selected="true" class="on" data-val="12m">12 شهراً</button>
+            <div class="adash-seg quiet p-[3px] gap-0.5 border border-guide rounded-md inline-flex bg-surface d560:w-full" role="tablist" aria-label="الفترة الزمنية" data-seg="range">
+              <button type="button" role="tab" aria-selected="false" data-val="7d" class="py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg.quiet_&.on]:text-primary-700 [.adash-seg.quiet_&.on]:bg-primary-50 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]">7 أيام</button>
+              <button type="button" role="tab" aria-selected="false" data-val="30d" class="py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg.quiet_&.on]:text-primary-700 [.adash-seg.quiet_&.on]:bg-primary-50 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]">30 يوماً</button>
+              <button type="button" role="tab" aria-selected="true" class="on py-0 px-3 rounded-[6px] h-8 text-[13px] font-medium text-ink-2 d560:px-1.5 d560:flex-1 [.adash-seg_&:hover]:text-ink [.adash-seg_&.on]:font-bold [.adash-seg_&.on]:text-white [.adash-seg_&.on]:bg-primary-700 [.adash-seg.quiet_&.on]:text-primary-700 [.adash-seg.quiet_&.on]:bg-primary-50 [.adash-seg_&:focus-visible]:[outline:2px_solid_var(--primary-500)] [.adash-seg_&:focus-visible]:outline-offset-[2px]" data-val="12m">12 شهراً</button>
             </div>
           </div>
         </div>
-        <div class="adash-an-grid">
-          <div class="adash-chart">
-            <div class="adash-stats" id="adashStats">
-              <div><div class="adash-stat-l">الإجمالي للفترة</div><div class="adash-stat-v">13,215</div></div>
-              <div><div class="adash-stat-l">التغيّر خلال الفترة</div><div class="adash-stat-v sm pos">↑ 70.1%</div></div>
-              <div><div class="adash-stat-l">الأعلى</div><div class="adash-stat-v sm">1,395 <bdi class="adash-stat-m adash-num">Sep</bdi></div></div>
+        <div class="mx-[calc(var(--s-4)_*_-1)] gap-0 border-y border-y-guide grid grid-cols-[minmax(0,1fr)_300px] bg-surface d1200:grid-cols-[minmax(0,1fr)] d820:mx-[calc(var(--s-2)_*_-1)]">
+          <div class="pt-6 pb-5 min-w-0 u1025:px-8 d1024:px-8 d820:px-4">
+            <div class="mb-[18px] gap-10 flex flex-wrap d820:gap-6" id="adashStats">
+              <div><div class="text-[12px] text-ink-3">الإجمالي للفترة</div><div class="mt-0.5 text-[28px] font-bold tabular-nums">13,215</div></div>
+              <div><div class="text-[12px] text-ink-3">التغيّر خلال الفترة</div><div class="mt-2 text-[20px] font-bold tabular-nums text-primary-700">↑ 70.1%</div></div>
+              <div><div class="text-[12px] text-ink-3">الأعلى</div><div class="mt-2 text-[20px] font-bold tabular-nums">1,395 <bdi class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] font-medium text-ink-3">Sep</bdi></div></div>
             </div>
             <div id="adashPlotWrap">
-              <div class="adash-plot" id="adashPlot">
-                <svg viewBox="0 0 760 280" preserveAspectRatio="none" role="img" aria-label="التسجيلات الجديدة — Oct إلى Sep">
-                  <defs><linearGradient id="adashFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--primary-700)" stop-opacity=".16"/><stop offset="1" stop-color="var(--primary-700)" stop-opacity="0"/></linearGradient></defs>
-                  <line x1="16" x2="704" y1="246" y2="246" class="adash-grid"/><text x="714" y="250" class="adash-ytick">800</text>
-                  <line x1="16" x2="704" y1="169.3" y2="169.3" class="adash-grid"/><text x="714" y="173.3" class="adash-ytick">1,000</text>
-                  <line x1="16" x2="704" y1="92.7" y2="92.7" class="adash-grid"/><text x="714" y="96.7" class="adash-ytick">1,200</text>
-                  <line x1="16" x2="704" y1="16" y2="16" class="adash-grid"/><text x="714" y="20" class="adash-ytick">1,400</text>
-                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9 L16.0 246 L704.0 246 Z" fill="url(#adashFill)"/>
-                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9" class="adash-line"/>
-                  <line id="adashCursor" x1="0" x2="0" y1="16" y2="246" class="adash-cursor" style="display:none"/>
-                  <circle cx="16" cy="17.9" r="9" class="adash-halo"/><circle cx="16" cy="17.9" r="4.5" class="adash-dot"/>
-                  <circle id="adashHover" r="4.5" class="adash-hdot" style="display:none"/>
-                  <text x="704" y="270" text-anchor="middle" class="adash-xtick">Oct</text>
-                  <text x="641.5" y="270" text-anchor="middle" class="adash-xtick">Nov</text>
-                  <text x="578.9" y="270" text-anchor="middle" class="adash-xtick">Dec</text>
-                  <text x="516.4" y="270" text-anchor="middle" class="adash-xtick">Jan</text>
-                  <text x="453.8" y="270" text-anchor="middle" class="adash-xtick">Feb</text>
-                  <text x="391.3" y="270" text-anchor="middle" class="adash-xtick">Mar</text>
-                  <text x="328.7" y="270" text-anchor="middle" class="adash-xtick">Apr</text>
-                  <text x="266.2" y="270" text-anchor="middle" class="adash-xtick">May</text>
-                  <text x="203.6" y="270" text-anchor="middle" class="adash-xtick">Jun</text>
-                  <text x="141.1" y="270" text-anchor="middle" class="adash-xtick">Jul</text>
-                  <text x="78.5" y="270" text-anchor="middle" class="adash-xtick">Aug</text>
-                  <text x="16" y="270" text-anchor="middle" class="adash-xtick">Sep</text>
-                  <rect data-i="0" x="672.7" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="1" x="610.2" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="2" x="547.6" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="3" x="485.1" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="4" x="422.5" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="5" x="360.0" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="6" x="297.5" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="7" x="234.9" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="8" x="172.4" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="9" x="109.8" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="10" x="47.3" y="16" width="62.5" height="230" fill="transparent"/>
-                  <rect data-i="11" x="-15.3" y="16" width="62.5" height="230" fill="transparent"/>
+              <div class="relative h-[280px] d820:h-[220px]" id="adashPlot">
+                <svg viewBox="0 0 760 280" preserveAspectRatio="none" role="img" aria-label="التسجيلات الجديدة — Oct إلى Sep" class="overflow-visible w-full h-full block">
+                  <defs><linearGradient id="adashFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--primary-700)" stop-opacity=".16"></stop><stop offset="1" stop-color="var(--primary-700)" stop-opacity="0"></stop></linearGradient></defs>
+                  <line x1="16" x2="704" y1="246" y2="246" class="stroke-guide stroke-1 [stroke-dasharray:3_4] [vector-effect:non-scaling-stroke]"></line><text x="714" y="250" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">800</text>
+                  <line x1="16" x2="704" y1="169.3" y2="169.3" class="stroke-guide stroke-1 [stroke-dasharray:3_4] [vector-effect:non-scaling-stroke]"></line><text x="714" y="173.3" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">1,000</text>
+                  <line x1="16" x2="704" y1="92.7" y2="92.7" class="stroke-guide stroke-1 [stroke-dasharray:3_4] [vector-effect:non-scaling-stroke]"></line><text x="714" y="96.7" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">1,200</text>
+                  <line x1="16" x2="704" y1="16" y2="16" class="stroke-guide stroke-1 [stroke-dasharray:3_4] [vector-effect:non-scaling-stroke]"></line><text x="714" y="20" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">1,400</text>
+                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9 L16.0 246 L704.0 246 Z" fill="url(#adashFill)"></path>
+                  <path d="M704.0 238.3 L641.5 203.8 L578.9 219.2 L516.4 154.0 L453.8 173.2 L391.3 123.3 L328.7 138.7 L266.2 96.5 L203.6 69.7 L141.1 88.8 L78.5 42.8 L16.0 17.9" class="fill-none stroke-primary-700 stroke-[2.5] [stroke-linejoin:round] [stroke-linecap:round] [vector-effect:non-scaling-stroke]"></path>
+                  <line id="adashCursor" x1="0" x2="0" y1="16" y2="246" class="stroke-edge-strong stroke-1 [vector-effect:non-scaling-stroke] hidden"></line>
+                  <circle cx="16" cy="17.9" r="9" class="fill-gold-500 opacity-25"></circle><circle cx="16" cy="17.9" r="4.5" class="fill-gold-500 stroke-white stroke-2"></circle>
+                  <circle id="adashHover" r="4.5" class="fill-white stroke-primary-700 stroke-2 hidden"></circle>
+                  <text x="704" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Oct</text>
+                  <text x="641.5" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Nov</text>
+                  <text x="578.9" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Dec</text>
+                  <text x="516.4" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Jan</text>
+                  <text x="453.8" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Feb</text>
+                  <text x="391.3" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Mar</text>
+                  <text x="328.7" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Apr</text>
+                  <text x="266.2" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">May</text>
+                  <text x="203.6" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Jun</text>
+                  <text x="141.1" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Jul</text>
+                  <text x="78.5" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Aug</text>
+                  <text x="16" y="270" text-anchor="middle" class="text-[11px] fill-ink-3 [font-family:inherit] [direction:ltr] [unicode-bidi:isolate]">Sep</text>
+                  <rect data-i="0" x="672.7" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="1" x="610.2" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="2" x="547.6" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="3" x="485.1" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="4" x="422.5" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="5" x="360.0" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="6" x="297.5" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="7" x="234.9" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="8" x="172.4" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="9" x="109.8" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="10" x="47.3" y="16" width="62.5" height="230" fill="transparent"></rect>
+                  <rect data-i="11" x="-15.3" y="16" width="62.5" height="230" fill="transparent"></rect>
                 </svg>
-                <div class="adash-tip" id="adashTip" role="status"></div>
+                <div class="py-1.5 px-2.5 gap-2.5 rounded-md absolute [transform:translate(-50%,calc(-100%_-_12px))] bg-primary-900 text-white text-[12px] flex items-baseline whitespace-nowrap pointer-events-none opacity-0 [transition:opacity_.12s]" id="adashTip" role="status"></div>
               </div>
             </div>
           </div>
-          <aside class="adash-mix">
-            <h3>التسجيلات حسب نوع البرنامج</h3>
-            <p class="adash-mix-sub">حصة كل نوع من إجمالي التسجيلات</p>
-            <a class="adash-mix-row" href="course-library.html"><span class="adash-mix-n">الدورات التدريبية</span><span class="adash-mix-v">46%</span><span class="adash-bar"><i style="width:100%" class="top"></i></span></a>
-            <a class="adash-mix-row" href="diplomas.html"><span class="adash-mix-n">الدبلومات المهنية</span><span class="adash-mix-v">28%</span><span class="adash-bar"><i style="width:60.9%"></i></span></a>
-            <a class="adash-mix-row" href="fellowships.html"><span class="adash-mix-n">الزمالات المهنية</span><span class="adash-mix-v">14%</span><span class="adash-bar"><i style="width:30.4%"></i></span></a>
-            <a class="adash-mix-row" href="professional-certificates.html"><span class="adash-mix-n">الشهادات الاحترافية</span><span class="adash-mix-v">12%</span><span class="adash-bar"><i style="width:26.1%"></i></span></a>
-            <a class="btn-ghost adash-more" href="reports.html">التقارير التفصيلية ←</a>
+          <aside class="py-6 px-6 border-s border-s-guide flex flex-col d1200:border-t d1200:border-s-0 d1200:border-t-guide">
+            <h3 class="text-[15px] font-bold">التسجيلات حسب نوع البرنامج</h3>
+            <p class="mx-0 mt-0.5 mb-3.5 text-[12px] text-ink-3">حصة كل نوع من إجمالي التسجيلات</p>
+            <a class="-mx-2 py-2.5 px-2 gap-x-2 gap-y-1.5 rounded-md grid grid-cols-[1fr_auto] text-start w-[calc(100%_+_16px)] focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-surface-hover" href="course-library.html"><span class="text-[14px]">الدورات التدريبية</span><span class="text-[14px] font-bold tabular-nums">46%</span><span class="overflow-hidden rounded-full [grid-column:1/-1] flex justify-start h-1.5 bg-surface-hover"><i class="flex-none rounded-full block h-full bg-primary-700 opacity-100 w-full"></i></span></a>
+            <a class="-mx-2 py-2.5 px-2 gap-x-2 gap-y-1.5 rounded-md grid grid-cols-[1fr_auto] text-start w-[calc(100%_+_16px)] focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-surface-hover" href="diplomas.html"><span class="text-[14px]">الدبلومات المهنية</span><span class="text-[14px] font-bold tabular-nums">28%</span><span class="overflow-hidden rounded-full [grid-column:1/-1] flex justify-start h-1.5 bg-surface-hover"><i class="flex-none rounded-full block h-full bg-primary-500 opacity-[.55] w-[60.9%]"></i></span></a>
+            <a class="-mx-2 py-2.5 px-2 gap-x-2 gap-y-1.5 rounded-md grid grid-cols-[1fr_auto] text-start w-[calc(100%_+_16px)] focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-surface-hover" href="fellowships.html"><span class="text-[14px]">الزمالات المهنية</span><span class="text-[14px] font-bold tabular-nums">14%</span><span class="overflow-hidden rounded-full [grid-column:1/-1] flex justify-start h-1.5 bg-surface-hover"><i class="flex-none rounded-full block h-full bg-primary-500 opacity-[.55] w-[30.4%]"></i></span></a>
+            <a class="-mx-2 py-2.5 px-2 gap-x-2 gap-y-1.5 rounded-md grid grid-cols-[1fr_auto] text-start w-[calc(100%_+_16px)] focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-surface-hover" href="professional-certificates.html"><span class="text-[14px]">الشهادات الاحترافية</span><span class="text-[14px] font-bold tabular-nums">12%</span><span class="overflow-hidden rounded-full [grid-column:1/-1] flex justify-start h-1.5 bg-surface-hover"><i class="flex-none rounded-full block h-full bg-primary-500 opacity-[.55] w-[26.1%]"></i></span></a>
+            <a class="mt-auto py-1.5 px-0 rounded-sm text-primary-700 h-auto text-[14px] font-bold self-start hover:bg-primary-50" href="reports.html">التقارير التفصيلية ←</a>
           </aside>
         </div>
       </section>
 
-      <div class="adash-bottom">
+      <div class="pt-2 gap-12 grid grid-cols-[minmax(0,2fr)_minmax(280px,1fr)] [align-items:start] d1200:gap-8 d1200:grid-cols-[minmax(0,1fr)] d768:gap-6">
         <!-- ===== Latest registrations ===== -->
         <section class="adash-regs" aria-labelledby="adashRT">
-          <div class="adash-sec-head">
-            <div><h2 id="adashRT">أحدث التسجيلات</h2><p>آخر المستخدمين المسجّلين في البرامج</p></div>
-            <a class="btn-ghost" href="trainees.html">عرض الكل ←</a>
+          <div class="mb-4 gap-4 flex items-end justify-between flex-wrap">
+            <div><h2 id="adashRT" class="text-[20px] font-semibold leading-[1.4]">أحدث التسجيلات</h2><p class="mt-0.5 text-[13px] text-ink-3">آخر المستخدمين المسجّلين في البرامج</p></div>
+            <a class="py-1.5 px-2 rounded-sm text-primary-700 h-auto text-[14px] font-bold hover:bg-primary-50" href="trainees.html">عرض الكل ←</a>
           </div>
-          <div class="table-card">
-            <table>
-              <thead><tr><th>المستخدم</th><th>البرنامج</th><th>تاريخ التسجيل</th><th>الحالة</th><th><span class="sr-only">الإجراء</span></th></tr></thead>
+          <div class="table-card border border-guide rounded-lg bg-surface shadow-none overflow-x-auto overflow-y-hidden [-webkit-overflow-scrolling:touch] relative [scrollbar-width:thin] [scrollbar-color:var(--border-strong)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-edge-strong [&::-webkit-scrollbar-track]:bg-transparent">
+            <table class="w-full min-w-[640px] border-collapse text-[14px]">
+              <thead><tr><th class="py-3 px-4 border-b border-b-guide bg-surface text-ink-3 text-[12px] font-medium text-start whitespace-nowrap">المستخدم</th><th class="py-3 px-4 border-b border-b-guide bg-surface text-ink-3 text-[12px] font-medium text-start whitespace-nowrap">البرنامج</th><th class="py-3 px-4 border-b border-b-guide bg-surface text-ink-3 text-[12px] font-medium text-start whitespace-nowrap">تاريخ التسجيل</th><th class="py-3 px-4 border-b border-b-guide bg-surface text-ink-3 text-[12px] font-medium text-start whitespace-nowrap">الحالة</th><th class="py-3 px-4 border-b border-b-guide bg-surface text-ink-3 text-[12px] font-medium text-start whitespace-nowrap"><span class="overflow-hidden absolute w-px h-px [clip:rect(0_0_0_0)] whitespace-nowrap">الإجراء</span></th></tr></thead>
               <tbody>
-                <tr>
-                  <td><div class="cell-user"><span class="cell-avatar">س‍أ</span><div><div class="adash-u">سارة أحمد</div><div class="adash-meta" dir="ltr">sara.ahmed@email.com</div></div></div></td>
-                  <td>دبلوم الأمن السيبراني</td>
-                  <td><div class="adash-num">16 Sep 2026</div><div class="adash-meta adash-num">10:24 AM</div></td>
-                  <td><span class="pill new">جديد</span></td>
-                  <td style="text-align:end"><a class="mini-btn line" href="users/trainee-6.html">عرض</a></td>
+                <tr class="[tbody_&:hover]:bg-surface-hover">
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="gap-3 flex items-center"><span class="rounded-full w-9 h-9 shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600">س‍أ</span><div><div class="font-bold">سارة أحمد</div><div class="mt-0.5 text-[12px] text-ink-3 text-right" dir="ltr">sara.ahmed@email.com</div></div></div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]">دبلوم الأمن السيبراني</td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">16 Sep 2026</div><div class="mt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">10:24 AM</div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><span class="pill py-[3px] px-3 border border-gold-100 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-gold-50 text-gold-600">جديد</span></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] text-end [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><a class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" href="users/trainee-6.html">عرض</a></td>
                 </tr>
-                <tr>
-                  <td><div class="cell-user"><span class="cell-avatar g">خ‍م</span><div><div class="adash-u">خالد منصور</div><div class="adash-meta" dir="ltr">k.mansour@email.com</div></div></div></td>
-                  <td>تحليل البيانات</td>
-                  <td><div class="adash-num">16 Sep 2026</div><div class="adash-meta adash-num">09:05 AM</div></td>
-                  <td><span class="pill new">جديد</span></td>
-                  <td style="text-align:end"><a class="mini-btn line" href="users/trainee-7.html">عرض</a></td>
+                <tr class="[tbody_&:hover]:bg-surface-hover">
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="gap-3 flex items-center"><span class="g rounded-full w-9 h-9 shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600">خ‍م</span><div><div class="font-bold">خالد منصور</div><div class="mt-0.5 text-[12px] text-ink-3 text-right" dir="ltr">k.mansour@email.com</div></div></div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]">تحليل البيانات</td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">16 Sep 2026</div><div class="mt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">09:05 AM</div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><span class="pill py-[3px] px-3 border border-gold-100 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-gold-50 text-gold-600">جديد</span></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] text-end [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><a class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" href="users/trainee-7.html">عرض</a></td>
                 </tr>
-                <tr>
-                  <td><div class="cell-user"><span class="cell-avatar">ر‍ع</span><div><div class="adash-u">ريم العتيبي</div><div class="adash-meta" dir="ltr">r.otaibi@email.com</div></div></div></td>
-                  <td>بكالوريوس علوم الحاسب</td>
-                  <td><div class="adash-num">15 Sep 2026</div><div class="adash-meta adash-num">06:40 PM</div></td>
-                  <td><span class="pill new">جديد</span></td>
-                  <td style="text-align:end"><a class="mini-btn line" href="users/trainee-8.html">عرض</a></td>
+                <tr class="[tbody_&:hover]:bg-surface-hover">
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="gap-3 flex items-center"><span class="rounded-full w-9 h-9 shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600">ر‍ع</span><div><div class="font-bold">ريم العتيبي</div><div class="mt-0.5 text-[12px] text-ink-3 text-right" dir="ltr">r.otaibi@email.com</div></div></div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]">بكالوريوس علوم الحاسب</td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">15 Sep 2026</div><div class="mt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">06:40 PM</div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><span class="pill py-[3px] px-3 border border-gold-100 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-gold-50 text-gold-600">جديد</span></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] text-end [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><a class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" href="users/trainee-8.html">عرض</a></td>
                 </tr>
-                <tr>
-                  <td><div class="cell-user"><span class="cell-avatar g">ع‍ح</span><div><div class="adash-u">عبدالله حسن</div><div class="adash-meta" dir="ltr">a.hassan@email.com</div></div></div></td>
-                  <td>دبلوم الذكاء الاصطناعي التطبيقي</td>
-                  <td><div class="adash-num">15 Sep 2026</div><div class="adash-meta adash-num">11:12 AM</div></td>
-                  <td><span class="pill ok">مُفعّل</span></td>
-                  <td style="text-align:end"><a class="mini-btn line" href="users/trainee-9.html">عرض</a></td>
+                <tr class="[tbody_&:hover]:bg-surface-hover">
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="gap-3 flex items-center"><span class="g rounded-full w-9 h-9 shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600">ع‍ح</span><div><div class="font-bold">عبدالله حسن</div><div class="mt-0.5 text-[12px] text-ink-3 text-right" dir="ltr">a.hassan@email.com</div></div></div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]">دبلوم الذكاء الاصطناعي التطبيقي</td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">15 Sep 2026</div><div class="mt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">11:12 AM</div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">مُفعّل</span></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] text-end [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><a class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" href="users/trainee-9.html">عرض</a></td>
                 </tr>
-                <tr>
-                  <td><div class="cell-user"><span class="cell-avatar">ن‍ش</span><div><div class="adash-u">نوف الشهري</div><div class="adash-meta" dir="ltr">nouf.s@email.com</div></div></div></td>
-                  <td>إدارة المشاريع الاحترافية</td>
-                  <td><div class="adash-num">14 Sep 2026</div><div class="adash-meta adash-num">03:30 PM</div></td>
-                  <td><span class="pill ok">مُفعّل</span></td>
-                  <td style="text-align:end"><a class="mini-btn line" href="users/trainee-10.html">عرض</a></td>
+                <tr class="[tbody_&:hover]:bg-surface-hover">
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="gap-3 flex items-center"><span class="rounded-full w-9 h-9 shrink-0 grid place-items-center text-[12px] font-bold bg-primary-50 text-primary-700 [&.g]:bg-gold-50 [&.g]:text-gold-600">ن‍ش</span><div><div class="font-bold">نوف الشهري</div><div class="mt-0.5 text-[12px] text-ink-3 text-right" dir="ltr">nouf.s@email.com</div></div></div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]">إدارة المشاريع الاحترافية</td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><div class="[unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block">14 Sep 2026</div><div class="mt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">03:30 PM</div></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><span class="pill py-[3px] px-3 rounded-full text-[12px] font-bold whitespace-nowrap inline-block bg-success-bg text-success-700 [&.err]:bg-error-bg [&.err]:text-error-700">مُفعّل</span></td>
+                  <td class="py-3.5 px-4 border-b border-b-guide align-middle text-[14px] text-end [tbody_tr:last-child_&]:border-b-0 [.adash-regs_&:nth-child(2)]:min-w-[170px]"><a class="line py-0 px-4 rounded-md inline-flex items-center justify-center h-9 text-[13px] font-bold whitespace-nowrap box-border [&.solid]:bg-primary-700 [&.solid]:text-white [&.solid:hover]:bg-primary-600 [&.line]:border [&.line]:border-edge [&.line]:bg-surface [&.line]:text-ink-2 [&.line:hover]:border-primary-500 [&.line:hover]:text-primary-700 disabled:opacity-40 disabled:cursor-not-allowed" href="users/trainee-10.html">عرض</a></td>
                 </tr>
               </tbody>
             </table>
@@ -367,22 +359,22 @@
 
         <!-- ===== System alerts ===== -->
         <section class="adash-alerts" aria-labelledby="adashNT">
-          <div class="adash-sec-head"><div><h2 id="adashNT">تنبيهات النظام</h2></div></div>
-          <ul>
-            <li>
-              <span class="adash-ai err"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
-              <div class="adash-at"><div>فشل مزامنة Zoom</div><span>3 جلسات لم تتم مزامنتها</span></div>
-              <time class="adash-num">قبل 10 دقائق</time>
+          <div class="mb-4 gap-4 flex items-end justify-between flex-wrap"><div><h2 id="adashNT" class="text-[20px] font-semibold leading-[1.4]">تنبيهات النظام</h2></div></div>
+          <ul class="list-none">
+            <li class="py-3.5 px-0 gap-3 border-b border-b-guide flex items-start [.adash-alerts_&:first-child]:pt-1 [.adash-alerts_&:last-child]:border-b-0">
+              <span class="err rounded-full w-8 h-8 grid place-items-center shrink-0 [&.err]:bg-error-bg [&.err]:text-error-700"><svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg></span>
+              <div class="flex-1 min-w-0"><div class="text-[14px] font-medium leading-[1.5]">فشل مزامنة Zoom</div><span class="text-[12px] text-ink-3">3 جلسات لم تتم مزامنتها</span></div>
+              <time class="pt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">قبل 10 دقائق</time>
             </li>
-            <li>
-              <span class="adash-ai warn"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span>
-              <div class="adash-at"><div>شهادة SSL تنتهي خلال 14 يوماً</div><span>جدولة التجديد</span></div>
-              <time class="adash-num">أمس</time>
+            <li class="py-3.5 px-0 gap-3 border-b border-b-guide flex items-start [.adash-alerts_&:first-child]:pt-1 [.adash-alerts_&:last-child]:border-b-0">
+              <span class="rounded-full w-8 h-8 grid place-items-center shrink-0 bg-warning-bg text-warning-700"><svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"></path></svg></span>
+              <div class="flex-1 min-w-0"><div class="text-[14px] font-medium leading-[1.5]">شهادة SSL تنتهي خلال 14 يوماً</div><span class="text-[12px] text-ink-3">جدولة التجديد</span></div>
+              <time class="pt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">أمس</time>
             </li>
-            <li>
-              <span class="adash-ai info"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>
-              <div class="adash-at"><div>اكتملت النسخة الاحتياطية</div><span>3:00 AM</span></div>
-              <time class="adash-num">أمس</time>
+            <li class="py-3.5 px-0 gap-3 border-b border-b-guide flex items-start [.adash-alerts_&:first-child]:pt-1 [.adash-alerts_&:last-child]:border-b-0">
+              <span class="rounded-full w-8 h-8 grid place-items-center shrink-0 bg-primary-50 text-primary-700"><svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"></path><rect x="4" y="3" width="16" height="18" rx="2"></rect></svg></span>
+              <div class="flex-1 min-w-0"><div class="text-[14px] font-medium leading-[1.5]">اكتملت النسخة الاحتياطية</div><span class="text-[12px] text-ink-3">3:00 AM</span></div>
+              <time class="pt-0.5 [unicode-bidi:isolate] [direction:ltr] whitespace-nowrap inline-block text-[12px] text-ink-3">أمس</time>
             </li>
           </ul>
         </section>
@@ -391,67 +383,64 @@
     </main>
   </div>
 </div>
-<div class="sidebar-scrim" id="sidebarScrim"></div>
+<div class="d1024:inset-0 d1024:fixed d1024:bg-[rgba(19,41,37,.4)] d1024:z-[65] d1024:opacity-0 d1024:pointer-events-none d1024:[transition:opacity_.2s] d1024:[&.open]:opacity-100 d1024:[&.open]:pointer-events-auto" id="sidebarScrim"></div>
 
 <!-- ===== Add User Wizard (reusable — role is implicit: "trainee" here, opened via the dashboard's quick action) ===== -->
-<div class="scrim" id="uwScrim"></div>
-<aside class="drawer" id="uwDrawer" role="dialog" aria-modal="true" aria-label="إضافة متدرب">
-  <div class="dr-head">
-    <h2>إضافة متدرب</h2>
-    <div class="dr-head-actions">
-      <button type="button" class="dr-icon-btn" id="uwFull" aria-label="ملء الشاشة" title="ملء الشاشة">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+<div class="scrim inset-0 fixed bg-[rgba(19,41,37,.4)] z-[60] opacity-0 pointer-events-none [transition:opacity_.2s] [&.open]:opacity-100 [&.open]:pointer-events-auto" id="uwScrim"></div>
+<aside class="drawer inset-y-0 left-0 right-auto fixed w-[620px] max-w-[96vw] bg-canvas z-[61] shadow-[0_12px_40px_rgba(19,41,37,.18)] [transform:translateX(-100%)] [transition:transform_.24s_ease,width_.24s_ease] flex flex-col invisible pointer-events-none d768:w-screen d768:max-w-[100vw] [&.open]:[transform:translateX(0)] [&.open]:visible [&.open]:pointer-events-auto [&.full]:w-screen [&.full]:max-w-[100vw]" id="uwDrawer" role="dialog" aria-modal="true" aria-label="إضافة متدرب">
+  <div class="py-6 gap-3 border-b border-b-guide bg-surface flex items-center u1025:px-8 d1024:px-8 d768:px-4">
+    <h2 class="text-[20px] font-bold">إضافة متدرب</h2>
+    <div class="ms-auto gap-1.5 flex items-center">
+      <button type="button" class="rounded-md w-[38px] h-[38px] grid place-items-center text-ink-2 hover:text-ink hover:bg-surface-hover" data-popup-full="" aria-label="ملء الشاشة" title="ملء الشاشة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"></path></svg>
       </button>
-      <button type="button" class="dr-icon-btn" id="uwClose" aria-label="إغلاق">✕</button>
+      <button type="button" class="rounded-md w-[38px] h-[38px] grid place-items-center text-ink-2 hover:text-ink hover:bg-surface-hover" data-popup-close="" aria-label="إغلاق">✕</button>
     </div>
   </div>
 
-  <div class="wz-steps" id="uwSteps">
-    <div class="wz-step cur" data-step="0"><span class="wz-num">1</span><span class="wz-lbl">المعلومات الأساسية</span></div>
-    <span class="wz-line"></span>
-    <div class="wz-step" data-step="1"><span class="wz-num">2</span><span class="wz-lbl">معلومات إضافية</span></div>
-    <span class="wz-line"></span>
-    <div class="wz-step" data-step="2"><span class="wz-num">3</span><span class="wz-lbl">المراجعة</span></div>
+  <div class="wz-steps py-3.5 gap-1.5 border-b border-b-guide flex overflow-x-auto bg-surface u1025:px-8 d1024:px-8 d480:px-4" id="uwSteps">
+    <div class="wz-step cur gap-2 flex items-center shrink-0" data-step="0"><span class="wz-num rounded-full w-[26px] h-[26px] grid place-items-center text-[12px] font-bold bg-surface-hover text-ink-3 [.wz-step.done_&]:bg-success-700 [.wz-step.done_&]:text-white [.wz-step.cur_&]:bg-primary-700 [.wz-step.cur_&]:text-white">1</span><span class="text-[13px] font-bold text-ink-3 [.wz-step.cur_&]:text-primary-700 [.wz-step.done_&]:text-ink-2 d480:[.wz-step:not(.cur)_&]:hidden">المعلومات الأساسية</span></div>
+    <span class="w-5 h-0.5 bg-edge"></span>
+    <div class="wz-step gap-2 flex items-center shrink-0" data-step="1"><span class="wz-num rounded-full w-[26px] h-[26px] grid place-items-center text-[12px] font-bold bg-surface-hover text-ink-3 [.wz-step.done_&]:bg-success-700 [.wz-step.done_&]:text-white [.wz-step.cur_&]:bg-primary-700 [.wz-step.cur_&]:text-white">2</span><span class="text-[13px] font-bold text-ink-3 [.wz-step.cur_&]:text-primary-700 [.wz-step.done_&]:text-ink-2 d480:[.wz-step:not(.cur)_&]:hidden">معلومات إضافية</span></div>
+    <span class="w-5 h-0.5 bg-edge"></span>
+    <div class="wz-step gap-2 flex items-center shrink-0" data-step="2"><span class="wz-num rounded-full w-[26px] h-[26px] grid place-items-center text-[12px] font-bold bg-surface-hover text-ink-3 [.wz-step.done_&]:bg-success-700 [.wz-step.done_&]:text-white [.wz-step.cur_&]:bg-primary-700 [.wz-step.cur_&]:text-white">3</span><span class="text-[13px] font-bold text-ink-3 [.wz-step.cur_&]:text-primary-700 [.wz-step.done_&]:text-ink-2 d480:[.wz-step:not(.cur)_&]:hidden">المراجعة</span></div>
   </div>
 
-  <div class="dr-body">
+  <div class="dr-body p-8 flex-1 overflow-y-auto d768:p-4 [.drawer.full_&]:my-0 [.drawer.full_&]:mx-auto [.drawer.full_&]:max-w-[900px] [.drawer.full_&]:w-full">
     <!-- Step 1: basic info -->
-    <div class="uw-step" data-step="0">
-      <div class="uw-note">سيُضاف هذا المستخدم كـ «المتدرب»</div>
-      <div class="field">
-        <label class="field-label">الصورة</label>
-        <div class="dropzone">
-          <div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <div data-step="0">
+      <div class="mb-4 py-2.5 px-3.5 rounded-md bg-primary-50 text-primary-700 text-[13px] font-bold">سيُضاف هذا المستخدم كـ «المتدرب»</div>
+      <div class="mb-6">
+        <label class="mb-1.5 block text-[14px] font-bold">الصورة</label>
+        <div class="p-6 border-[1.5px] border-dashed border-edge-strong rounded-lg text-center text-ink-3 cursor-pointer bg-surface hover:border-primary-500 hover:text-primary-700 hover:bg-primary-50">
+          <div class="mx-auto mt-0 mb-2 rounded-md w-11 h-11 bg-primary-50 text-primary-600 grid place-items-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
           اسحب صورة الملف الشخصي أو اضغط للرفع
-          <div class="field-hint">PNG/JPG · مربّعة مفضّلة</div>
+          <div class="mt-[5px] text-[12px] text-ink-3 leading-[1.6]">PNG/JPG · مربّعة مفضّلة</div>
         </div>
       </div>
-      <div class="field">
-        <label class="field-label">الاسم <span class="req">*</span></label>
-        <input class="inp" id="uw_name" placeholder="الاسم الكامل">
-        <div class="inp-error" id="err_uwName">هذا الحقل مطلوب</div>
+      <div class="mb-6">
+        <label class="mb-1.5 block text-[14px] font-bold">الاسم <span class="text-error-700">*</span></label>
+        <input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" id="uw_name" placeholder="الاسم الكامل">
       </div>
-      <div class="grid-2e">
-        <div class="field">
-          <label class="field-label">البريد الإلكتروني <span class="req">*</span></label>
-          <input class="inp" id="uw_email" dir="ltr" placeholder="user@email.com">
-          <div class="inp-error" id="err_uwEmail">أدخل بريداً صحيحاً</div>
+      <div class="gap-6 grid grid-cols-[1fr_1fr] [align-items:start] d1024:grid-cols-[1fr]">
+        <div class="mb-6">
+          <label class="mb-1.5 block text-[14px] font-bold">البريد الإلكتروني <span class="text-error-700">*</span></label>
+          <input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" id="uw_email" dir="ltr" placeholder="user@email.com">
         </div>
-        <div class="field">
-          <label class="field-label">الجوال</label>
-          <input class="inp" id="uw_phone" dir="ltr" placeholder="+966 5x xxx xxxx">
+        <div class="mb-6">
+          <label class="mb-1.5 block text-[14px] font-bold">الجوال</label>
+          <input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" id="uw_phone" dir="ltr" placeholder="+966 5x xxx xxxx">
         </div>
       </div>
-      <div class="grid-2e">
-        <div class="field">
-          <label class="field-label">كلمة المرور <span class="req">*</span></label>
-          <input class="inp" id="uw_pass" type="text" placeholder="كلمة مرور مؤقتة">
-          <div class="inp-error" id="err_uwPass">هذا الحقل مطلوب</div>
+      <div class="gap-6 grid grid-cols-[1fr_1fr] [align-items:start] d1024:grid-cols-[1fr]">
+        <div class="mb-6">
+          <label class="mb-1.5 block text-[14px] font-bold">كلمة المرور <span class="text-error-700">*</span></label>
+          <input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" id="uw_pass" type="text" placeholder="كلمة مرور مؤقتة">
         </div>
-        <div class="field">
-          <label class="field-label">اللغة</label>
-          <select class="inp" id="uw_lang">
-            <option value="ar" selected>العربية</option>
+        <div class="mb-6">
+          <label class="mb-1.5 block text-[14px] font-bold">اللغة</label>
+          <select class="py-0 ps-9 pe-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink appearance-none bg-select-caret bg-no-repeat [background-position:left_14px_center] focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" id="uw_lang">
+            <option value="ar" selected="">العربية</option>
             <option value="en">English</option>
           </select>
         </div>
@@ -459,47 +448,47 @@
     </div>
 
     <!-- Step 2: role-specific extra info (trainee) -->
-    <div class="uw-step" data-step="1" hidden>
-      <div class="uw-note">الحقول الإضافية للدور: المتدرب</div>
-      <div class="grid-2e">
-        <div class="field"><label class="field-label">رقم الهوية / الإقامة</label><input class="inp" placeholder="10xxxxxxxx"></div>
-        <div class="field"><label class="field-label">الجنسية</label>
-          <select class="inp"><option>سعودي</option><option>مقيم</option><option>أخرى</option></select>
+    <div data-step="1" hidden="">
+      <div class="mb-4 py-2.5 px-3.5 rounded-md bg-primary-50 text-primary-700 text-[13px] font-bold">الحقول الإضافية للدور: المتدرب</div>
+      <div class="gap-6 grid grid-cols-[1fr_1fr] [align-items:start] d1024:grid-cols-[1fr]">
+        <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">رقم الهوية / الإقامة</label><input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" placeholder="10xxxxxxxx"></div>
+        <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">الجنسية</label>
+          <select class="py-0 ps-9 pe-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink appearance-none bg-select-caret bg-no-repeat [background-position:left_14px_center] focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700"><option>سعودي</option><option>مقيم</option><option>أخرى</option></select>
         </div>
       </div>
-      <div class="grid-2e">
-        <div class="field"><label class="field-label">المدينة</label><input class="inp" placeholder="الرياض"></div>
-        <div class="field"><label class="field-label">البرنامج/الدورة المسجّل بها</label>
-          <select class="inp"><option>— اختياري —</option><option>دبلوم الأمن السيبراني</option><option>مقدمة في الذكاء الاصطناعي</option></select>
+      <div class="gap-6 grid grid-cols-[1fr_1fr] [align-items:start] d1024:grid-cols-[1fr]">
+        <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">المدينة</label><input class="py-0 px-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700" placeholder="الرياض"></div>
+        <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">البرنامج/الدورة المسجّل بها</label>
+          <select class="py-0 ps-9 pe-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink appearance-none bg-select-caret bg-no-repeat [background-position:left_14px_center] focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700"><option>— اختياري —</option><option>دبلوم الأمن السيبراني</option><option>مقدمة في الذكاء الاصطناعي</option></select>
         </div>
       </div>
-      <div class="field"><label class="field-label">المؤهل التعليمي</label>
-        <select class="inp"><option>ثانوي</option><option>بكالوريوس</option><option>ماجستير</option><option>دكتوراه</option></select>
+      <div class="mb-6"><label class="mb-1.5 block text-[14px] font-bold">المؤهل التعليمي</label>
+        <select class="py-0 ps-9 pe-3.5 border border-edge rounded-md w-full h-11 text-[14px] bg-surface text-ink appearance-none bg-select-caret bg-no-repeat [background-position:left_14px_center] focus:border-primary-500 focus:[outline:2px_solid_var(--primary-500)] focus:outline-offset-[1px] [&.err]:border-error-700"><option>ثانوي</option><option>بكالوريوس</option><option>ماجستير</option><option>دكتوراه</option></select>
       </div>
     </div>
 
     <!-- Step 3: review -->
-    <div class="uw-step" data-step="2" hidden>
-      <h3 class="uw-review-title">مراجعة البيانات</h3>
-      <p class="uw-review-sub">تأكّد من صحة المعلومات قبل الحفظ.</p>
-      <div class="uw-review-card">
-        <div class="summary-row"><span>الاسم</span><span id="rv_name" class="v">—</span></div>
-        <div class="summary-row"><span>البريد الإلكتروني</span><span id="rv_email" class="v">—</span></div>
-        <div class="summary-row"><span>الجوال</span><span id="rv_phone" class="v">—</span></div>
-        <div class="summary-row"><span>اللغة</span><span id="rv_lang" class="v">العربية</span></div>
-        <div class="summary-row"><span>الدور</span><span class="v">المتدرب</span></div>
-        <div class="summary-row no-border"><span>كلمة المرور</span><span class="v">••••••••</span></div>
+    <div data-step="2" hidden="">
+      <h3 class="mb-1.5 text-[17px] font-bold">مراجعة البيانات</h3>
+      <p class="mb-4 text-[13px] text-ink-2">تأكّد من صحة المعلومات قبل الحفظ.</p>
+      <div class="py-4 px-5 border border-guide rounded-lg">
+        <div class="summary-row py-[11px] px-0 border-b border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">الاسم</span><span id="rv_name" class="v font-bold [.summary-row>&:first-child]:text-ink-3">أحمد محمد العتيبي</span></div>
+        <div class="summary-row py-[11px] px-0 border-b border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">البريد الإلكتروني</span><span id="rv_email" class="v font-bold [.summary-row>&:first-child]:text-ink-3">user@email.com</span></div>
+        <div class="summary-row py-[11px] px-0 border-b border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">الجوال</span><span id="rv_phone" class="v font-bold [.summary-row>&:first-child]:text-ink-3">+966 5x xxx xxxx</span></div>
+        <div class="summary-row py-[11px] px-0 border-b border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">اللغة</span><span id="rv_lang" class="v font-bold [.summary-row>&:first-child]:text-ink-3">العربية</span></div>
+        <div class="summary-row py-[11px] px-0 border-b border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">الدور</span><span class="v font-bold [.summary-row>&:first-child]:text-ink-3">المتدرب</span></div>
+        <div class="summary-row py-[11px] px-0 border-b-0 border-b-guide flex justify-between text-[14px]"><span class="[.summary-row>&:first-child]:text-ink-3">كلمة المرور</span><span class="v font-bold [.summary-row>&:first-child]:text-ink-3">••••••••</span></div>
       </div>
-      <div class="uw-review-note">سيُضاف المستخدم إلى قائمة «المتدربون» مباشرة بعد الحفظ.</div>
+      <div class="mt-4 py-2.5 px-3.5 rounded-md bg-success-bg text-success-700 text-[13px]">سيُضاف المستخدم إلى قائمة «المتدربون» مباشرة بعد الحفظ.</div>
     </div>
   </div>
 
-  <div class="dr-foot">
-    <button type="button" class="btn btn-secondary" id="uwCancel">إلغاء</button>
-    <span class="step-txt" id="uwStepTxt">الخطوة 1 من 3</span>
-    <div class="end">
-      <button type="button" class="btn btn-secondary" id="uwBack" style="visibility:hidden">السابق</button>
-      <button type="button" class="btn btn-primary" id="uwNext">التالي</button>
+  <div class="py-4 bottom-0 gap-3 border-t border-t-guide bg-surface flex items-center sticky u1025:px-8 d1024:px-8 d768:px-4 d768:flex-wrap">
+    <button type="button" class="py-0 px-5 gap-2 border border-edge rounded-md h-11 text-[15px] font-medium inline-flex items-center bg-surface text-primary-700 focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:border-primary-500 hover:bg-primary-50" data-popup-close="">إلغاء</button>
+    <span class="d768:order-[3] d768:w-full d768:text-center" data-wz-count="">الخطوة 1 من 3</span>
+    <div class="ms-auto gap-2.5 flex">
+      <button type="button" class="py-0 px-5 gap-2 border border-edge rounded-md h-11 text-[15px] font-medium inline-flex items-center bg-surface text-primary-700 invisible focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:border-primary-500 hover:bg-primary-50" data-wz="prev">السابق</button>
+      <button type="button" class="py-0 px-5 gap-2 rounded-md h-11 text-[15px] font-bold inline-flex items-center bg-primary-700 text-white focus-visible:[outline:2px_solid_var(--primary-500)] focus-visible:outline-offset-[2px] hover:bg-primary-600" data-wz="next" data-wz-save="حفظ المستخدم">التالي</button>
     </div>
   </div>
 </aside>
@@ -507,16 +496,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/data/dashboard.js"></script>
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/popups.js"></script>
 <script src="../assets/js/dashboard.js"></script>
-<script src="../assets/js/user-wizard.js"></script>
-<script>
-$(function () {
-  $('#addUserBtn').on('click', UserWizard.open);
-  UserWizard.onSave(function () {
-    // no user table lives on the dashboard — go see the new trainee in the list
-    window.location.href = 'trainees.html';
-  });
-});
-</script>
-</body>
-</html>
+
+
+</body></html>

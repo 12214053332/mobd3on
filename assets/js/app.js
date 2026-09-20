@@ -87,14 +87,14 @@
   App.toast = function (title, sub) {
     var $wrap = $('#toastWrap');
     if (!$wrap.length) {
-      $wrap = $('<div class="toast-wrap" id="toastWrap"></div>').appendTo('body');
+      $wrap = $('<div class="fixed bottom-6 start-6 z-[90] flex flex-col gap-2.5" id="toastWrap"></div>').appendTo('body');
     }
     var $t = $(
-      '<div class="toast" role="status">' +
-        '<span class="t-ico">' +
-          '<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>' +
+      '<div class="toast min-w-[280px] py-3.5 px-[18px] gap-3 border-y border-l border-s-4 border-y-guide border-l-guide border-s-success-700 rounded-md flex items-center bg-surface shadow-md [animation:slideIn_.24s_ease]" role="status">' +
+        '<span class="w-8 h-8 rounded-full bg-success-bg text-success-700 grid place-items-center shrink-0">' +
+          '<svg class="w-4 h-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>' +
         '</span>' +
-        '<div><div class="t-txt"></div>' + (sub ? '<div class="t-sub"></div>' : '') + '</div>' +
+        '<div><div class="t-txt text-[14px] font-bold"></div>' + (sub ? '<div class="t-sub text-[12px] text-ink-2 font-normal"></div>' : '') + '</div>' +
       '</div>'
     );
     $t.find('.t-txt').text(title || '');
@@ -124,8 +124,17 @@
     });
   }
 
+  /* ---- Table rows with data-href navigate to that page (links / buttons / checkboxes inside keep their own action) ---- */
+  function bindRowLinks() {
+    $(document).on('click', 'tr[data-href]', function (e) {
+      if ($(e.target).closest('a, button, .cbx-cell').length) return;
+      window.location.href = $(this).data('href');
+    });
+  }
+
   $(function () {
     markActiveNav();
+    bindRowLinks();
     bindToggles();
     bindToastButtons();
     bindNavGroups();
