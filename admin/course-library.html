@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدورات التدريبية — مركز المبدعون</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/forms.css">
+<link rel="stylesheet" href="../assets/css/tables.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/users.css">
+<link rel="stylesheet" href="../assets/css/programs.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-navkey="course_lib">
+
+<div class="proto-banner">
+  <span aria-hidden="true">🛠</span>
+  <span><b>وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
+</div>
+
+<div class="shell">
+
+  <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
+<aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <img src="../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+    </div>
+    <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+  </div>
+
+  <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+    <div class="nav-section">
+      <a class="nav-item" href="dashboard.html" data-key="dash">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+        <span class="lbl">الرئيسية</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-group open" data-group="lptrack">
+        <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          <span class="lbl">البرامج التدريبية</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child active" aria-current="page" href="course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
+          <a class="nav-child" href="diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
+          <a class="nav-child" href="fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
+          <a class="nav-child" href="professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">التعلم</div>
+      <div class="nav-group collapsed" data-group="learning">
+        <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
+          <span class="lbl">التعلم</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
+          <a class="nav-child" href="placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
+          <a class="nav-child" href="course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
+          <a class="nav-child" href="virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+        </div>
+      </div>
+      <div class="nav-group collapsed" data-group="assess">
+        <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+          <span class="lbl">الاختبارات وبنك الأسئلة</span>
+          <span class="nav-badge lbl">8</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
+          <a class="nav-child" href="exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
+          <a class="nav-child" href="grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+        </div>
+      </div>
+      <a class="nav-item" href="certificates.html" data-key="certs">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+        <span class="lbl">الشهادات</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الأشخاص</div>
+      <div class="nav-group collapsed" data-group="users">
+        <button type="button" class="nav-parent" data-parent="users" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="lbl">إدارة المستخدمين</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
+          <a class="nav-child" href="trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
+          <a class="nav-child" href="academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
+          <a class="nav-child" href="roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الإيرادات</div>
+      <a class="nav-item" href="reports.html" data-key="sales_reports">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        <span class="lbl">التقارير</span>
+      </a>
+      <a class="nav-item" href="payments.html" data-key="payments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <span class="lbl">المدفوعات</span>
+      </a>
+      <a class="nav-item" href="coupons.html" data-key="coupons">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
+        <span class="lbl">كوبونات الخصم</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">النمو والمحتوى</div>
+      <div class="nav-group collapsed" data-group="website">
+        <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+          <span class="lbl">إدارة الموقع الإلكتروني</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
+          <a class="nav-child" href="../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
+          <a class="nav-child" href="../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
+          <a class="nav-child" href="../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
+          <a class="nav-child" href="../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
+          <a class="nav-child" href="../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
+          <a class="nav-child" href="../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
+          <a class="nav-child" href="../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
+          <a class="nav-child" href="../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
+          <a class="nav-child" href="../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <button type="button" class="collapse-btn" id="collapseBtn">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    <span class="lbl">طيّ القائمة</span>
+  </button>
+</aside>
+
+  <div class="main">
+    <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
+    <header class="topbar">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+      <span class="crumb">الرئيسية / البرامج التدريبية / <b>الدورات التدريبية</b></span>
+      <div class="topbar-cluster"><div class="role-switch-wrap">
+    <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
+      <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+      <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+      <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
+      <a class="role-opt on" href="dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+    </div>
+  </div>
+  <button type="button" class="lang-switch">EN</button>
+  <button type="button" class="icon-btn" aria-label="الإشعارات">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    <span class="dot"></span>
+  </button>
+  <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+</div>
+    </header>
+
+    <main class="page">
+
+      <div class="page-head">
+        <div>
+          <h1>الدورات التدريبية</h1>
+          <p class="page-desc">المكتبة المركزية للدورات التدريبية القابلة لإعادة الاستخدام داخل البرامج التدريبية</p>
+        </div>
+        <div class="head-actions">
+          <button type="button" class="btn btn-primary" id="cwCreateBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> إنشاء دورة تدريبية</button>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <table id="courseTable">
+          <thead><tr><th>اسم الدورة</th><th>معرف الدورة</th><th>نوع الدورة</th><th>عدد الأيام</th><th>عدد الساعات</th><th>السعر</th><th>الحالة</th><th>آخر تحديث</th><th style="text-align:end">الإجراءات</th></tr></thead>
+          <tbody id="courseTbody">
+            <tr data-id="1" data-used="0" data-href="programs/course-1.html">
+              <td><a class="cell-name js-name" href="programs/course-1.html">أساسيات الأمن السيبراني</a></td><td class="mono js-cid">CL-001</td><td class="js-type">عن بعد</td>
+              <td class="mono js-days">30</td><td class="mono js-hours">120</td><td class="mono js-price">12,000 ر.س</td>
+              <td class="js-status"><span class="pill ok">نشطة</span></td><td class="mono js-updated">قبل ساعة</td>
+              <td style="text-align:end"><div class="row-act">
+                <a class="act-btn" href="programs/course-1.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-cw-edit><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
+                <button type="button" class="act-btn act-danger" title="أرشفة" aria-label="أرشفة" data-cw-archive><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M10 12h4"/></svg></button>
+              </div></td>
+            </tr>
+            <tr data-id="2" data-used="0" data-href="programs/course-2.html">
+              <td><a class="cell-name js-name" href="programs/course-2.html">مقدمة في الذكاء الاصطناعي</a></td><td class="mono js-cid">CL-002</td><td class="js-type">عن بعد</td>
+              <td class="mono js-days">14</td><td class="mono js-hours">40</td><td class="mono js-price">4,500 ر.س</td>
+              <td class="js-status"><span class="pill ok">نشطة</span></td><td class="mono js-updated">أمس</td>
+              <td style="text-align:end"><div class="row-act">
+                <a class="act-btn" href="programs/course-2.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-cw-edit><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
+                <button type="button" class="act-btn act-danger" title="أرشفة" aria-label="أرشفة" data-cw-archive><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M10 12h4"/></svg></button>
+              </div></td>
+            </tr>
+            <tr data-id="3" data-used="0" data-href="programs/course-3.html">
+              <td><a class="cell-name js-name" href="programs/course-3.html">قواعد البيانات المتقدمة</a></td><td class="mono js-cid">CL-003</td><td class="js-type">حضوري</td>
+              <td class="mono js-days">20</td><td class="mono js-hours">60</td><td class="mono js-price">6,000 ر.س</td>
+              <td class="js-status"><span class="pill neutral">مسودة</span></td><td class="mono js-updated">قبل يومين</td>
+              <td style="text-align:end"><div class="row-act">
+                <a class="act-btn" href="programs/course-3.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-cw-edit><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
+                <button type="button" class="act-btn act-danger" title="أرشفة" aria-label="أرشفة" data-cw-archive><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M10 12h4"/></svg></button>
+              </div></td>
+            </tr>
+            <tr data-id="4" data-used="0" data-href="programs/course-4.html">
+              <td><a class="cell-name js-name" href="programs/course-4.html">الشبكات الآمنة</a></td><td class="mono js-cid">CL-004</td><td class="js-type">حضوري</td>
+              <td class="mono js-days">18</td><td class="mono js-hours">70</td><td class="mono js-price">7,500 ر.س</td>
+              <td class="js-status"><span class="pill ok">نشطة</span></td><td class="mono js-updated">قبل 3 أيام</td>
+              <td style="text-align:end"><div class="row-act">
+                <a class="act-btn" href="programs/course-4.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-cw-edit><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
+                <button type="button" class="act-btn act-danger" title="أرشفة" aria-label="أرشفة" data-cw-archive><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M10 12h4"/></svg></button>
+              </div></td>
+            </tr>
+            <tr data-id="5" data-used="0" data-href="programs/course-5.html">
+              <td><a class="cell-name js-name" href="programs/course-5.html">الاستجابة للحوادث الأمنية</a></td><td class="mono js-cid">CL-005</td><td class="js-type">عن بعد</td>
+              <td class="mono js-days">15</td><td class="mono js-hours">50</td><td class="mono js-price">8,000 ر.س</td>
+              <td class="js-status"><span class="pill ok">نشطة</span></td><td class="mono js-updated">قبل 4 أيام</td>
+              <td style="text-align:end"><div class="row-act">
+                <a class="act-btn" href="programs/course-5.html" title="عرض" aria-label="عرض"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                <button type="button" class="act-btn" title="تعديل" aria-label="تعديل" data-cw-edit><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>
+                <button type="button" class="act-btn act-danger" title="أرشفة" aria-label="أرشفة" data-cw-archive><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M10 12h4"/></svg></button>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tfoot"><span>عرض <b id="tfootShown">5</b> من <b id="tfootTotal">5</b> دورة</span></div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<div class="sidebar-scrim" id="sidebarScrim"></div>
+
+<div class="scrim" id="cwScrim"></div>
+<aside class="drawer full" id="cwDrawer" role="dialog" aria-modal="true" aria-label="إنشاء دورة تدريبية">
+  <div class="dr-head">
+    <h2 id="cwTitle">إنشاء دورة تدريبية</h2>
+    <div class="dr-head-actions">
+      <button type="button" class="dr-icon-btn" id="cwFull" aria-label="ملء الشاشة" title="ملء الشاشة"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
+      <button type="button" class="dr-icon-btn" id="cwClose" aria-label="إغلاق">✕</button>
+    </div>
+  </div>
+  <div class="wz-steps" id="cwSteps"><div class="wz-step cur" data-step="1"><span class="wz-num">1</span><span class="wz-lbl">البيانات الأساسية</span></div><div class="wz-step" data-step="2"><span class="wz-num">2</span><span class="wz-lbl">التخصص</span></div><div class="wz-step" data-step="3"><span class="wz-num">3</span><span class="wz-lbl">محتوى الدورة</span></div><div class="wz-step" data-step="4"><span class="wz-num">4</span><span class="wz-lbl">الأسئلة الشائعة</span></div><div class="wz-step" data-step="5"><span class="wz-num">5</span><span class="wz-lbl">تفاصيل الدورة</span></div><div class="wz-step" data-step="6"><span class="wz-num">6</span><span class="wz-lbl">الدفع والتقسيط</span></div><div class="wz-step" data-step="7"><span class="wz-num">7</span><span class="wz-lbl">الظهور والصلاحيات</span></div><div class="wz-step" data-step="8"><span class="wz-num">8</span><span class="wz-lbl">المراجعة والنشر</span></div></div>
+  <div class="dr-body" id="cwBody"><div class="wz-body-inner">
+    <div class="cw-step" data-step="1">
+      <div class="field"><label class="field-label">صورة الدورة</label>
+        <div class="dropzone" id="cwImgDrop"><div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>اسحب صورة الدورة هنا أو اضغط للرفع<div class="field-hint" style="margin-top:4px">JPG/PNG</div></div>
+        <div class="file-row" id="cwImgFile" hidden><span class="file-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div class="fname" id="cwImgName"></div>
+          <button type="button" class="mini-btn line" id="cwImgReplace">استبدال</button><button type="button" class="mini-btn line danger-line" id="cwImgRemove">إزالة</button></div>
+        <div class="dropzone" id="cwImgUploading" hidden><div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>جارٍ رفع الصورة…</div>
+      </div>
+      <div class="field"><label class="field-label">اسم الدورة <span class="req">*</span></label><input class="inp" id="cl_name" placeholder="مثال: دبلوم الأمن السيبراني"><div class="inp-error" id="err_clName">هذا الحقل مطلوب</div></div>
+      <div class="field"><label class="field-label">الوصف العام</label><textarea class="inp" id="cl_gendesc" placeholder="نبذة عامة عن الدورة"></textarea></div>
+    </div>
+    <div class="cw-step" data-step="2" hidden>
+      <p class="wz-intro">اربط هذه الدورة بتخصص واحد أو أكثر — سيُستخدم لاحقاً لتصفية الدورات عند إضافتها إلى مقررات الدبلومات والزمالات.</p>
+      <div class="field"><label class="field-label">التخصص</label>
+        <div class="wz-inline"><input class="inp" id="cl_spec_input" placeholder="اكتب التخصص واضغط Enter — مثال: إدارة الأعمال"><button type="button" class="mini-btn solid" id="cwSpecAdd">+ إضافة</button></div>
+        <div class="field-hint">يمكن إضافة أكثر من تخصص لنفس الدورة.</div></div>
+      <div class="spec-chips" id="cwSpecList"></div>
+    </div>
+    <div class="cw-step" data-step="3" hidden>
+      <div class="field"><label class="field-label">أهداف الدورة</label><textarea class="inp" id="cl_objectives" placeholder="ما الذي سيحققه المتدرب بعد إكمال الدورة؟"></textarea></div>
+      <div class="field"><label class="field-label">الفئة المستهدفة</label><textarea class="inp" id="cl_audience" placeholder="لمن هذه الدورة؟"></textarea></div>
+      <div class="field"><label class="field-label">مميزات الدورة</label><textarea class="inp" id="cl_features" placeholder="ما الذي يميز هذه الدورة؟"></textarea></div>
+      <div class="field"><label class="field-label">محاور الدورة</label><textarea class="inp" id="cl_topics" placeholder="أهم الموضوعات التي تغطيها الدورة"></textarea></div>
+      <div class="field"><label class="field-label">مخرجات الدورة</label><textarea class="inp" id="cl_outcomes" placeholder="المهارات أو النتائج التي يكتسبها المتدرب"></textarea></div>
+    </div>
+    <div class="cw-step" data-step="4" hidden>
+      <div class="wz-row-between"><div class="field-label">الأسئلة الشائعة (<span id="cwFaqCount">0</span>)</div><button type="button" class="mini-btn solid" id="cwFaqAdd">+ إضافة سؤال شائع</button></div>
+      <div id="cwFaqList"></div>
+      <div class="empty" id="cwFaqEmpty" style="box-shadow:none;padding:24px"><p style="font-size:13px">لا توجد أسئلة شائعة بعد.</p></div>
+    </div>
+    <div class="cw-step" data-step="5" hidden>
+      <div class="grid-2e">
+        <div class="field"><label class="field-label">سعر الدورة</label><input class="inp" id="cl_price" placeholder="مثال: 4,500"></div>
+        <div class="field"><label class="field-label">نوع الدورة</label><select class="inp" id="cl_type"><option>حضوري</option><option selected>عن بعد</option></select></div>
+        <div class="field"><label class="field-label">عدد الأيام</label><input class="inp" id="cl_days" type="number" min="0" value="0"></div>
+        <div class="field"><label class="field-label">عدد الساعات</label><input class="inp" id="cl_hours" type="number" min="0" value="0"></div>
+      </div>
+    </div>
+    <div class="cw-step" data-step="6" hidden>
+      <div class="field-label" style="margin-bottom:8px">مزوّدو التقسيط المتاحون لهذه الدورة</div>
+      <p class="wz-intro" style="margin-top:0">يمكن اختيار أكثر من مزوّد في آنٍ واحد.</p>
+      <div class="toggle-row"><div class="toggle cw-inst" data-id="tabby" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">Tabby</div></div></div>
+      <div class="toggle-row"><div class="toggle cw-inst" data-id="tamara" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">Tamara</div></div></div>
+    </div>
+    <div class="cw-step" data-step="7" hidden>
+      <div class="set-card"><div class="set-card-h">الظهور على الموقع الخارجي</div><div class="set-card-b">
+        <div class="toggle-row"><div class="toggle " id="cl_web" data-id="web" role="switch" aria-checked="true" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">إظهار الدورة على الموقع الخارجي</div><div class="toggle-d">في حال الإيقاف تبقى الدورة داخل المنصة فقط دون ظهورها على الموقع الخارجي.</div></div></div>
+      </div></div>
+      <div class="set-card"><div class="set-card-h">صلاحيات التعديل</div><div class="set-card-b">
+        <p class="wz-intro" style="margin-top:0">حدد من يملك صلاحية تعديل إعداد هذه الدورة.</p>
+        <div class="toggle-row"><div class="toggle cw-role" data-id="admin" role="switch" aria-checked="true" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">السوبر أدمن</div></div></div>
+        <div class="toggle-row"><div class="toggle cw-role" data-id="academic" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">الكادر الأكاديمي</div></div></div>
+        <div class="toggle-row"><div class="toggle cw-role" data-id="trainer" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">المدرب</div></div></div>
+      </div></div>
+    </div>
+    <div class="cw-step" data-step="8" hidden>
+      <div class="wb-ref-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg> <span>راجع تفاصيل الدورة قبل النشر.</span></div>
+      <div class="set-card"><div class="set-card-h">البيانات الأساسية</div><div class="set-card-b"><div class="info-row"><span class="k">اسم الدورة</span><span class="v" id="rvName"></span></div><div class="info-row"><span class="k">الوصف العام</span><span class="v" id="rvDesc"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">التخصص</div><div class="set-card-b"><div class="info-row"><span class="k">التخصصات</span><span class="v" id="rvSpecs"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">التفاصيل</div><div class="set-card-b"><div class="info-row"><span class="k">السعر</span><span class="v" id="rvPrice"></span></div><div class="info-row"><span class="k">النوع</span><span class="v" id="rvType"></span></div><div class="info-row"><span class="k">عدد الأيام</span><span class="v" id="rvDays"></span></div><div class="info-row"><span class="k">عدد الساعات</span><span class="v" id="rvHours"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">الأسئلة الشائعة</div><div class="set-card-b"><div class="info-row"><span class="k">عدد الأسئلة</span><span class="v" id="rvFaq"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">الدفع والظهور</div><div class="set-card-b"><div class="info-row"><span class="k">مزوّدو التقسيط</span><span class="v" id="rvInst"></span></div><div class="info-row"><span class="k">ظهور خارجي</span><span class="v" id="rvWeb"></span></div><div class="info-row"><span class="k">صلاحيات التعديل</span><span class="v" id="rvRoles"></span></div></div></div>
+    </div>
+  </div></div>
+  <div class="dr-foot">
+    <button type="button" class="btn btn-secondary" id="cwBack">إلغاء</button>
+    <div class="end">
+      <button type="button" class="btn btn-primary" id="cwNext">التالي</button>
+      <button type="button" class="btn btn-secondary" id="cwDraft" hidden>حفظ كمسودة</button>
+      <button type="button" class="btn btn-primary" id="cwPublish" hidden>نشر الدورة</button>
+    </div>
+  </div>
+</aside>
+<template id="tplFaq"><div class="set-card faq-item"><div class="set-card-b">
+  <div class="faq-top"><span class="faq-num">1</span><input class="inp faq-q" placeholder="السؤال">
+    <button type="button" class="dr-icon-btn" data-faq="up" title="نقل لأعلى" aria-label="نقل لأعلى"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+    <button type="button" class="dr-icon-btn" data-faq="down" title="نقل لأسفل" aria-label="نقل لأسفل"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+    <button type="button" class="dr-icon-btn danger" data-faq="remove" aria-label="حذف السؤال">✕</button></div>
+  <textarea class="inp faq-a" placeholder="الإجابة"></textarea></div></div></template>
+
+<div class="dlg-scrim" id="archScrim"><div class="dlg" style="max-width:460px">
+  <div class="dlg-ico danger"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6"/></svg></div>
+  <h3>أرشفة الدورة؟</h3>
+  <p>ستُنقل الدورة إلى الأرشيف ولن يمكن استخدامها في مسارات جديدة.</p>
+  <div class="dlg-warn" id="archWarn" hidden><span>هذه الدورة مستخدمة داخل مسار تعليمي واحد أو أكثر — الأرشفة لن تحذفها من المسارات الحالية لكنها ستمنع استخدامها في مسارات جديدة.</span></div>
+  <div class="dlg-actions"><button type="button" class="btn btn-secondary" id="archNo">تراجع</button><button type="button" class="btn btn-danger" id="archYes">أرشفة الدورة</button></div>
+</div></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/data/programs.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/course-wizard.js"></script>
+</body>
+</html>

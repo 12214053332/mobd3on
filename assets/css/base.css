@@ -1,5 +1,6 @@
 /* ===== Global resets & base element styles ===== */
 *{margin:0;padding:0;box-sizing:border-box;}
+[hidden]{display:none!important;}
 html{-webkit-text-size-adjust:100%;}
 body{font-family:'Tajawal',system-ui,sans-serif; background:var(--bg-primary); color:var(--text-primary); -webkit-font-smoothing:antialiased;}
 button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}

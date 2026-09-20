@@ -1,0 +1,103 @@
+/* ===== Training programs: courses, diplomas, fellowships, professional certificates ===== */
+
+/* ---- read-only info rows inside set-cards ---- */
+.info-row{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--border-guide);font-size:14px;}
+.info-row:last-child{border-bottom:none;}
+.info-row .k{color:var(--text-tertiary);width:170px;flex-shrink:0;}
+.info-row .v{font-weight:500;min-width:0;overflow-wrap:anywhere;}
+.info-row .v:empty::before{content:"—";color:var(--text-tertiary);}
+.set-card+.set-card{margin-top:16px;}
+.prog-empty-note{font-size:13px;color:var(--text-tertiary);}
+.prog-head-back{margin-bottom:4px;}
+.prog-sub{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.prog-sub .mono{color:var(--text-secondary);}
+.prog-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px;}
+.prog-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
+.prog-tab-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
+.prog-tab-head h2{font-size:14px;font-weight:700;}
+
+/* ---- collapsible module cards (curriculum tab) ---- */
+.mod-card{margin-bottom:12px;}
+.mod-card .set-card-h{cursor:pointer;}
+.mod-card .mc-ico{width:30px;height:30px;border-radius:var(--r-sm);background:var(--surface-hover);display:grid;place-items:center;flex-shrink:0;}
+.mod-card .mc-txt{flex:1;min-width:0;}
+.mod-card .mc-name{font-weight:700;}
+.mod-card .mc-sub{font-size:12px;color:var(--text-tertiary);margin-top:2px;font-weight:400;}
+.mod-caret{color:var(--text-tertiary);margin-inline-start:4px;transition:transform .15s;}
+.mod-card.open .mod-caret{transform:rotate(180deg);}
+.mod-card .set-card-b[hidden]{display:none;}
+
+/* ---- kit files + batch list ---- */
+.kit-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px;}
+.kit-tools .tb-search{flex:1;min-width:200px;height:38px;width:auto;font-size:13px;}
+.kit-kinds{display:flex;gap:6px;flex-wrap:wrap;}
+.kit-row .row-avatar{font-size:11px;}
+.set-card-h .mini-btn{margin-inline-start:auto;}
+.batch-tools{margin-bottom:12px;}
+.batch-tools .tb-search{width:100%;max-width:420px;height:40px;}
+
+/* ---- wizard (full-screen drawer) ---- */
+.drawer.full .wz-steps{justify-content:center;}
+.wz-step{cursor:pointer;}
+.wz-body-inner{max-width:900px;margin:0 auto;}
+.cw-step[hidden],.ew-step[hidden]{display:none;}
+.wz-intro{color:var(--text-secondary);font-size:13px;margin:-6px 0 16px;}
+.wz-inline{display:flex;gap:8px;}
+.wz-inline .inp{flex:1;}
+.wz-row-between{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.wz-row-between .field-label{margin:0;}
+.spec-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.spec-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;font-size:13px;}
+.spec-chip .x{cursor:pointer;font-weight:800;}
+.faq-item{margin-bottom:10px;}
+.faq-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.faq-top .inp{flex:1;}
+.faq-num{width:26px;height:26px;border-radius:var(--r-full);background:var(--surface-hover);color:var(--primary-700);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dr-icon-btn[disabled]{opacity:.3;cursor:not-allowed;}
+.dr-icon-btn.danger{color:var(--error-700);}
+.file-row{display:flex;align-items:center;gap:12px;border:1px solid var(--border-guide);border-radius:var(--r-md);padding:10px 12px;margin-bottom:6px;}
+.file-row .fname{flex:1;min-width:0;overflow-wrap:anywhere;}
+.file-row .fmeta{font-size:12px;color:var(--text-tertiary);}
+.file-ico{width:32px;height:32px;border-radius:var(--r-md);background:var(--surface-hover);display:grid;place-items:center;flex-shrink:0;color:var(--text-secondary);}
+.wz-note-err{background:var(--error-bg);border-color:transparent;color:var(--error-700);}
+.spec-card{margin-bottom:10px;}
+.spec-card .set-card-h{cursor:pointer;}
+.spec-card .sc-body[hidden]{display:none;}
+.spec-card.open .mod-caret{transform:rotate(180deg);}
+.spec-mod-row{padding:8px 0;}
+.spec-mod-row:hover{background:transparent;}
+.radio-stack.wz{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.wz-panel[hidden]{display:none;}
+.cert-course-card{display:flex;gap:14px;align-items:flex-start;}
+.cert-course-card .course-ico{width:48px;height:48px;flex-shrink:0;}
+.wz-toggle-card .toggle-row{cursor:default;}
+.wz-cta{margin-top:10px;}
+select.inp[disabled]{background:var(--surface-hover);cursor:not-allowed;}
+
+@media(max-width:1024px){
+  .prog-grid-4{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .prog-grid-3{grid-template-columns:1fr 1fr;}
+  .info-row{flex-direction:column;gap:2px;}
+  .info-row .k{width:auto;font-size:12px;}
+  .prog-tab-head{align-items:stretch;}
+  .prog-tab-head .btn{width:100%;justify-content:center;}
+  .wz-body-inner .grid-2e{grid-template-columns:1fr;}
+  .faq-top{flex-wrap:wrap;}
+  .faq-top .inp{flex:1 1 100%;order:3;}
+  .wz-inline{flex-wrap:wrap;}
+  .wz-inline .inp{flex:1 1 100%;}
+  .cert-course-card{flex-direction:column;}
+  .drawer.full .wz-steps{justify-content:flex-start;}
+}
+@media(max-width:480px){
+  .prog-grid-4,.prog-grid-3{grid-template-columns:1fr 1fr;gap:12px;}
+}
+
+.prog-desc{font-size:14px;line-height:1.9;color:var(--text-secondary);}
+.prog-desc:empty::before{content:"—";}
+
+/* full-screen wizard: keep the scrollbar at the screen edge, centre the content instead */
+#cwBody,#ewBody{max-width:none;margin:0;width:100%;}
+.prog-head-back{margin-bottom:-16px;}

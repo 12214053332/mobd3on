@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دبلوم الأمن السيبراني — مركز المبدعون</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/forms.css">
+<link rel="stylesheet" href="../../assets/css/tables.css">
+<link rel="stylesheet" href="../../assets/css/dashboard.css">
+<link rel="stylesheet" href="../../assets/css/users.css">
+<link rel="stylesheet" href="../../assets/css/programs.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body data-navkey="lp_diplomas" data-edu-type="diploma" data-edu-id="2">
+
+<div class="proto-banner">
+  <span aria-hidden="true">🛠</span>
+  <span><b>وضع النموذج التجريبي</b> — «معاينة كـ» هي نقطة التحكم المركزية؛ يعيد تبديل الدور بناء التجربة كاملة (لوحة، تنقّل، وحدات، صلاحيات) ولا يظهر في المنتج الفعلي.</span>
+</div>
+
+<div class="shell">
+
+  <!-- ===== Sidebar (kept in sync with /components/sidebar-admin.html) ===== -->
+<aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <img src="../../assets/images/logo.png" alt="" onerror="this.style.display='none'">
+    </div>
+    <div><div class="brand-name lbl">مركز المبدعون</div><div class="brand-sub lbl">منصة التعليم والتدريب</div></div>
+  </div>
+
+  <nav class="nav" id="nav" aria-label="أقسام لوحة السوبر أدمن">
+    <div class="nav-section">
+      <a class="nav-item" href="../dashboard.html" data-key="dash">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+        <span class="lbl">الرئيسية</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-group open" data-group="lptrack">
+        <button type="button" class="nav-parent" data-parent="lptrack" aria-expanded="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          <span class="lbl">البرامج التدريبية</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../course-library.html" data-key="course_lib"><span class="cdot"></span>الدورات التدريبية</a>
+          <a class="nav-child active" aria-current="page" href="../diplomas.html" data-key="lp_diplomas"><span class="cdot"></span>الدبلومات المهنية</a>
+          <a class="nav-child" href="../fellowships.html" data-key="lp_fellowships"><span class="cdot"></span>الزمالات المهنية</a>
+          <a class="nav-child" href="../professional-certificates.html" data-key="lp_procerts"><span class="cdot"></span>الشهادات الاحترافية</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">التعلم</div>
+      <div class="nav-group collapsed" data-group="learning">
+        <button type="button" class="nav-parent" data-parent="learning" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg>
+          <span class="lbl">التعلم</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../waitlist.html" data-key="waitlist"><span class="cdot"></span>قائمة الانتظار</a>
+          <a class="nav-child" href="../placement-exam.html" data-key="placement"><span class="cdot"></span>اختبار تحديد المستوى</a>
+          <a class="nav-child" href="../course-categories.html" data-key="coursecats"><span class="cdot"></span>تصنيفات الدورات</a>
+          <a class="nav-child" href="../virtual-classrooms.html" data-key="vclasses"><span class="cdot"></span>الفصول الافتراضية</a>
+        </div>
+      </div>
+      <div class="nav-group collapsed" data-group="assess">
+        <button type="button" class="nav-parent" data-parent="assess" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+          <span class="lbl">الاختبارات وبنك الأسئلة</span>
+          <span class="nav-badge lbl">8</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../question-bank.html" data-key="qbank"><span class="cdot"></span>بنك الأسئلة</a>
+          <a class="nav-child" href="../exams.html" data-key="exams"><span class="cdot"></span>الاختبارات</a>
+          <a class="nav-child" href="../grading.html" data-key="grading"><span class="cdot"></span>التصحيح والنتائج</a>
+        </div>
+      </div>
+      <a class="nav-item" href="../certificates.html" data-key="certs">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+        <span class="lbl">الشهادات</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الأشخاص</div>
+      <div class="nav-group collapsed" data-group="users">
+        <button type="button" class="nav-parent" data-parent="users" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="lbl">إدارة المستخدمين</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../trainees.html" data-key="um_trainees"><span class="cdot"></span>المتدربون</a>
+          <a class="nav-child" href="../trainers.html" data-key="um_trainers"><span class="cdot"></span>المدربون</a>
+          <a class="nav-child" href="../academic-staff.html" data-key="um_academic"><span class="cdot"></span>الكادر الأكاديمي</a>
+          <a class="nav-child" href="../roles.html" data-key="um_roles"><span class="cdot"></span>الأدوار والصلاحيات</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">الإيرادات</div>
+      <a class="nav-item" href="../reports.html" data-key="sales_reports">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        <span class="lbl">التقارير</span>
+      </a>
+      <a class="nav-item" href="../payments.html" data-key="payments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <span class="lbl">المدفوعات</span>
+      </a>
+      <a class="nav-item" href="../coupons.html" data-key="coupons">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
+        <span class="lbl">كوبونات الخصم</span>
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label lbl">النمو والمحتوى</div>
+      <div class="nav-group collapsed" data-group="website">
+        <button type="button" class="nav-parent" data-parent="website" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+          <span class="lbl">إدارة الموقع الإلكتروني</span>
+          <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="nav-children">
+          <a class="nav-child" href="../../website/dashboard.html" data-key="web_dash"><span class="cdot"></span>لوحة الموقع</a>
+          <a class="nav-child" href="../../website/home.html" data-key="web_home"><span class="cdot"></span>الصفحة الرئيسية</a>
+          <a class="nav-child" href="../../website/programs.html" data-key="web_programs"><span class="cdot"></span>البرامج</a>
+          <a class="nav-child" href="../../website/pages.html" data-key="web_pages"><span class="cdot"></span>صفحات الموقع</a>
+          <a class="nav-child" href="../../website/blog.html" data-key="web_blog"><span class="cdot"></span>المدونة والأخبار</a>
+          <a class="nav-child" href="../../website/media.html" data-key="web_media"><span class="cdot"></span>المكتبة الإعلامية</a>
+          <a class="nav-child" href="../../website/forms.html" data-key="web_forms"><span class="cdot"></span>النماذج</a>
+          <a class="nav-child" href="../../website/navigation.html" data-key="web_nav"><span class="cdot"></span>التنقل والقوائم</a>
+          <a class="nav-child" href="../../website/policies.html" data-key="web_policies"><span class="cdot"></span>السياسات والامتثال</a>
+          <a class="nav-child" href="../../website/settings.html" data-key="web_settings"><span class="cdot"></span>إعدادات الموقع</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <button type="button" class="collapse-btn" id="collapseBtn">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    <span class="lbl">طيّ القائمة</span>
+  </button>
+</aside>
+
+  <div class="main">
+    <!-- ===== Topbar (kept in sync with /components/topbar-actions.html) ===== -->
+    <header class="topbar">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+      <span class="crumb">الرئيسية / البرامج التدريبية / <a href="../diplomas.html">الدبلومات المهنية</a> / <b>دبلوم الأمن السيبراني</b></span>
+      <div class="topbar-cluster"><div class="role-switch-wrap">
+    <button type="button" class="role-switch" id="roleBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span aria-hidden="true">👁</span> معاينة كـ: <span class="cur">السوبر أدمن</span>
+      <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="role-menu" id="roleMenu" role="listbox" aria-label="معاينة بدور مختلف">
+      <div class="hint">أداة تصميم فقط: تحاكي تسجيل الدخول بالدور المحدد — بنية وتجربة مستقلة لكل دور، وليست إخفاءً لعناصر القائمة.</div>
+      <a class="role-opt" href="#" role="option"><span>المتدرب<small>بوابة تعلم</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>المدرب<small>أنشطته التدريبية</small></span><span class="chk">✓</span></a>
+      <a class="role-opt" href="#" role="option"><span>الكادر الأكاديمي<small>الجودة والاعتماد</small></span><span class="chk">✓</span></a>
+      <a class="role-opt on" href="../dashboard.html" role="option"><span>السوبر أدمن<small>إدارة المنصة</small></span><span class="chk">✓</span></a>
+    </div>
+  </div>
+  <button type="button" class="lang-switch">EN</button>
+  <button type="button" class="icon-btn" aria-label="الإشعارات">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    <span class="dot"></span>
+  </button>
+  <button type="button" class="icon-btn" aria-label="الحساب"><span class="avatar" style="background:var(--primary-700);color:var(--gold-100)">ع‍ش</span></button>
+</div>
+    </header>
+
+    <main class="page">
+
+      <div class="page-head prog-head-back"><a class="btn btn-secondary" href="../diplomas.html">← العودة</a></div>
+      <div class="page-head">
+        <div>
+          <h1 data-bind="name">دبلوم الأمن السيبراني</h1>
+          <div class="page-desc prog-sub">معرف دبلوم مهني: <span class="mono">DIP-102</span> · <span data-bind-status><span class="pill ok">نشطة</span></span></div>
+        </div>
+        <div class="head-actions"><button type="button" class="btn btn-secondary" id="ewEditBtn">تعديل</button></div>
+      </div>
+
+      <div class="sec-tabs" role="tablist" style="margin-bottom:0"><button type="button" class="sec-tab active" role="tab" aria-selected="true" data-tab="overview">نظرة عامة</button><button type="button" class="sec-tab" role="tab" aria-selected="false" data-tab="curriculum">المقررات</button><button type="button" class="sec-tab" role="tab" aria-selected="false" data-tab="groups">الدفعات التدريبية</button><button type="button" class="sec-tab" role="tab" aria-selected="false" data-tab="kit">الحقيبة التدريبية</button><button type="button" class="sec-tab" role="tab" aria-selected="false" data-tab="fees">الرسوم والدفع</button><button type="button" class="sec-tab" role="tab" aria-selected="false" data-tab="settings">الإعدادات</button></div>
+
+      <div class="uws-panels">
+        <div class="uws-panel" data-panel="overview">
+          <section class="prog-grid-4"><div class="stat-card"><div class="sc-l">المقررات</div><div class="sc-v" data-bind="modCount">2</div></div><div class="stat-card"><div class="sc-l">الدفعات التدريبية</div><div class="sc-v">1</div></div><div class="stat-card"><div class="sc-l">المتدربون</div><div class="sc-v">0</div></div><div class="stat-card"><div class="sc-l">آخر تحديث</div><div class="sc-v" style="font-size:14px" data-bind="updated">قبل 3 أيام</div></div></section>
+          <div class="set-card"><div class="set-card-h">معلومات دبلوم مهني</div><div class="set-card-b">
+            <div class="info-row"><span class="k">الوصف العام</span><span class="v" data-bind="generalDesc">دبلوم مهني متخصص في حماية الأنظمة والشبكات والاستجابة للحوادث.</span></div><div class="info-row"><span class="k">الأهداف</span><span class="v" data-bind="objectivesText">تأهيل المتدرب للعمل كأخصائي أمن سيبراني في بيئة مؤسسية.</span></div><div class="info-row"><span class="k">التخصص</span><span class="v" data-bind="specialty">الأمن السيبراني</span></div><div class="info-row"><span class="k">المدة</span><span class="v" data-bind="duration">6 أشهر</span></div><div class="info-row"><span class="k">آلية الدراسة</span><span class="v" data-bind="studyMode">التعلم المدمج</span></div><div class="info-row"><span class="k">إجمالي الساعات</span><span class="v" data-bind="hours">170</span></div><div class="info-row"><span class="k">طريقة تقديم الاختبارات</span><span class="v" data-bind="examMode">عن بُعد</span></div>
+          </div></div>
+        </div>
+        <div class="uws-panel" data-panel="curriculum" hidden><div id="ewCurr"><div class="set-card mod-card"><div class="set-card-h"><span class="mc-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg></span><div class="mc-txt"><div class="mc-name">أساسيات الأمن السيبراني</div><div class="mc-sub">الأمن السيبراني · 120 ساعة</div></div><svg class="mod-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div><div class="set-card-b" hidden><div class="info-row"><span class="k">التخصص</span><span class="v">الأمن السيبراني</span></div><div class="info-row"><span class="k">الدورة التدريبية</span><span class="v">أساسيات الأمن السيبراني</span></div><div class="info-row"><span class="k">معرف الدورة</span><span class="v mono">CL-001</span></div><div class="info-row"><span class="k">عدد الأيام</span><span class="v">30</span></div><div class="info-row"><span class="k">عدد الساعات</span><span class="v">120</span></div><div class="info-row"><span class="k">طريقة التقديم</span><span class="v">عن بعد</span></div><div class="info-row"><span class="k">تخصصات الدورة</span><span class="v">الأمن السيبراني</span></div></div></div><div class="set-card mod-card"><div class="set-card-h"><span class="mc-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg></span><div class="mc-txt"><div class="mc-name">الاستجابة للحوادث الأمنية</div><div class="mc-sub">الأمن السيبراني · 50 ساعة</div></div><svg class="mod-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div><div class="set-card-b" hidden><div class="info-row"><span class="k">التخصص</span><span class="v">الأمن السيبراني</span></div><div class="info-row"><span class="k">الدورة التدريبية</span><span class="v">الاستجابة للحوادث الأمنية</span></div><div class="info-row"><span class="k">معرف الدورة</span><span class="v mono">CL-005</span></div><div class="info-row"><span class="k">عدد الأيام</span><span class="v">15</span></div><div class="info-row"><span class="k">عدد الساعات</span><span class="v">50</span></div><div class="info-row"><span class="k">طريقة التقديم</span><span class="v">عن بعد</span></div><div class="info-row"><span class="k">تخصصات الدورة</span><span class="v">الأمن السيبراني، هندسة البرمجيات</span></div></div></div></div></div>
+        <div class="uws-panel" data-panel="groups" hidden>
+          <div class="prog-tab-head"><h2>الدفعات التدريبية</h2><button type="button" class="btn btn-primary" data-toast="إدارة الدفعات التدريبية تُبنى في المرحلة القادمة"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> إنشاء دفعة جديدة</button></div>
+          <div class="batch-tools"><label class="tb-search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" id="batchQ" placeholder="ابحث في كل الأعمدة…"></label></div>
+          <div class="table-card"><table><thead><tr><th>اسم الدفعة</th><th>رقم الدفعة</th><th>تاريخ البداية</th><th>تاريخ النهاية</th><th>المتدربون</th><th>المجموعات</th><th>المدربون</th><th>الحالة</th></tr></thead>
+            <tbody id="batchTbody"><tr><td><b>الدفعة الأولى</b></td><td class="mono">B-102</td><td class="mono">15 Sep 2026</td><td class="mono">—</td><td class="mono">0</td><td class="mono">1</td><td>—</td><td><span class="pill ok">نشطة</span></td></tr></tbody></table></div>
+          <div class="empty" id="batchNoMatch" hidden style="box-shadow:none;padding:24px"><h2 style="font-size:14px">لا نتائج مطابقة</h2><p>عدّل معايير البحث.</p></div>
+        </div>
+        <div class="uws-panel" data-panel="kit" hidden>
+          <div class="set-card"><div class="set-card-h">ملفات الحقيبة التدريبية<button type="button" class="mini-btn solid" id="kitTabAdd">+ إضافة ملف</button></div>
+            <div class="set-card-b">
+              <div class="kit-tools"><label class="tb-search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" id="kitQ" placeholder="ابحث باسم الملف أو من رفعه…"></label><div class="kit-kinds"><button type="button" class="mini-btn solid kit-kind" data-kind="all">الكل (<span class="n">3</span>)</button><button type="button" class="mini-btn line kit-kind" data-kind="pdf">PDF (<span class="n">1</span>)</button><button type="button" class="mini-btn line kit-kind" data-kind="doc">مستندات (<span class="n">1</span>)</button><button type="button" class="mini-btn line kit-kind" data-kind="video">فيديوهات (<span class="n">1</span>)</button></div></div>
+              <div id="kitTabList"><div class="row kit-row" data-i="0"><span class="row-avatar">PDF</span><div class="row-main"><div class="row-title" style="font-size:13px">حقيبة-الأمن-السيبراني.pdf</div><div class="row-sub">PDF · رفعه أ. هند العتيبي · 2 Sep 2026</div></div><button type="button" class="mini-btn line" data-toast="جارٍ تنزيل الملف">تنزيل</button><button type="button" class="dr-icon-btn danger" title="حذف" data-kit-del>✕</button></div><div class="row kit-row" data-i="1"><span class="row-avatar">DOC</span><div class="row-main"><div class="row-title" style="font-size:13px">قائمة-ضوابط-الحماية.xlsx</div><div class="row-sub">مستند · رفعه د. أحمد الحربي · 4 Sep 2026</div></div><button type="button" class="mini-btn line" data-toast="جارٍ تنزيل الملف">تنزيل</button><button type="button" class="dr-icon-btn danger" title="حذف" data-kit-del>✕</button></div><div class="row kit-row" data-i="2"><span class="row-avatar g">▶</span><div class="row-main"><div class="row-title" style="font-size:13px">محاكاة-هجوم-تصيّد.mp4</div><div class="row-sub">فيديو · رفعه د. أحمد الحربي · 6 Sep 2026</div></div><button type="button" class="mini-btn line" data-toast="جارٍ تنزيل الملف">تنزيل</button><button type="button" class="dr-icon-btn danger" title="حذف" data-kit-del>✕</button></div></div>
+              <p class="prog-empty-note" id="kitTabEmpty" hidden>لا ملفات في الحقيبة التدريبية بعد — استخدم «إضافة ملف» لرفع أول ملف.</p>
+            </div></div>
+        </div>
+        <div class="uws-panel" data-panel="fees" hidden>
+          <div class="set-card"><div class="set-card-b"><div class="info-row"><span class="k">الرسوم</span><span class="v" data-bind="price">18,000 ر.س</span></div><div class="info-row"><span class="k">نظم التقسيط</span><span class="v" data-bind="installments">Tabby، Tamara</span></div></div></div>
+        </div>
+        <div class="uws-panel" data-panel="settings" hidden>
+          <div class="set-card"><div class="set-card-b"><div class="info-row"><span class="k">الظهور على الموقع</span><span class="v" data-bind="webVisible">مفعّل</span></div><div class="info-row"><span class="k">صلاحيات التعديل</span><span class="v" data-bind="editRoles">السوبر أدمن، الكادر الأكاديمي</span></div></div></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<div class="sidebar-scrim" id="sidebarScrim"></div>
+
+<div class="scrim" id="ewScrim"></div>
+<aside class="drawer full" id="ewDrawer" role="dialog" aria-modal="true" aria-label="إنشاء دبلوم مهني">
+  <div class="dr-head">
+    <h2 id="ewTitle">إنشاء دبلوم مهني</h2>
+    <div class="dr-head-actions">
+      <button type="button" class="dr-icon-btn" id="ewFull" aria-label="ملء الشاشة" title="ملء الشاشة"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
+      <button type="button" class="dr-icon-btn" id="ewClose" aria-label="إغلاق">✕</button>
+    </div>
+  </div>
+  <div class="wz-steps" id="ewSteps"><div class="wz-step cur" data-step="1"><span class="wz-num">1</span><span class="wz-lbl">البيانات الأساسية</span></div><div class="wz-step" data-step="2"><span class="wz-num">2</span><span class="wz-lbl">المقررات الأساسية للدبلومة</span></div><div class="wz-step" data-step="3"><span class="wz-num">3</span><span class="wz-lbl">الحقيبة التدريبية</span></div><div class="wz-step" data-step="4"><span class="wz-num">4</span><span class="wz-lbl">الرسوم والدفع</span></div><div class="wz-step" data-step="5"><span class="wz-num">5</span><span class="wz-lbl">الظهور والصلاحيات</span></div><div class="wz-step" data-step="6"><span class="wz-num">6</span><span class="wz-lbl">المراجعة والنشر</span></div></div>
+  <div class="dr-body" id="ewBody"><div class="wz-body-inner">
+    <div class="ew-step" data-step="1">
+      <div class="field"><label class="field-label">صورة دبلوم مهني</label>
+        <div class="dropzone" id="ewImgDrop"><div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>اسحب صورة دبلوم مهني هنا أو اضغط للرفع<div class="field-hint" style="margin-top:4px">JPG/PNG</div></div>
+        <div class="file-row" id="ewImgFile" hidden><span class="file-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div class="fname" id="ewImgName"></div>
+          <button type="button" class="mini-btn line" id="ewImgReplace">استبدال</button><button type="button" class="mini-btn line danger-line" id="ewImgRemove">إزالة</button></div>
+        <div class="dropzone" id="ewImgUploading" hidden><div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>جارٍ رفع الصورة…</div>
+      </div>
+      <div class="field"><label class="field-label">اسم دبلوم مهني <span class="req">*</span></label><input class="inp" id="ew_name"><div class="inp-error" id="err_ewName">هذا الحقل مطلوب</div></div>
+      <div class="field"><label class="field-label">وصف عام</label><textarea class="inp" id="ew_generalDesc"></textarea></div>
+      <div class="field"><label class="field-label">أهداف البرنامج</label><textarea class="inp" id="ew_objectivesText"></textarea></div>
+      <div class="field"><label class="field-label">المقال العام</label><textarea class="inp" id="ew_article"></textarea></div>
+      <div class="grid-2e">
+        <div class="field"><label class="field-label">المدة الزمنية</label><input class="inp" id="ew_duration" placeholder="مثال: عام واحد"></div>
+        <div class="field"><label class="field-label">طريقة تقديم الاختبارات</label><select class="inp" id="ew_exammode"><option>عن بُعد</option><option>حضوري</option><option>مختلط (حضوري وعن بُعد)</option></select></div>
+        <div class="field"><label class="field-label">آلية الدراسة</label><select class="inp" id="ew_studymode"><option>حضوري</option><option selected>التعلم المدمج</option><option>عن بُعد (مباشر)</option></select></div>
+        <div class="field"><label class="field-label">إجمالي الساعات المعتمدة</label><input class="inp" id="ew_hours" type="number" min="0" value="0"></div>
+        <div class="field"><label class="field-label">عدد الفصول الدراسية</label><input class="inp" id="ew_terms" type="number" min="0" value="0"></div>
+        <div class="field"><label class="field-label">عدد المقررات الدراسية</label><input class="inp" id="ew_subjects" type="number" min="0" value="0"></div>
+      </div>
+    </div>
+    <div class="ew-step" data-step="2" hidden>
+      <div class="wb-ref-note"><span>المقرر في الدبلوم هو <b>دورة تدريبية قائمة</b> — اختر التخصص أولاً، ثم اختر من دوراته التدريبية المُعدّة مسبقاً. يمكنك إضافة أكثر من مقرر للتخصص الواحد، ولن تُنشأ نسخة جديدة من أي دورة.</span></div>
+      <div class="wz-row-between" style="margin-top:14px"><div style="font-size:14px;font-weight:700">المقررات الأساسية (<span id="ewModTotal">0</span>)</div><button type="button" class="mini-btn solid" id="ewAddGroup">+ إضافة مقرر</button></div>
+      <div id="ewCards"></div>
+      <div class="empty" id="ewCardsEmpty" style="box-shadow:none;padding:20px"><p style="font-size:13px">لا مقررات بعد — ابدأ بإضافة تخصص واختيار دوراته التدريبية.</p></div>
+    </div>
+    <div class="ew-step" data-step="3" hidden>
+      <p class="wz-intro">ارفع ملفات الحقيبة التدريبية مباشرة، أو عيّن مسؤولاً واحداً أو أكثر لإعدادها.</p>
+      <div class="radio-stack wz">
+        <div class="radio-card kit-mode" data-mode="direct"><span class="radio-dot"></span><div class="rc-t">إضافة الحقيبة التدريبية مباشرة</div></div>
+        <div class="radio-card kit-mode sel" data-mode="assign"><span class="radio-dot"></span><div class="rc-t">تعيين مسؤول عن إعداد الحقيبة</div></div>
+      </div>
+      <div class="wz-panel" id="kitDirect" hidden>
+        <div class="dropzone" id="kitDrop"><div class="dz-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>اسحب ملفات الحقيبة التدريبية هنا أو اضغط للرفع</div>
+        <div id="kitFiles" style="margin-top:10px"></div>
+      </div>
+      <div class="wz-panel" id="kitAssign">
+        <div id="kitResp" style="margin-bottom:10px"></div>
+        <div class="field" style="margin:0"><label class="field-label">إضافة مسؤول</label><select class="inp" id="kitAddResp"></select><div class="field-hint">يمكن تعيين أكثر من مسؤول واحد.</div></div>
+        <div class="wb-ref-note" id="kitNote" style="margin-top:12px" hidden><span></span></div>
+      </div>
+    </div>
+    <div class="ew-step" data-step="4" hidden>
+      <div class="field" style="max-width:260px"><label class="field-label">رسوم البرنامج</label><input class="inp" id="ew_price" placeholder="مثال: 15,000"></div>
+      <div class="field-label" style="margin:16px 0 8px">نظام التقسيط</div>
+      <div class="toggle-row"><div class="toggle ew-inst" data-id="tabby" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">Tabby</div></div></div>
+      <div class="toggle-row"><div class="toggle ew-inst" data-id="tamara" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">Tamara</div></div></div>
+    </div>
+    <div class="ew-step" data-step="5" hidden>
+      <div class="set-card"><div class="set-card-h">الظهور على الموقع الخارجي</div><div class="set-card-b">
+        <div class="toggle-row"><div class="toggle " id="ew_web" data-id="web" role="switch" aria-checked="true" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">إظهار البرنامج على الموقع الخارجي</div></div></div>
+      </div></div>
+      <div class="set-card"><div class="set-card-h">صلاحيات التعديل</div><div class="set-card-b">
+        <div class="toggle-row"><div class="toggle ew-role" data-id="admin" role="switch" aria-checked="true" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">السوبر أدمن</div></div></div>
+        <div class="toggle-row"><div class="toggle ew-role" data-id="academic" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">الكادر الأكاديمي</div></div></div>
+        <div class="toggle-row"><div class="toggle ew-role" data-id="trainer" role="switch" aria-checked="false" tabindex="0"></div><div class="toggle-txt"><div class="toggle-t">المدرب</div></div></div>
+      </div></div>
+    </div>
+    <div class="ew-step" data-step="6" hidden>
+      <div class="wb-ref-note wz-note-err" id="rvMissing" hidden><span>يرجى إدخال اسم دبلوم مهني.</span></div>
+      <div class="set-card"><div class="set-card-h">البيانات الأساسية</div><div class="set-card-b"><div class="info-row"><span class="k">الاسم</span><span class="v" id="rvName"></span></div><div class="info-row"><span class="k">التخصص</span><span class="v" id="rvSpecialty"></span></div><div class="info-row"><span class="k">المدة</span><span class="v" id="rvDuration"></span></div><div class="info-row"><span class="k">إجمالي الساعات</span><span class="v" id="rvHours"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">المقررات الأساسية</div><div class="set-card-b"><div class="info-row"><span class="k">عدد التخصصات</span><span class="v" id="rvSpecCount"></span></div><div class="info-row"><span class="k">عدد المقررات</span><span class="v" id="rvModCount"></span></div><div id="rvMods"></div></div></div>
+      <div class="set-card"><div class="set-card-h">الحقيبة التدريبية</div><div class="set-card-b"><div class="info-row"><span class="k">الحقيبة</span><span class="v" id="rvKit"></span></div></div></div>
+      <div class="wb-ref-note" style="margin-top:16px"><span>تُدار الدفعات التدريبية وتعيين المدربين من الصفحة الداخلية للدبلوم بعد الحفظ — على مستوى الدفعة والمجموعة والجلسة.</span></div>
+      <div class="set-card"><div class="set-card-h">الرسوم والدفع</div><div class="set-card-b"><div class="info-row"><span class="k">الرسوم</span><span class="v" id="rvPrice"></span></div><div class="info-row"><span class="k">التقسيط</span><span class="v" id="rvInst"></span></div></div></div>
+      <div class="set-card"><div class="set-card-h">الظهور والصلاحيات</div><div class="set-card-b"><div class="info-row"><span class="k">الظهور على الموقع</span><span class="v" id="rvWeb"></span></div><div class="info-row"><span class="k">صلاحيات التعديل</span><span class="v" id="rvRoles"></span></div></div></div>
+    </div>
+  </div></div>
+  <div class="dr-foot">
+    <button type="button" class="btn btn-secondary" id="ewBack">إلغاء</button>
+    <div class="end">
+      <button type="button" class="btn btn-primary" id="ewNext">التالي</button>
+      <button type="button" class="btn btn-secondary" id="ewDraft" hidden>حفظ كمسودة</button>
+      <button type="button" class="btn btn-primary" id="ewPublish" hidden>نشر</button>
+    </div>
+  </div>
+</aside>
+<template id="tplSpecCard"><div class="set-card spec-card">
+  <div class="set-card-h spec-h"><span class="mc-ico" style="width:30px;height:30px;border-radius:var(--r-sm);background:var(--surface-hover);display:grid;place-items:center;flex-shrink:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></svg></span>
+    <div style="flex:1;min-width:0"><div class="sc-title" style="font-weight:700">تخصص جديد</div><div class="sc-sub" style="font-size:12px;color:var(--text-tertiary);margin-top:2px;font-weight:400">لم يُحدد التخصص بعد</div></div>
+    <svg class="mod-caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+  <div class="set-card-b sc-body" hidden>
+    <div class="field" style="margin-bottom:12px"><label class="field-label">التخصص <span class="req">*</span></label><select class="inp sc-spec"><option value="">— اختر التخصص —</option></select></div>
+    <div class="sc-detail" hidden>
+      <div class="divider-label" style="font-size:13px">المقررات (الدورات التدريبية)</div>
+      <div class="sc-mods"></div>
+      <div class="field" style="margin:12px 0 0"><label class="field-label">إضافة مقرر</label><select class="inp sc-add"></select></div>
+    </div>
+    <div class="field-hint sc-pick">اختر التخصص لعرض دوراته التدريبية.</div>
+    <button type="button" class="mini-btn line danger-line sc-remove" style="margin-top:14px">إزالة التخصص ومقرراته</button>
+  </div></div></template>
+<div class="dlg-scrim" id="dupScrim"><div class="dlg" style="max-width:480px">
+  <div class="dlg-ico" style="color:var(--primary-700);background:var(--primary-50)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+  <h3>نسخ دبلوم مهني</h3>
+  <p>سيتم نسخ البرنامج بالمحتوى كامل، ماعدا المجموعات والمستخدمين والجلسات المباشرة. يمكنك إضافة هذه المعلومات مرة أخرى بنفسك بعد إنشاء النسخة.</p>
+  <div class="dlg-actions"><button type="button" class="btn btn-secondary" id="dupNo">تراجع</button><button type="button" class="btn btn-primary" id="dupYes">نسخ دبلوم مهني</button></div>
+</div></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/data/programs.js"></script>
+<script src="../../assets/js/app.js"></script>
+<script src="../../assets/js/tabs.js"></script>
+<script src="../../assets/js/edu-wizard.js"></script>
+</body>
+</html>
