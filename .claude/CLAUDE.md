@@ -719,7 +719,7 @@ al-mubdioun/
 * التنسيق كله **utility classes** داخل الـ HTML، ولا تُنشأ ملفات CSS مخصصة للمكونات.
 * الصفحات تربط ملفًا واحدًا فقط: `assets/css/tailwind.css` (ناتج مُترجَم ومحفوظ في المستودع ليعمل `file://` بدون أدوات).
 * الـ Design tokens (الألوان، المسافات، الـ radius، الظلال) معرّفة في `assets/css/tailwind.src.css` ومربوطة في `tailwind.config.js` (`bg-primary-700`, `text-ink-2`, `border-guide`, `rounded-md`, `shadow-card`).
-* بعد إضافة classes جديدة نفّذ `npm run build` (بدون `--minify`).
+* الصفحات تحمّل أيضًا Tailwind CDN (`https://cdn.tailwindcss.com`) مع `tailwind.config.js` المشترك، فأي class جديد يعمل مباشرة في المتصفح؛ ومع ذلك نفّذ `npm run build` (بدون `--minify`) بعد إضافة classes جديدة ليبقى `tailwind.css` محدّثًا. أي صفحة جديدة تضيف سطري `<script>` الخاصين بالـ CDN والـ config بعد رابط `tailwind.css`.
 * breakpoints مخصصة: `d1200 d1100 d1024 d820 d768 d560 d480` (حتى هذا العرض) و`u1025` (من هذا العرض).
 * الحالات التي يبدّلها jQuery تُكتب كـ variants مثل `[&.open]:visible`، وسلاسل الـ classes داخل ملفات JS التي تبني عناصر تُكتب utilities أيضًا.
 * لا تغيير في التصميم: أي صفحة جديدة تحافظ على نفس الألوان والمسافات والسلوك الحالي.
