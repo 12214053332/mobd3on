@@ -127,7 +127,7 @@
   /* ---- Table rows with data-href navigate to that page (links / buttons / checkboxes inside keep their own action) ---- */
   function bindRowLinks() {
     $(document).on('click', 'tr[data-href]', function (e) {
-      if ($(e.target).closest('a, button, .cbx-cell').length) return;
+      if ($(e.target).closest('a, button, input, label, td[data-col="cbx"], .cbx-cell').length) return;
       window.location.href = $(this).data('href');
     });
   }

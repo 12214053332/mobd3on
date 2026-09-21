@@ -26,6 +26,7 @@
     });
     $('#tfootShown').text(shown ? ('1–' + shown) : '0');
     $('#userEmpty').prop('hidden', shown > 0);
+    syncAll();
   }
 
   /* ---- column visibility ---- */
@@ -62,29 +63,37 @@
     $('#bulkBar').empty().append($bar);
   }
 
+  /* header checkbox: checked = all visible rows ticked, indeterminate = some */
+  function syncAll() {
+    var $boxes = $('.um-cbx:visible'), n = $boxes.filter(':checked').length;
+    $('#umSelAll').prop({ checked: n > 0 && n === $boxes.length, indeterminate: n > 0 && n < $boxes.length });
+  }
+
   function clearSelection() {
     selected.clear();
-    $('.um-cbx, #umSelAll').removeClass('on');
+    $('.um-cbx, #umSelAll').prop({ checked: false, indeterminate: false });
     renderBulkBar();
   }
 
   function bindSelection() {
-    $(document).on('click', '.um-cbx', function () {
+    $(document).on('change', '.um-cbx', function () {
       var id = $(this).data('id');
-      if (selected.has(id)) { selected.delete(id); $(this).removeClass('on'); }
-      else { selected.add(id); $(this).addClass('on'); }
+      if (this.checked) selected.add(id); else selected.delete(id);
+      syncAll();
       renderBulkBar();
     });
-    $('#umSelAll').on('click', function () {
-      var $boxes = $('.um-cbx:visible');
-      var allOn = $boxes.length && $boxes.filter('.on').length === $boxes.length;
-      if (allOn) {
-        $boxes.removeClass('on').each(function () { selected.delete($(this).data('id')); });
-        $(this).removeClass('on');
-      } else {
-        $boxes.addClass('on').each(function () { selected.add($(this).data('id')); });
-        $(this).addClass('on');
-      }
+    /* clicking the cell around the box toggles it too (and never opens the row) */
+    $(document).on('click', 'td[data-col="cbx"]', function (e) {
+      if ($(e.target).is('input')) return;
+      $(this).find('.um-cbx').trigger('click');
+    });
+    $('#umSelAll').on('change', function () {
+      var on = this.checked;
+      $('.um-cbx:visible').each(function () {
+        this.checked = on;
+        if (on) selected.add($(this).data('id')); else selected.delete($(this).data('id'));
+      });
+      this.indeterminate = false;
       renderBulkBar();
     });
     $(document).on('click', '#bulkClear', clearSelection);
