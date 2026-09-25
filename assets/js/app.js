@@ -124,11 +124,37 @@
     });
   }
 
-  /* ---- Table rows with data-href navigate to that page (links / buttons / checkboxes inside keep their own action) ---- */
+  /* ---- Rows/cards with data-href navigate to that page (nested links / buttons / checkboxes / toasts keep their own action) ---- */
   function bindRowLinks() {
-    $(document).on('click', 'tr[data-href]', function (e) {
-      if ($(e.target).closest('a, button, input, label, td[data-col="cbx"], .cbx-cell').length) return;
+    $(document).on('click', '[data-href]', function (e) {
+      if ($(e.target).closest('a, button, input, label, td[data-col="cbx"], .cbx-cell, [data-toast], [data-popup-open], [data-popup-close]').length) return;
       window.location.href = $(this).data('href');
+    });
+  }
+
+  /* ---- Device-preview toggle groups (website builder pages: desktop/tablet/جوال) ---- */
+  function bindDeviceBar() {
+    $(document).on('click', '.wb-device-bar .wb-device, .nav-device-toggle .nav-device-btn', function () {
+      $(this).siblings().removeClass('on');
+      $(this).addClass('on');
+    });
+  }
+
+  /* ---- Media library grid/list view toggle ---- */
+  function bindViewToggle() {
+    $(document).on('click', '[data-view-btn]', function () {
+      var v = $(this).data('view-btn');
+      $(this).siblings('[data-view-btn]').addBack().removeClass('on');
+      $(this).addClass('on');
+      $('[data-view-panel]').prop('hidden', true).filter('[data-view-panel="' + v + '"]').prop('hidden', false);
+    });
+  }
+
+  /* ---- Navigation-menu tree: collapse/expand a node's children ---- */
+  function bindNavTree() {
+    $(document).on('click', '[data-nav-tree-toggle]', function (e) {
+      e.stopPropagation();
+      $(this).closest('.nav-node').toggleClass('collapsed');
     });
   }
 
@@ -142,5 +168,8 @@
     bindMobileSidebar();
     bindRoleSwitch();
     bindGenericMenus();
+    bindDeviceBar();
+    bindViewToggle();
+    bindNavTree();
   });
 })(jQuery);

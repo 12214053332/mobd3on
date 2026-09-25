@@ -1,7 +1,7 @@
 /** Tailwind config — design tokens come from the prototype's :root variables (assets/css/tailwind.src.css).
  *  Shared by the CLI build (module.exports) and by the Play CDN in the browser (tailwind.config). */
 const config = {
-  content: ['./admin/**/*.html', './components/**/*.html', './assets/js/**/*.js'],
+  content: ['./admin/**/*.html', './website/**/*.html', './components/**/*.html', './assets/js/**/*.js'],
   corePlugins: { preflight: false }, // the project's own reset lives in tailwind.src.css (@layer base)
   theme: {
     // responsive breakpoints used by the prototype: "u" = from this width up, "d" = down to this width
