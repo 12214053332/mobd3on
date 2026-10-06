@@ -1043,8 +1043,8 @@ MOCK.EDU_PATHS = [
    "status": "in_progress",
    "files": []
   },
-  "groupsCount": 0,
-  "learnersCount": 0
+  "groupsCount": 2,
+  "learnersCount": 5
  },
  {
   "id": 24,
