@@ -47,16 +47,31 @@
     $z.prepend($view);
   }
 
+  /* "files" zones add one row per file to their list: #kitFiles (training kit in the program wizards) or the list named by
+     data-files-list (batch wizard / bulk upload). A row marked [data-file-tpl] is the hidden template; anything marked
+     [data-after-upload] in the same popup is revealed once the list has files. */
+  function listOf($z) { return $($z.attr('data-files-list') || '#kitFiles'); }
+  function syncAfter($z) {
+    var has = listOf($z).children(':not([data-file-tpl])').length > 0;
+    $z.closest('.drawer').find('[data-after-upload]').prop('hidden', !has);
+  }
   function addFiles($z, files) {
-    var $list = $('#kitFiles');
-    var $tpl = $list.children().first();
+    var $list = listOf($z);
+    var $tpl = $list.children('[data-file-tpl]').first();
+    if (!$tpl.length) $tpl = $list.children().first();
     if (!$tpl.length) return;
     $.each(files, function (_, f) {
-      var $row = $tpl.clone();
-      $row.find('div').filter(function () { return !$(this).children().length; }).eq(0).text(f.name);
-      $row.find('div').filter(function () { return !$(this).children().length; }).eq(1).text(size(f.size));
+      var $row = $tpl.clone().removeAttr('data-file-tpl').prop('hidden', false);
+      if ($row.find('[data-fname]').length) {
+        $row.find('[data-fname]').text(f.name);
+        $row.find('[data-fmeta]').text(size(f.size));
+      } else {
+        $row.find('div').filter(function () { return !$(this).children().length; }).eq(0).text(f.name);
+        $row.find('div').filter(function () { return !$(this).children().length; }).eq(1).text(size(f.size));
+      }
       $list.append($row);
     });
+    syncAfter($z);
     toast('تمت إضافة ' + files.length + ' ملف');
   }
 
@@ -100,5 +115,12 @@
 
     // the training-kit list: remove a row
     $(document).on('click', '#kitFiles button', function () { $(this).closest('#kitFiles > div').remove(); });
+    // rows of the other file lists (batch wizard, bulk upload, kit file drawer)
+    $(document).on('click', '[data-file-del]', function () {
+      var $row = $(this).parent(), $list = $row.parent(), $drawer = $(this).closest('.drawer');
+      $row.remove();
+      var has = $list.children(':not([data-file-tpl])').length > 0;
+      $drawer.find('[data-after-upload]').prop('hidden', !has);
+    });
   });
 })(jQuery);

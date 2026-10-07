@@ -6,9 +6,10 @@
      [data-kit-kind] [data-kit-search]                  فلترة ملفات الحقيبة (صفوف .row[data-kind])
    المعالج والنوافذ:
      .bw-card .set-card-h    فتح/طيّ بطاقة المجموعة أو بطاقة الوقت (المحتوى [hidden] داخلها)
-     [data-choose]           اختيار بطاقة واحدة من مجموعة بطاقات الراديو
      [data-toggle-next]      إظهار/إخفاء العنصر التالي
-     [data-cbx] [data-pick-all] [data-pick-q]  اختيار المتدربين في نافذة قائمة الانتظار
+     [data-cbx] [data-pick-all|save|q]         اختيار المتدربين في نافذة قائمة الانتظار (خانات اختيار حقيقية)
+     [data-dist]                               توزيع متدرب غير موزَّع على مجموعة (تنبيه فقط)
+     [data-choose="مجموعة:قيمة"] + [data-choose-panel]  بطاقات الراديو تبدّل اللوحة المرتبطة بها (الحقيبة، تقسيم الوقت)
    #edit في رابط الصفحة يفتح نافذة تعديل الدفعة. */
 (function ($) {
   'use strict';
@@ -65,7 +66,7 @@
   /* ================= صفحة الدفعة: المتدربون ================= */
   function lnRows() { return $('[data-ln-row]'); }
   function lnVisible() { return lnRows().filter(function () { return $(this).css('display') !== 'none'; }); }
-  function lnSelected() { return lnRows().filter(function () { return $(this).find('[data-ln-cb]').hasClass('on'); }); }
+  function lnSelected() { return lnRows().filter(function () { return $(this).find('[data-ln-cb]').prop('checked'); }); }
 
   function applyLearners() {
     var q = $.trim($('[data-ln-q]').val() || ''), g = $('[data-ln-group]').val() || 'all', s = $('[data-ln-status]').val() || 'all';
@@ -86,16 +87,16 @@
     var sel = lnSelected().length, vis = lnVisible();
     $('[data-ln-bar]').prop('hidden', !sel);
     $('[data-ln-sel]').text(sel);
-    $('[data-ln-all]').toggleClass('on', !!vis.length && vis.filter(function () { return $(this).find('[data-ln-cb]').hasClass('on'); }).length === vis.length);
+    var n = vis.filter(function () { return $(this).find('[data-ln-cb]').prop('checked'); }).length;
+    $('[data-ln-all]').prop({ checked: !!vis.length && n === vis.length, indeterminate: n > 0 && n < vis.length });
   }
   $(document).on('input change', '[data-ln-q], [data-ln-group], [data-ln-status]', applyLearners);
-  $(document).on('click', '[data-ln-cb]', function () { $(this).toggleClass('on'); syncSelection(); });
-  $(document).on('click', '[data-ln-all]', function () {
-    var on = !$(this).hasClass('on');
-    lnVisible().find('[data-ln-cb]').toggleClass('on', on);
+  $(document).on('change', '[data-ln-cb]', syncSelection);
+  $(document).on('change', '[data-ln-all]', function () {
+    lnVisible().find('[data-ln-cb]').prop('checked', this.checked);
     syncSelection();
   });
-  $(document).on('click', '[data-ln-clear]', function () { lnRows().find('[data-ln-cb]').removeClass('on'); syncSelection(); });
+  $(document).on('click', '[data-ln-clear]', function () { lnRows().find('[data-ln-cb]').prop('checked', false); syncSelection(); });
   $(document).on('click', '[data-ln-reset]', function () {
     $('[data-ln-q]').val(''); $('[data-ln-group], [data-ln-status]').val('all');
     applyLearners();
@@ -104,7 +105,7 @@
     var n = lnSelected().length, name = $(this).find('option:selected').text().replace(/\s*\(.*\)$/, '');
     if (this.value === '') return;
     toast(n + ' متدرباً نُقلوا إلى ' + name);
-    lnRows().find('[data-ln-cb]').removeClass('on');
+    lnRows().find('[data-ln-cb]').prop('checked', false);
     $(this).val('');
     syncSelection();
   });
@@ -135,8 +136,11 @@
     $c.children('.set-card-b').prop('hidden', !$c.hasClass('open'));
   });
   $(document).on('click', '[data-choose]', function () {
+    var v = $(this).attr('data-choose'), g = v.split(':')[0];
     $(this).siblings('[data-choose]').removeClass('sel');
     $(this).addClass('sel');
+    $(this).closest('.dr-body, body').find('[data-choose-panel^="' + g + ':"]').prop('hidden', true)
+      .filter('[data-choose-panel="' + v + '"]').prop('hidden', false);
   });
   $(document).on('click', '[data-toggle-next]', function () {
     var $n = $(this).next();
@@ -144,9 +148,18 @@
   });
 
   /* ================= نافذة إضافة المتدربين من قائمة الانتظار ================= */
-  $(document).on('click', '[data-cbx]', function () { $(this).toggleClass('on'); });
   $(document).on('click', '[data-pick-all]', function () {
-    $(this).closest('.drawer').find('[data-cbx]').filter(function () { return $(this).closest('.row').css('display') !== 'none'; }).addClass('on');
+    $(this).closest('.drawer').find('[data-cbx]').filter(function () { return $(this).closest('.row').css('display') !== 'none'; }).prop('checked', true);
+  });
+  $(document).on('click', '[data-pick-save]', function () {
+    var $d = $(this).closest('.drawer'), n = $d.find('[data-cbx]:checked').length;
+    toast(n ? n + ' متدرباً أُضيفوا' : 'لم يتم تحديد أي متدرب');
+    $d.find('[data-cbx]').prop('checked', false);
+  });
+  $(document).on('change', '[data-dist]', function () {
+    if (this.value === '') return;
+    toast('تم توزيع المتدرب على ' + $(this).find('option:selected').text());
+    $(this).val('');
   });
   $(document).on('input', '[data-pick-q]', function () {
     var q = $.trim($(this).val());
